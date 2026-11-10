@@ -1,0 +1,1 @@
+[[01_Genel_Linux_Komutlari]]
