@@ -2,6 +2,8 @@
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
 .obsidian/cache
+**/workspace.json
+**/workspace-mobile.json
 
 # Silinen notlar
 .trash/
