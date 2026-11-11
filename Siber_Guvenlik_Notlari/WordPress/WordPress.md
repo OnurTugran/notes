@@ -533,3 +533,21 @@ Disgusted@htb[/htb]$ curl -X POST -d "<methodCall><methodName>wp.getUsersBlogs</
 > [!info] Sonuç: Manuel Bilgi Toplamanın (Enumeration) Önemi
 > Otomatik araçlar (WPScan, wfuzz vb.) sızma testi sürecini büyük ölçüde hızlandırsa da, değerlendirdiğimiz sistemler üzerindeki etkilerini anlamak bizim sorumluluğumuzdadır. Otomatik araçları kullanmaya çalışmadan önce **manuel yöntemleri** anlamak çok önemlidir. Manuel bilgi toplama yöntemlerini iyi kavramak, otomatik araçların düzgün çalışmadığı veya beklenmedik çıktılar verdiği durumlarda sorun gidermenize (troubleshooting) büyük ölçüde yardımcı olacaktır.
 
+
+
+# 🔍 WPScan Enumeration (Numaralandırma)
+
+`--enumerate` bayrağı (flag), WordPress uygulamasının eklentiler, temalar ve kullanıcılar gibi çeşitli bileşenlerini numaralandırmak için kullanılır. Varsayılan olarak WPScan; zafiyetli eklentileri, temaları, kullanıcıları, medya dosyalarını ve yedeklemeleri tarar. Ancak belirli argümanlar verilerek tarama sınırlandırılabilir (Örneğin; tüm eklentileri taramak için `--enumerate ap` argümanı kullanılır).
+
+> [!info] Thread (İş Parçacığı) Notu
+> WPScan taramalarında varsayılan iş parçacığı (thread) sayısı 5'tir. Bu değer `-t` bayrağı yardımıyla değiştirilebilir.
+
+---
+
+## 💻 WPScan Tarama Komutu ve Çıktısı
+
+Hedef bir WordPress sitesine API token kullanarak yapılan standart bir numaralandırma taraması ve çıktısı şu şekildedir:
+
+```shell
+Disgusted@htb[/htb]$ wpscan --url [http://blog.inlanefreight.com](http://blog.inlanefreight.com) --enumerate --api-token Kffr4fdJzy9qVcTk
+```
