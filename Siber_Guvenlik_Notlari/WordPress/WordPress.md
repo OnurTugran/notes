@@ -553,3 +553,7 @@ Disgusted@htb[/htb]$ wpscan --url [http://blog.inlanefreight.com](http://blog.in
 ```
 
 wpscan --url http://blog.inlanefreight.com --enumerate
+
+nuclei -u  http://154.57.164.78:38680 -t wp-content/plugins/
+
+nuclei -u  http://154.57.164.78:38680 -t http/vulnerabilities/wordpress/
