@@ -51,14 +51,6 @@ Bu notun ait olduğu siber güvenlik modülünde hedeflenen yetenekler şunlard�
 
 
 ---
-tags:
-  - wordpress
-  - file-structure
-  - pentesting
-  - web-security
-  - linux
-date: 2026-11-10
----
 
 # 📂 WordPress Dosya ve Dizin Yapısı
 
