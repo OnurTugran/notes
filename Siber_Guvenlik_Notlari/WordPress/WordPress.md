@@ -551,3 +551,5 @@ Hedef bir WordPress sitesine API token kullanarak yapılan standart bir numarala
 ```shell
 Disgusted@htb[/htb]$ wpscan --url [http://blog.inlanefreight.com](http://blog.inlanefreight.com) --enumerate --api-token Kffr4fdJzy9qVcTk
 ```
+
+wpscan --url http://blog.inlanefreight.com --enumerate
