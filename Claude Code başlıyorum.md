@@ -90,4 +90,35 @@ Kod odaklı olmayan, genel iletişim ve belge yönetimini düzenleyen araçlard�
 MCP olayına bakmam gerek sanırım büyük bir olay.
 
 
+- **`CLAUDE.md` Dosyası (Proje Hafızası ve Kuralları):**
+    
+    - Projenin ana dizinine koyduğun bu markdown dosyası, Claude Code her çalıştığında **ilk okuduğu kılavuzdur**.
+        
+    - Projede hangi kod standartlarını kullanacağını (örneğin Python/C++ kodlama kuralları), mimari kararlarını, hangi kütüphaneleri tercih ettiğini buraya yazarsın. Böylece Claude her seferinde kuralları baştan unutmaz. Eğer projede başka ajanlar için yazılmış bir `AGENTS.md` varsa, Claude doğrudan onu da okuyabilir.
+        
+    - _Not:_ Ayrıca Claude, seninle çalıştıkça arka planda kendi otomatik hafızasını (`auto memory`) oluşturarak oturumlar arası öğrendiği şeyleri kendisi kaydeder.
+        
+- **Custom Skills (Özel Beceriler):**
+    
+    - Sık tekrar ettiğin iş akışlarını (`/review-pr` veya `/deploy-staging` gibi özel komutlar haline getirerek) paketleyip hem kendinin hem de ekibinin tek komutla kullanabilmesini sağlayan özel yetenek dosyalarıdır. (Az önce incelediğimiz Matt Pocock'un becerileri de bu mantıkla çalışır).
+        
+- **Hooks (Kancalar / Otomasyon Tetikleyicileri):**
+    
+    - Claude Code belirli bir eylemi gerçekleştirmeden _önce_ veya _sonra_ otomatik olarak arkada shell komutları çalıştırmanı sağlar.
+        
+    - Örneğin: Claude her dosya düzenlediğinde arka planda otomatik format atması (black/prettier vb.) ya da bir commit atmadan önce otomatik olarak linter (kod kontrolü) çalıştırması gibi otomasyonlar bu kancalarla ayarlanır.
+
+
+- **Background Agents (Arka Plan Ajanları & Lider-Alt Ajan Mimarisi):**
+    
+    - Büyük bir görevi (örneğin devasa bir refaktör veya birden fazla modülün yazılması) tek bir ajana yükleyip beklemek yerine, sistem bir **lider ajan (lead agent)** atar.
+        
+    - Bu lider ajan işi parçalara böler, alt ajanlara (subagents) dağıtır, her biri arka planda eş zamanlı çalışır ve sonuçları en sonda lider ajan birleştirip senin önüne tek bir temiz PR olarak getirir. Sen de tek ekrandan bu süreci izlersin.
+        
+- **Agent SDK (Özel Orkestrasyon):**
+    
+    - Eğer hazır komutlar yetmezse, Anthropic'in sağladığı **Agent SDK**'yı kullanarak kendi özel ajan ağını kurabilirsin.
+        
+    - Hangi ajanın hangi araca erişebileceğini, izinleri, görev dağılım zincirini tamamen kendi kodladığın senaryolara göre programlayabilirsin.
+
 
