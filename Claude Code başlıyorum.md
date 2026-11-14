@@ -203,4 +203,18 @@ MCP olayına bakmam gerek sanırım büyük bir olay.
 
 claude --fork-session veya /branch farklı yolları denemek veya riske girince geri alabilmek için
 
-/context ise
+/context ise bağlam miktarı
+
+- **Görünmez Kurallar (Sistem Hatırlatıcıları):** Bazen Claude, senin ona açıkça söylemediğin bir kuralı uygular; örneğin Git commit mesajlarına otomatik olarak `Co-Authored-By` (ortak yazar) satırı ekleyebilir. Bu durum, arka planda çalışan "sistem hatırlatıcılarından" (system reminder) kaynaklanmaktadır.
+    
+- **Claude'un Sohbete Eklediği Bağlamlar:** Sen çalışırken, Claude senin mesajlarının yanına şu verileri de kendi kendine ekler:
+    
+    - Projendeki `CLAUDE.md` dosyalarınızın içeriği.
+        
+    - Çıktı stili (output style) talimatları.
+        
+    - Claude'un daha önceden okuduğu bir dosya bilgisayarında (diskte) değiştiğinde durumu bildiren bir not.
+        
+    - Git commit ve pull request işlemleri için atıf (attribution) satırları.
+        
+- **Bu Otomasyonları Kapatma:** Eğer Claude'un bu işlemleri kendi kendine yapmasını istemiyorsan ayarları değiştirebileceğin belirtilir. Atıf satırlarını değiştirmek veya kaldırmak için `attribution` ayarını kullanabilirsin. Claude'un yerleşik commit ve pull request talimatlarını tamamen kaldırmak istersen de, `includeGitInstructions` ayarını `false` yapman yeterlidir
