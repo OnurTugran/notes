@@ -144,3 +144,58 @@ MCP olayına bakmam gerek sanırım büyük bir olay.
     
     - Hazır araçlar yetmediğinde, kendi özel otomasyon ajanlarını kodlayarak Claude'un tüm yeteneklerini kendi sistemlerine entegre etmene olanak tanır.
 
+#### Shell komutları (Vault kök dizinindeki terminalinizden çalıştırın)
+
+- `claude` $\rightarrow$ Kasanızda etkileşimli modu başlatır
+    
+- `claude "organize my notes"` $\rightarrow$ Etkileşimli modu ilk komutla birlikte başlatır
+    
+- `claude -p "summarize today's note"` $\rightarrow$ Tek seferlik bir sorgu çalıştırır, ardından çıkar
+    
+- `claude -c` $\rightarrow$ Kasa dizinindeki en son sohbete devam eder
+    
+
+#### Oturum komutları (Claude Code içinde çalıştırın)
+
+- `/clear` $\rightarrow$ Yeni bir sohbet başlatır
+    
+- `/help` $\rightarrow$ Kullanılabilir komutları gösterir
+    
+- `/exit` $\rightarrow$ Claude Code'dan çıkar
+    
+
+### Obsidian kullanıcıları için profesyonel ipuçları
+
+- **İsteklerinizde net olun:**
+    
+    - _Şunun yerine:_ "clean up my notes"
+        
+    - _Şunu deneyin:_ "clean up the markdown formatting in the 2026/06 folder, fixing broken links"
+        
+- **Adım adım talimatlar kullanın:**
+    
+    - Karmaşık görevleri adımlara bölün:
+        
+        - `scan all markdown files for missing tags`
+            
+        - `add standard frontmatter YAML to notes that lack it`
+            
+        - `generate an index note linking them all together`
+            
+- **Önce Claude'un keşfetmesine izin verin:**
+    
+    - Değişiklik yapmadan önce Claude'un kasanızı okumasına izin verin:
+        
+        - `analyze the folder structure of my vault`
+            
+        - `find all notes related to my university courses`
+            
+- **Kısayollarla zaman kazanın:**
+    
+    - Kullanabileceğiniz komutları ve becerileri (skills) görmek için `/` yazın
+        
+    - Dosya adı tamamlama için `Tab` tuşunu kullanın
+        
+    - Komut geçmişi için `↑` (Yukarı Ok) tuşuna basın
+        
+    - İzin modları (sorarak yap/otomatik yap) arasında geçiş yapmak için `Shift+Tab` tuşlarına basın
