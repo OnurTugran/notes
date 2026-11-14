@@ -87,5 +87,7 @@ Kod odaklı olmayan, genel iletişim ve belge yönetimini düzenleyen araçlard�
     
 - **`/writing-for-agents`**: Ajancıkların, `AGENTS.md` / `CLAUDE.md` gibi dosyaların veya ajanların okuyacağı belgelerin en anlaşılır ve hatasız şekilde yazılmasını sağlar.
 
+MCP olayına bakmam gerek sanırım büyük bir olay.
+
 
 
