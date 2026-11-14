@@ -199,3 +199,8 @@ MCP olayına bakmam gerek sanırım büyük bir olay.
     - Komut geçmişi için `↑` (Yukarı Ok) tuşuna basın
         
     - İzin modları (sorarak yap/otomatik yap) arasında geçiş yapmak için `Shift+Tab` tuşlarına basın
+
+
+claude --fork-session veya /branch farklı yolları denemek veya riske girince geri alabilmek için
+
+/context ise
