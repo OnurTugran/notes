@@ -8,3 +8,84 @@ claude
 
 o proje içindeki terminalde yazmamız gerekli.
 
+Matt Pocock'un **"Skills for Real Engineers"** deposundaki beceriler, yapay zekayı rastgele kod üreten bir araçtan çıkarıp disiplinli, test odaklı ve mimari kararlar alan bir mühendislik asistanına dönüştürmek için tasarlanmıştır.
+
+Bu beceriler iki ana gruba ayrılır: Sadece senin komutunla çalışan **User-invoked** (Kullanıcı komutlu) araçlar ve hem senin çağırabileceğin hem de ajanın ihtiyaç duyduğunda arkada otomatik devreye sokabileceği **Model-invoked** (Model komutlu) disiplinler.
+
+Depodaki tüm becerilerin eksiksiz listesi ve ne işe yaradıkları:
+
+### 1. Engineering (Kod ve Yazılım Geliştirme Becerileri)
+
+Günlük kod yazma, mimari tasarlama ve hata ayıklama süreçlerinde kullanılan temel araçlardır.
+
+#### User-invoked (Komutla Çalışanlar)
+
+- **`/setup-matt-pocock-skills`**: Proje bazlı ilk kurulum komutudur. Projede kullanılacak issue tracker tercihini (GitHub, GitLab, yerel dosyalar) ve doküman yollarını yapılandırır. Her yeni projede bir kez çalıştırılır.
+    
+- **`/ask-matt`**: Mevcut durumun veya sorunun için hangi becerinin veya akışın uygun olduğunu sana söyleyen bir yönlendiricidir (router).
+    
+- **`/grill-with-docs`**: Kod yazmadan veya büyük bir değişiklik yapmadan önce seni sorguya çeken ("grill") detaylı bir mülakat seansıdır. Sürecin sonunda projenin terimler sözlüğünü (`GLOSSARY.md`) ve mimari kararlarını (`ADR`) günceller.
+    
+- **`/to-spec`**: O anki sohbeti ve fikirleri resmi bir teknik şartnameye (spec) dönüştürür ve issue tracker'a gönderir.
+    
+- **`/to-tickets`**: Bir planı veya şartnameyi küçük, yönetilebilir biletlere (görevlere) böler.
+    
+- **`/implement`**: Belirlenen bir şartnameyi veya biletleri, test kurallarına (`/tdd`) ve kod incelemesine (`/code-review`) sadık kalarak inşa eder.
+    
+- **`/implement-spec`**: Bütün bir şartnameyi entegrasyon dalında (branch) paralel alt ajanlar kullanarak en yüksek verimle hayata geçirir.
+    
+- **`/wayfinder`**: Tek bir ajan oturumuna sığmayacak kadar büyük ve karmaşık işleri, karar biletlerinden oluşan haritalara bölerek adım adım çözer.
+    
+- **`/triage`**: Projedeki görevleri / issue'ları belirli roller ve kurallar çerçevesinde bir durum makinesinden geçirerek sınıflandırır.
+    
+- **`/improve-codebase-architecture`**: Kod tabanını düzenli aralıklarla tarar, modülleri derinleştirme fırsatlarını raporlar ve seçtiğin mimari iyileştirme üzerinde seninle çalışır.
+    
+- **`/retro`**: Bir oturum bittiğinde ajanın çevresini (navigasyon, otomatik kontroller, standartlar) daha iyi hale getirmek için iyileştirme önerilerinde bulunur.
+    
+
+#### Model-invoked (Arka Planda / Gerektikçe Çalışanlar)
+
+- **`/tdd`**: Test-driven development (Test odaklı geliştirme) disiplinidir. Ajan önce hata veren bir test yazar, ardından kodu yazarak testi geçer ve refaktör eder.
+    
+- **`/diagnosing-bugs`**: Zorlu hatalarda ve performans düşüşlerinde kullanılan, adım adım hipotez kurma ve izleme döngüsü içeren hata ayıklama disiplinidir.
+    
+- **`/code-review`**: Yazılan kodun diff çıktılarını hem standartlara uyum (temizlik, kirlilik analizi) hem de şartnameye uygunluk açısından paralel alt ajanlarla inceler.
+    
+- **`/domain-modeling`**: Projenin alan modelini (domain model) aktif olarak geliştirir; terimleri sözlükte test eder ve edge-case senaryolarla güçlendirir.
+    
+- **`/codebase-design`**: Derin modüller tasarlamak (küçük bir arayüzün arkasında çok fazla işlevsellik barındırmak) için ortak bir disiplin ve kelime dağarcığı sağlar.
+    
+- **`/prototype`**: Tasarım sorularını çözmek için geçici prototipler (örneğin tek dosyalık interaktif HTML arayüzleri) inşa eder.
+    
+- **`/research`**: Güvenilir birincil kaynaklardan araştırma yapar ve bulguları repoya markdown dosyası olarak kaydeder.
+    
+- **`/pr`**: Pull Request metnini en sade görsel özet, kanıt ve birleştirme tehlikesi (blast radius) içerecek şekilde biçimlendirir.
+    
+- **`/wizard`**: Altyapı kurma, credential ayarlama veya manuel üçüncü taraf panellerini yönetme gibi adımlarda seni yönlendiren interaktif bir bash sihirbazı üretir.
+    
+
+### 2. Productivity (Genel Verimlilik ve İş Akışı Araçları)
+
+Kod odaklı olmayan, genel iletişim ve belge yönetimini düzenleyen araçlardır.
+
+#### User-invoked (Komutla Çalışanlar)
+
+- **`/grill-me`**: Herhangi bir plan veya tasarım fikrini, tüm açık uçlar çözülene kadar seni aralıksız sorguya çekerek olgunlaştıran popüler mülakat aracıdır.
+    
+- **`/handoff`**: Oturum bittiğinde veya token sınırı dolduğunda, o ana kadar yapılanları kompakt bir devir teslim belgesine sıkıştırarak sonraki ajana aktarır.
+    
+- **`/wait-what`**: Ajanın cevabı kafa karıştırıcı geldiğinde çalıştırılır; ajanı durdurup eksik bağlamı projenin ortak diliyle sade bir şekilde yeniden anlatmasını sağlar.
+    
+- **`/teach`**: Mevcut dizini durum bilgisi tutan bir çalışma alanı olarak kullanarak sana yeni bir beceri veya konsepti çoklu oturumlarda öğretir.
+    
+- **`/to-questionnaire`**: Yanıtlayamadığın kararları, projeye dışarıdan destek veren kişilere iletmek üzere yapılandırılmış bir Markdown anketine dönüştürür.
+    
+
+#### Model-invoked (Arka Planda / Gerektikçe Çalışanlar)
+
+- **`/grilling`**: `/grill-me`, `/grill-with-docs` gibi araçların arkasında çalışan temel mülakat yapma motorudur.
+    
+- **`/writing-for-agents`**: Ajancıkların, `AGENTS.md` / `CLAUDE.md` gibi dosyaların veya ajanların okuyacağı belgelerin en anlaşılır ve hatasız şekilde yazılmasını sağlar.
+
+
+
