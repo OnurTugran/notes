@@ -218,3 +218,5 @@ claude --fork-session veya /branch farklı yolları denemek veya riske girince g
     - Git commit ve pull request işlemleri için atıf (attribution) satırları.
         
 - **Bu Otomasyonları Kapatma:** Eğer Claude'un bu işlemleri kendi kendine yapmasını istemiyorsan ayarları değiştirebileceğin belirtilir. Atıf satırlarını değiştirmek veya kaldırmak için `attribution` ayarını kullanabilirsin. Claude'un yerleşik commit ve pull request talimatlarını tamamen kaldırmak istersen de, `includeGitInstructions` ayarını `false` yapman yeterlidir
+/config chat ayarları
+
