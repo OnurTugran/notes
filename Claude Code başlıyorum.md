@@ -220,3 +220,14 @@ claude --fork-session veya /branch farklı yolları denemek veya riske girince g
 - **Bu Otomasyonları Kapatma:** Eğer Claude'un bu işlemleri kendi kendine yapmasını istemiyorsan ayarları değiştirebileceğin belirtilir. Atıf satırlarını değiştirmek veya kaldırmak için `attribution` ayarını kullanabilirsin. Claude'un yerleşik commit ve pull request talimatlarını tamamen kaldırmak istersen de, `includeGitInstructions` ayarını `false` yapman yeterlidir
 /config chat ayarları
 
+- **Yardım İste:** Claude'a her zaman "Bunu nasıl yaparım?" diye sorabilirsin. Ayrıca projeni başlatmak için `/init` (otomatik CLAUDE.md oluşturur) ve ayarlarında sorun varsa `/doctor` (teşhis ve tamir) komutlarını kullanabilirsin.
+    
+- **Sohbet Havasında İlerleyin (Mükemmel Prompt Beklentisini Bırakın):** İlk komutunuz kusursuz olmak zorunda değil. "Giriş yapma hatasını çöz" diye başlarsın, Claude bir şey dener. Hata yaparsa, "Hayır, sorun oturum yönetiminde (session handling)" diye düzeltirsin. En baştan başlamak yerine üst üste koyarak ilerlersiniz.
+    
+- **Müdahale Et ve Yönlendir (Interrupt and steer):** Claude arka planda harıl harıl kod okurken yanlış yöne gittiğini fark edersen:
+    
+    - `Esc` tuşuna basıp onu anında durdurabilirsin.
+        
+    - O çalışırken doğrudan klavyeden yazıp `Enter`a basarsan, mesajın sıraya alınır (queued). Claude elindeki işlemi bitirir bitirmez mesajını okur ve rotasını senin yeni verdiğin bilgiye göre düzeltir.
+        
+- **Dikte Etme, Devret (Delegate, don’t dictate):** Yapay zekaya "Şu dosyayı aç, 15. satıra in, şu kodu sil" demek yerine usta bir mühendise iş verir gibi davran: _"Süresi dolmuş kredi kartlarında ödeme akışı çöküyor. Kod src/payments/ içinde. Sorunu bulup çözer misin?"_ Gerisini Claude kendisi halledecektir.
