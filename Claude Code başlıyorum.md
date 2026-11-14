@@ -122,3 +122,25 @@ MCP olayına bakmam gerek sanırım büyük bir olay.
     - Hangi ajanın hangi araca erişebileceğini, izinleri, görev dağılım zincirini tamamen kendi kodladığın senaryolara göre programlayabilirsin.
 
 
+- **Remote Control & Mobil Devamlılık (`claude --cloud`, mobil uygulama vb.):**
+    
+    - Bilgisayarda lokal olarak başlattığın bir Claude Code oturumunu dilediğinde telefonundan veya başka bir cihazdan uzaktan kontrol etmeye devam etmeni sağlar.
+        
+    - Telegram, Discord, iMessage veya özel webhooks üzerinden Claude oturumlarına dışarıdan komut/etkinlik (push event) tetikleyebilirsin.
+        
+- **Zamanlanmış Bulut Görevleri (Cloud / Desktop Scheduled Tasks):**
+    
+    - Claude'u sadece sen komut verdiğinde değil; örneğin her gece belirli bir saatte arka planda çalışacak şekilde otomatik periyodik görevlere bağlamanı sağlar.
+        
+- **CI/CD Entegrasyonları ve Otomatik Kod İnceleme (GitHub Actions / GitLab CI):**
+    
+    - Projeye açılan her bir Pull Request'e (PR) otomatik olarak kod incelemesi yaptırabilir, issue'ları triaj edebilir (sınıflandırabilir) veya Slack'ten gelen hata raporlarını doğrudan otomatik bir PR'a dönüştürebilirsin.
+        
+- **Tarayıcı ve Canlı Web Uygulama Hata Ayıklama (Chrome):**
+    
+    - Claude'un doğrudan tarayıcıyla etkileşime girerek canlı web uygulamalarındaki hataları test etmesini ve debug etmesini sağlar.
+        
+- **Agent SDK ile Özel İş Akışları:**
+    
+    - Hazır araçlar yetmediğinde, kendi özel otomasyon ajanlarını kodlayarak Claude'un tüm yeteneklerini kendi sistemlerine entegre etmene olanak tanır.
+
