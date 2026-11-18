@@ -19,7 +19,7 @@ tags:
 
 # Halüsinasyonları ve Aşırı Güvenmeyi Anlamak
 
-> ◀ [[06 - Model Parmak İzi ve Keşif|Model Parmak İzi ve Keşif]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]]
+> ◀ [[06 - Model Parmak İzi ve Keşif|Model Parmak İzi ve Keşif]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[08 - Sistem Prompt Çıkarma Teknikleri|Sistem Prompt Çıkarma Teknikleri]] ▶
 
 > [!abstract] Özet
 > **Halüsinasyon:** LLM'in gerçekte yanlış, uydurma veya anlamsız içerik üretip bunu doğru bilgiyle **aynı güvenle** sunmasıdır. **Aşırı güven (overreliance):** insanların LLM çıktısına **doğrulamadan** güvenme eğilimidir. İkisi birleşince yanlış tıbbi tavsiyeden, uydurma yazılım paketleri yoluyla **tedarik zinciri saldırılarına** kadar gerçek zarar doğurabilen tehlikeli bir kombinasyon oluşur.
@@ -234,4 +234,4 @@ Halüsinasyon riskini azaltmak için aşağıdaki stratejiler **birlikte** uygul
 - [[Human-in-the-loop]]
 
 ---
-> ◀ [[06 - Model Parmak İzi ve Keşif|Model Parmak İzi ve Keşif]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]]
+> ◀ [[06 - Model Parmak İzi ve Keşif|Model Parmak İzi ve Keşif]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[08 - Sistem Prompt Çıkarma Teknikleri|Sistem Prompt Çıkarma Teknikleri]] ▶

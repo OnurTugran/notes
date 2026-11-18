@@ -28,6 +28,7 @@ aliases:
 | 5 | [[05 - AI Red Teaming Etiği\|AI Red Teaming Etiği]] | Metodoloji, etik sınırlar, AB AI Yasası, GDPR, bug bounty, sorumlu açıklama, rapor şablonu |
 | 6 | [[06 - Model Parmak İzi ve Keşif\|Model Parmak İzi ve Keşif]] | Model fingerprinting, davranışsal ve API düzeyinde keşif, önlemler |
 | 7 | [[07 - Halüsinasyonlar ve Aşırı Güven\|Halüsinasyonları ve Aşırı Güvenmeyi Anlamak]] | Halüsinasyon türleri, slopsquatting (paket halüsinasyonu), aşırı güven, LLM09, savunma stratejileri |
+| 8 | [[08 - Sistem Prompt Çıkarma Teknikleri\|Sistem Prompt Çıkarma Teknikleri]] | LLM07, doğrudan/dolaylı/gelişmiş extraction teknikleri (25 teknik), tespit göstergeleri, savunma |
 
 ```mermaid
 flowchart LR
@@ -37,6 +38,7 @@ flowchart LR
     D --> E["5. Red Teaming etiği"]
     E --> F["6. Keşif ve fingerprinting"]
     F --> G["7. Halüsinasyon ve aşırı güven"]
+    G --> H["8. Sistem prompt çıkarma"]
 ```
 
 ## Hızlı erişim
@@ -49,6 +51,8 @@ flowchart LR
 - **Etik sınırlar:** [[05 - AI Red Teaming Etiği#Etik İlkeler ve Sınırlar|Ne kabul edilebilir, ne edilemez?]]
 - **Slopsquatting (paket halüsinasyonu) saldırısı:** [[07 - Halüsinasyonlar ve Aşırı Güven#Paket Halüsinasyon Saldırıları|Nasıl çalışır?]]
 - **Halüsinasyona karşı savunma tablosu:** [[07 - Halüsinasyonlar ve Aşırı Güven#Halüsinasyonlara Karşı Savunma|Savunma stratejileri]]
+- **System prompt çıkarma teknikleri (25 teknik):** [[08 - Sistem Prompt Çıkarma Teknikleri#Doğrudan Ekstraksiyon Teknikleri|Doğrudan]] · [[08 - Sistem Prompt Çıkarma Teknikleri#Dolaylı Ekstraksiyon Teknikleri|Dolaylı]] · [[08 - Sistem Prompt Çıkarma Teknikleri#Gelişmiş Ekstraksiyon Teknikleri|Gelişmiş]]
+- **Extraction tespit göstergeleri:** [[08 - Sistem Prompt Çıkarma Teknikleri#Sistem Prompt Çıkarma Girişimlerini Algılama|Göstergeler ve detection]]
 - **Model parmak izi veritabanı yapısı:** [[06 - Model Parmak İzi ve Keşif#Model Parmak İzi Veritabanı Oluşturma|JSON yapısı]]
 
 ## Temel fikirler (tek cümlede)
@@ -61,6 +65,7 @@ flowchart LR
 > 5. **Yetkilendirme, kapsam uyumu ve sorumlu açıklama tartışılamaz.**
 > 6. **Model parmak izi keşfin ilk adımıdır**; modelin kendini tanıtmasına değil, çoklu kanıta güven.
 > 7. **LLM doğruluk için değil inandırıcılık için optimize edilir.** Paket adı, URL, içtihat ve yapılandırmayı bağımsız kaynakla doğrula.
+> 8. **System prompt gizli kalmaz.** Sırları (API key, şifre) prompt'a koyma, kuralları uygulama kodunda zorla.
 
 ## Bağlantılı konular
 - [[Prompt Injection]] · [[Jailbreak]] · [[RAG]] · [[SSRF]] · [[Excessive Agency]]
