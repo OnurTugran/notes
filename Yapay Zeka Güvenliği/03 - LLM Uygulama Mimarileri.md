@@ -1,5 +1,5 @@
 ---
-title: LLM Uygulama Mimarileri
+title: "LLM Uygulama Mimarileri"
 bolum: 3
 tarih: 2026-11-18
 ana-not: "[[00 - Yapay zeka]]"
@@ -27,7 +27,7 @@ tags:
 - [[#Ajan Mimarisi]]
 - [[#Çok Ajanlı Mimari]]
 - [[#Model Context Protocol (MCP)]]
-- [[#Doğru Mimariyi Seçmek: Güvenlik Konuları]]
+- [[#Doğru Mimariyi Seçmek Güvenlik Konuları]]
 
 ---
 

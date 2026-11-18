@@ -1,5 +1,5 @@
 ---
-title: Model Parmak İzi ve Keşif
+title: "Model Parmak İzi ve Keşif"
 bolum: 6
 tarih: 2026-11-18
 ana-not: "[[00 - Yapay zeka]]"
@@ -17,7 +17,7 @@ tags:
 
 # Model Parmak İzi ve Keşif
 
-> ◀ [[05 - AI Red Teaming Etiği|AI Red Teaming Etiği]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]]
+> ◀ [[05 - AI Red Teaming Etiği|AI Red Teaming Etiği]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[07 - Halüsinasyonlar ve Aşırı Güven|Halüsinasyonları ve Aşırı Güvenmeyi Anlamak]] ▶
 
 > [!abstract] Özet
 > **Model parmak izi alma (model fingerprinting)**, kara kutu bir AI arayüzünün arkasındaki **temel LLM'i, sürümünü ve yapılandırmasını** tanımlama sürecidir. Sızma testi uzmanının hedefin işletim sistemini, web sunucusunu ve yazılım sürümlerini keşifle belirlemesi gibi, AI Red Team uzmanı da önce hedef uygulamaya güç veren modeli tanımlar. Çünkü farklı modellerin **farklı bilinen zafiyetleri, davranış kalıpları ve atlatma teknikleri** vardır.
@@ -398,4 +398,4 @@ Parmak izini anlamak **savunmacılar** için de kritiktir. Parmak izi almayı zo
 - [[LiteLLM]]
 
 ---
-> ◀ [[05 - AI Red Teaming Etiği|AI Red Teaming Etiği]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]]
+> ◀ [[05 - AI Red Teaming Etiği|AI Red Teaming Etiği]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[07 - Halüsinasyonlar ve Aşırı Güven|Halüsinasyonları ve Aşırı Güvenmeyi Anlamak]] ▶

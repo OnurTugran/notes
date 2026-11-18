@@ -27,6 +27,7 @@ aliases:
 | 4 | [[04 - OWASP LLM Top 10\|OWASP LLM Top 10]] | LLM01-LLM10, saldırı yüzeyi haritası, MITRE ATLAS |
 | 5 | [[05 - AI Red Teaming Etiği\|AI Red Teaming Etiği]] | Metodoloji, etik sınırlar, AB AI Yasası, GDPR, bug bounty, sorumlu açıklama, rapor şablonu |
 | 6 | [[06 - Model Parmak İzi ve Keşif\|Model Parmak İzi ve Keşif]] | Model fingerprinting, davranışsal ve API düzeyinde keşif, önlemler |
+| 7 | [[07 - Halüsinasyonlar ve Aşırı Güven\|Halüsinasyonları ve Aşırı Güvenmeyi Anlamak]] | Halüsinasyon türleri, slopsquatting (paket halüsinasyonu), aşırı güven, LLM09, savunma stratejileri |
 
 ```mermaid
 flowchart LR
@@ -35,16 +36,19 @@ flowchart LR
     C --> D["4. OWASP Top 10"]
     D --> E["5. Red Teaming etiği"]
     E --> F["6. Keşif ve fingerprinting"]
+    F --> G["7. Halüsinasyon ve aşırı güven"]
 ```
 
 ## Hızlı erişim
 
 - **Saldırı yüzeyi haritası:** [[04 - OWASP LLM Top 10#Yapay Zeka Saldırı Yüzeyi|Yapay Zeka Saldırı Yüzeyi]]
 - **OWASP hızlı referans tablosu:** [[04 - OWASP LLM Top 10#OWASP LLM Top 10 Hızlı Referans|LLM01-LLM10 tablosu]]
-- **Mimari karşılaştırma tablosu:** [[03 - LLM Uygulama Mimarileri#Doğru Mimariyi Seçmek: Güvenlik Konuları|Hangi mimari hangi riski taşır?]]
-- **Geleneksel güvenlik vs AI güvenliği:** [[02 - Yapay Zeka Güvenliği Neden Farklı#Geleneksel Güvenlik ve Yapay Zeka Güvenliği: Karşılaştırma|Karşılaştırma tablosu]]
+- **Mimari karşılaştırma tablosu:** [[03 - LLM Uygulama Mimarileri#Doğru Mimariyi Seçmek Güvenlik Konuları|Hangi mimari hangi riski taşır?]]
+- **Geleneksel güvenlik vs AI güvenliği:** [[02 - Yapay Zeka Güvenliği Neden Farklı#Geleneksel Güvenlik ve Yapay Zeka Güvenliği Karşılaştırma|Karşılaştırma tablosu]]
 - **Zafiyet raporu şablonu:** [[05 - AI Red Teaming Etiği#Yapay Zeka Güvenlik Açığı Raporu Yazma|Rapor şablonu]]
 - **Etik sınırlar:** [[05 - AI Red Teaming Etiği#Etik İlkeler ve Sınırlar|Ne kabul edilebilir, ne edilemez?]]
+- **Slopsquatting (paket halüsinasyonu) saldırısı:** [[07 - Halüsinasyonlar ve Aşırı Güven#Paket Halüsinasyon Saldırıları|Nasıl çalışır?]]
+- **Halüsinasyona karşı savunma tablosu:** [[07 - Halüsinasyonlar ve Aşırı Güven#Halüsinasyonlara Karşı Savunma|Savunma stratejileri]]
 - **Model parmak izi veritabanı yapısı:** [[06 - Model Parmak İzi ve Keşif#Model Parmak İzi Veritabanı Oluşturma|JSON yapısı]]
 
 ## Temel fikirler (tek cümlede)
@@ -56,6 +60,7 @@ flowchart LR
 > 4. **LLM çıktısı güvenilmez girdidir.** Alt sistemlere geçmeden sanitize et.
 > 5. **Yetkilendirme, kapsam uyumu ve sorumlu açıklama tartışılamaz.**
 > 6. **Model parmak izi keşfin ilk adımıdır**; modelin kendini tanıtmasına değil, çoklu kanıta güven.
+> 7. **LLM doğruluk için değil inandırıcılık için optimize edilir.** Paket adı, URL, içtihat ve yapılandırmayı bağımsız kaynakla doğrula.
 
 ## Bağlantılı konular
 - [[Prompt Injection]] · [[Jailbreak]] · [[RAG]] · [[SSRF]] · [[Excessive Agency]]

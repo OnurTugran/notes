@@ -1,5 +1,5 @@
 ---
-title: Yapay Zeka Güvenliği Neden Farklı?
+title: "Yapay Zeka Güvenliği Neden Farklı?"
 bolum: 2
 tarih: 2026-11-18
 ana-not: "[[00 - Yapay zeka]]"
@@ -25,7 +25,7 @@ tags:
 ## İçindekiler (Bölüm 2)
 - [[#Deterministik ve Olasılıksal Sistemler]]
 - [[#Güvenlikle İlgili Determinizm Dışı Zorluklar]]
-- [[#Geleneksel Güvenlik ve Yapay Zeka Güvenliği: Karşılaştırma]]
+- [[#Geleneksel Güvenlik ve Yapay Zeka Güvenliği Karşılaştırma]]
 - [[#Anlamsal Boşluk Sorunu]]
 - [[#Ortaya Çıkan Davranışlar ve Tahmin Edilemezlik]]
 - [[#Saldırı Yüzeyi Dilin Kendisidir]]
