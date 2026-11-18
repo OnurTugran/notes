@@ -1,8 +1,8 @@
 ---
-title: "AI Red Teaming Etiği"
+title: AI Red Teaming Etiği
 bolum: 5
 tarih: 2026-11-18
-ana-not: "[[Yapay zeka]]"
+ana-not: "[[00 - Yapay zeka]]"
 aliases:
   - AI Red Teaming
   - AI Red Teaming Etiği
@@ -19,7 +19,7 @@ tags:
 
 # AI Red Teaming Etiği
 
-> ◀ [[04 - OWASP LLM Top 10|LLM Uygulamaları için OWASP Top 10]] · 📚 [[Yapay zeka|Ana Sayfa (MOC)]] · [[06 - Model Parmak İzi ve Keşif|Model Parmak İzi ve Keşif]] ▶
+> ◀ [[04 - OWASP LLM Top 10|LLM Uygulamaları için OWASP Top 10]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[06 - Model Parmak İzi ve Keşif|Model Parmak İzi ve Keşif]] ▶
 
 > [!abstract] Özet
 > **AI Red Teaming**, yapay zeka sistemlerini güvenlik açıkları, önyargılar ve güvenlik hataları açısından sistematik olarak sınama uygulamasıdır. Geleneksel sızma testlerinden farklı bir **etik çerçeve** gerektirir; çünkü "zafiyetler" çoğu zaman insan benzeri çıktı üreten bir sistemin manipüle edilmesini içerir ve zarar potansiyeli veri ihlallerinin ötesine geçerek **yanlış bilgilendirme, ayrımcılık ve psikolojik manipülasyonu** da kapsayabilir.
@@ -357,4 +357,4 @@ Ortam:
 - [[Jailbreak]]
 
 ---
-> ◀ [[04 - OWASP LLM Top 10|LLM Uygulamaları için OWASP Top 10]] · 📚 [[Yapay zeka|Ana Sayfa (MOC)]] · [[06 - Model Parmak İzi ve Keşif|Model Parmak İzi ve Keşif]] ▶
+> ◀ [[04 - OWASP LLM Top 10|LLM Uygulamaları için OWASP Top 10]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[06 - Model Parmak İzi ve Keşif|Model Parmak İzi ve Keşif]] ▶

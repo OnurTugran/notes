@@ -1,8 +1,8 @@
 ---
-title: "LLM Güvenliğine Giriş"
+title: LLM Güvenliğine Giriş
 bolum: 1
 tarih: 2026-11-18
-ana-not: "[[Yapay zeka]]"
+ana-not: "[[00 - Yapay zeka]]"
 aliases:
   - LLM Güvenliğine Giriş
   - LLM Giriş
@@ -18,7 +18,7 @@ tags:
 
 # LLM Güvenliğine Giriş
 
-> 📚 [[Yapay zeka|Ana Sayfa (MOC)]] · [[02 - Yapay Zeka Güvenliği Neden Farklı|Yapay Zeka Güvenliği Neden Farklı?]] ▶
+> 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[02 - Yapay Zeka Güvenliği Neden Farklı|Yapay Zeka Güvenliği Neden Farklı?]] ▶
 
 > [!abstract] Özet
 > Büyük Dil Modellerine (LLM) nasıl saldıracağımızı veya onları nasıl savunacağımızı anlamak için önce içeriden nasıl çalıştıklarını bilmek gerekir. Bu not; mimariyi, mekanizmaları ve temel kavramları **güvenlik odaklı** ele alır.
@@ -406,4 +406,4 @@ LLM'lerin kritik uygulamalara hızla konuşlandırılması yeni ve benzeri gör�
 #siber-guvenlik #llm #yapay-zeka
 
 ---
-> 📚 [[Yapay zeka|Ana Sayfa (MOC)]] · [[02 - Yapay Zeka Güvenliği Neden Farklı|Yapay Zeka Güvenliği Neden Farklı?]] ▶
+> 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[02 - Yapay Zeka Güvenliği Neden Farklı|Yapay Zeka Güvenliği Neden Farklı?]] ▶

@@ -1,8 +1,8 @@
 ---
-title: "LLM Uygulamaları için OWASP Top 10"
+title: LLM Uygulamaları için OWASP Top 10
 bolum: 4
 tarih: 2026-11-18
-ana-not: "[[Yapay zeka]]"
+ana-not: "[[00 - Yapay zeka]]"
 aliases:
   - OWASP LLM Top 10
   - LLM Uygulamaları için OWASP Top 10
@@ -16,7 +16,7 @@ tags:
 
 # LLM Uygulamaları için OWASP Top 10
 
-> ◀ [[03 - LLM Uygulama Mimarileri|LLM Uygulama Mimarileri]] · 📚 [[Yapay zeka|Ana Sayfa (MOC)]] · [[05 - AI Red Teaming Etiği|AI Red Teaming Etiği]] ▶
+> ◀ [[03 - LLM Uygulama Mimarileri|LLM Uygulama Mimarileri]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[05 - AI Red Teaming Etiği|AI Red Teaming Etiği]] ▶
 
 > [!abstract] Özet
 > LLM uygulamalarının saldırı yüzeyini ve endüstri standardı zafiyet sınıflandırmasını anlamak, hem saldırı hem savunma çalışmaları için kritiktir. Bu bölüm tüm yapay zeka saldırı yüzeyinin haritasını çıkarır ve **OWASP LLM Top 10**'un her maddesini ayrıntılı işler.
@@ -332,4 +332,4 @@ LLM uygulamasının kontrolsüz kaynak kullanımına izin vermesi; **hizmet redd
 - [[MITRE ATLAS]]
 
 ---
-> ◀ [[03 - LLM Uygulama Mimarileri|LLM Uygulama Mimarileri]] · 📚 [[Yapay zeka|Ana Sayfa (MOC)]] · [[05 - AI Red Teaming Etiği|AI Red Teaming Etiği]] ▶
+> ◀ [[03 - LLM Uygulama Mimarileri|LLM Uygulama Mimarileri]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[05 - AI Red Teaming Etiği|AI Red Teaming Etiği]] ▶

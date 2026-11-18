@@ -1,8 +1,8 @@
 ---
-title: "Yapay Zeka Güvenliği Neden Farklı?"
+title: Yapay Zeka Güvenliği Neden Farklı?
 bolum: 2
 tarih: 2026-11-18
-ana-not: "[[Yapay zeka]]"
+ana-not: "[[00 - Yapay zeka]]"
 aliases:
   - Yapay Zeka Güvenliği Neden Farklı
   - Deterministik ve Olasılıksal
@@ -17,7 +17,7 @@ tags:
 
 # Yapay Zeka Güvenliği Neden Farklı?
 
-> ◀ [[01 - LLM Güvenliğine Giriş|LLM Güvenliğine Giriş]] · 📚 [[Yapay zeka|Ana Sayfa (MOC)]] · [[03 - LLM Uygulama Mimarileri|LLM Uygulama Mimarileri]] ▶
+> ◀ [[01 - LLM Güvenliğine Giriş|LLM Güvenliğine Giriş]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[03 - LLM Uygulama Mimarileri|LLM Uygulama Mimarileri]] ▶
 
 > [!abstract] Özet
 > Geleneksel yazılım güvenliği ile yapay zeka güvenliği aynı disiplinin varyasyonları gibi görünse de **doğaları, tehdit modelleri ve savunma stratejileri** temelden farklıdır. Siber güvenliğin yerleşik kuralları LLM tabanlı sistemlere tam olarak uygulanamaz; **yeni bir güvenlik zihniyeti** gerekir.
@@ -240,4 +240,4 @@ LLM güvenliğinde ise **her savunma olasılıksaldır**:
 - [[AI Supply Chain]]
 
 ---
-> ◀ [[01 - LLM Güvenliğine Giriş|LLM Güvenliğine Giriş]] · 📚 [[Yapay zeka|Ana Sayfa (MOC)]] · [[03 - LLM Uygulama Mimarileri|LLM Uygulama Mimarileri]] ▶
+> ◀ [[01 - LLM Güvenliğine Giriş|LLM Güvenliğine Giriş]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[03 - LLM Uygulama Mimarileri|LLM Uygulama Mimarileri]] ▶

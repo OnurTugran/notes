@@ -1,8 +1,8 @@
 ---
-title: "LLM Uygulama Mimarileri"
+title: LLM Uygulama Mimarileri
 bolum: 3
 tarih: 2026-11-18
-ana-not: "[[Yapay zeka]]"
+ana-not: "[[00 - Yapay zeka]]"
 aliases:
   - LLM Uygulama Mimarileri
 tags:
@@ -16,7 +16,7 @@ tags:
 
 # LLM Uygulama Mimarileri
 
-> ◀ [[02 - Yapay Zeka Güvenliği Neden Farklı|Yapay Zeka Güvenliği Neden Farklı?]] · 📚 [[Yapay zeka|Ana Sayfa (MOC)]] · [[04 - OWASP LLM Top 10|LLM Uygulamaları için OWASP Top 10]] ▶
+> ◀ [[02 - Yapay Zeka Güvenliği Neden Farklı|Yapay Zeka Güvenliği Neden Farklı?]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[04 - OWASP LLM Top 10|LLM Uygulamaları için OWASP Top 10]] ▶
 
 > [!abstract] Özet
 > LLM'ler nadiren bağımsız model olarak dağıtılır; veritabanlarına, API'lere, araçlara ve diğer sistemlere bağlayan karmaşık uygulama mimarilerine gömülürler. **Her mimari kendine özgü saldırı yüzeyini sunar.** Bir LLM'nin nasıl entegre edildiği, saldırganın neyi başarabileceğini belirler.
@@ -332,4 +332,4 @@ MCP **protokol düzeyinde** saldırı vektörleri getirir:
 - [[Principle of Least Privilege]]
 
 ---
-> ◀ [[02 - Yapay Zeka Güvenliği Neden Farklı|Yapay Zeka Güvenliği Neden Farklı?]] · 📚 [[Yapay zeka|Ana Sayfa (MOC)]] · [[04 - OWASP LLM Top 10|LLM Uygulamaları için OWASP Top 10]] ▶
+> ◀ [[02 - Yapay Zeka Güvenliği Neden Farklı|Yapay Zeka Güvenliği Neden Farklı?]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[04 - OWASP LLM Top 10|LLM Uygulamaları için OWASP Top 10]] ▶
