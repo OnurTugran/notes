@@ -14,7 +14,7 @@ tags:
 
 # Dosya Sistemi ve Disk Yönetimi
 
-> ◀ [[04_Süreçler_ve_Görev_Zamanlama|Süreçler ve Görev Zamanlama]] · 📚 [[00_Linux_Komutları|İndeks]] · [[06_Ağ_Yapılandırması_ve_Güvenliği|Ağ Yapılandırması ve Güvenliği]] ▶
+> ◀ [Süreçler ve Görev Zamanlama](04_S%C3%BCre%C3%A7ler_ve_G%C3%B6rev_Zamanlama.md) · 📚 [İndeks](00_Linux_Komutlar%C4%B1.md) · [Ağ Yapılandırması ve Güvenliği](06_A%C4%9F_Yap%C4%B1land%C4%B1rmas%C4%B1_ve_G%C3%BCvenli%C4%9Fi.md) ▶
 
 ## 1. Dosya Sistemleri (File Systems)
 Linux, diski formatlarken kullanabileceğin farklı dosya sistemlerini destekler. Her birinin kullanım amacı farklıdır:
@@ -50,4 +50,4 @@ Fiziksel RAM dolduğunda sistemin çökmemesi için sabit diskte (HDD/SSD) ayrı
 *   İlgili komutlar: Alan oluşturmak için `mkswap`, aktif etmek için `swapon` kullanılır.
 
 ---
-> ◀ [[04_Süreçler_ve_Görev_Zamanlama|Süreçler ve Görev Zamanlama]] · 📚 [[00_Linux_Komutları|İndeks]] · [[06_Ağ_Yapılandırması_ve_Güvenliği|Ağ Yapılandırması ve Güvenliği]] ▶
+> ◀ [Süreçler ve Görev Zamanlama](04_S%C3%BCre%C3%A7ler_ve_G%C3%B6rev_Zamanlama.md) · 📚 [İndeks](00_Linux_Komutlar%C4%B1.md) · [Ağ Yapılandırması ve Güvenliği](06_A%C4%9F_Yap%C4%B1land%C4%B1rmas%C4%B1_ve_G%C3%BCvenli%C4%9Fi.md) ▶

@@ -13,11 +13,12 @@ tags:
 
 # Yetki Yükseltme
 
-> 📚 [[Siber_Güvenlik_Ana_Sayfa|Ana Sayfa]]
+> 📚 [Ana Sayfa](../Siber_G%C3%BCvenlik_Ana_Sayfa.md)
 
-> [!abstract] Bu klasör
+> [!NOTE]
+> **Bu klasör**
 > Linux üzerinde yerel yetki yükseltme teknikleri. Yeni teknikler eklendikçe tabloya eklenir.
 
 | Not | İçerik |
 |---|---|
-| [[01_Linux_Capability_ile_Hak_Yükseltme\|Linux Capability ile Hak Yükseltme]] | getcap taraması, cap_setuid ile root, onarım |
+| [Linux Capability ile Hak Yükseltme](01_Linux_Capability_ile_Hak_Y%C3%BCkseltme.md) | getcap taraması, cap_setuid ile root, onarım |

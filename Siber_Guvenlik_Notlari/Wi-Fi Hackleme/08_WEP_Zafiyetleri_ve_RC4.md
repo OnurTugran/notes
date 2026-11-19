@@ -14,20 +14,21 @@ tags:
 
 # WEP Zafiyetleri ve RC4
 
-> ◀ [[07.5_MDK4_ile_WPS_Kilidi_DoS|MDK4 ile WPS Kilidi / DoS]] · 📚 [[00_Wi-Fi_Hackleme_İndex|İndeks]] · [[08.1_WEP_ARP_Request_Replay|WEP ARP Request Replay]] ▶
+> ◀ [MDK4 ile WPS Kilidi / DoS](07.5_MDK4_ile_WPS_Kilidi_DoS.md) · 📚 [İndeks](00_Wi-Fi_Hackleme_%C4%B0ndex.md) · [WEP ARP Request Replay](08.1_WEP_ARP_Request_Replay.md) ▶
 
-> [!abstract] Özet
+> [!NOTE]
+> **Özet**
 > **WEP** artık kırık sayılır: **24-bit IV** çok küçüktür (tekrar eder), IV **şifresiz** gider ve bütünlük için **CRC32** kullanılır (kriptografik değil). Yeterli IV toplanınca anahtar istatistiksel olarak (PTW/FMS/KoreK) bulunur.
 
 ## Hangi saldırı, ne zaman?
 
 | Durum | Saldırı | Not |
 |---|---|---|
-| Ağda aktif istemci var, ARP trafiği üretiyor | [[08.1_WEP_ARP_Request_Replay\|ARP Request Replay]] | En basit ve hızlı |
-| Yakalanan paketten keystream lazım | [[08.2_WEP_KoreK_Chop_Chop\|KoreK Chop Chop]] | Anahtarı bilmeden paket çözer |
-| İstemci var ama gerçek AP'ye erişim / ARP trafiği yok | [[08.3_WEP_Cafe_Latte\|Cafe Latte]] | Sahte AP + deauth, 4 terminal |
-| Hiç istemci yok | [[08.4_WEP_İstemcisiz_Saldırı\|İstemcisiz saldırı]] | Fake auth + chop-chop/fragmentation |
-| Çok az paket, 5 karakterlik anahtar | [[08.5_WEP_Ek_Yöntemler_ve_Bruteforce\|Bruteforce]] | Sözlükle |
+| Ağda aktif istemci var, ARP trafiği üretiyor | [ARP Request Replay](08.1_WEP_ARP_Request_Replay.md) | En basit ve hızlı |
+| Yakalanan paketten keystream lazım | [KoreK Chop Chop](08.2_WEP_KoreK_Chop_Chop.md) | Anahtarı bilmeden paket çözer |
+| İstemci var ama gerçek AP'ye erişim / ARP trafiği yok | [Cafe Latte](08.3_WEP_Cafe_Latte.md) | Sahte AP + deauth, 4 terminal |
+| Hiç istemci yok | [İstemcisiz saldırı](08.4_WEP_%C4%B0stemcisiz_Sald%C4%B1r%C4%B1.md) | Fake auth + chop-chop/fragmentation |
+| Çok az paket, 5 karakterlik anahtar | [Bruteforce](08.5_WEP_Ek_Y%C3%B6ntemler_ve_Bruteforce.md) | Sözlükle |
 
 ---
 
@@ -74,7 +75,8 @@ WEP ağlarında iki tür kimlik doğrulama bulunur:
 ## 5. Python ile WEP Seed Üretimi Kavramsal Simülasyonu
 Aşağıdaki Python kodu, WEP'in şifreleme tohumunu nasıl oluşturduğunu ve RC4'ü nasıl başlattığını gösterir.
 
-> [!note] Kurulum
+> [!NOTE]
+> **Kurulum**
 > `pip install pycryptodome` gerekir.
 
 ```python
@@ -116,7 +118,7 @@ WEP, verinin iletim sırasında bozulup bozulmadığını veya değiştirilip de
 ---
 
 ### 2. KoreK Chop Chop
-Bu saldırı CRC32/ICV zafiyetini kullanır, ayrıntısı: [[08.2_WEP_KoreK_Chop_Chop]].
+Bu saldırı CRC32/ICV zafiyetini kullanır, ayrıntısı: [08.2_WEP_KoreK_Chop_Chop](08.2_WEP_KoreK_Chop_Chop.md).
 
 ### 3. Python ile CRC32 (ICV) Üretimi Simülasyonu
 WEP algoritmasının bütünlük doğrulama adımını Python'daki yerleşik `zlib` kütüphanesi ile pratikte şu şekilde hesaplayabiliriz:
@@ -260,4 +262,4 @@ Wireshark Arayüzünde IV Bulma Adımları:
 4. Initialization Vector (IV) alanında yazan değeri (ör. 0x123456) tespit et.
 
 ---
-> ◀ [[07.5_MDK4_ile_WPS_Kilidi_DoS|MDK4 ile WPS Kilidi / DoS]] · 📚 [[00_Wi-Fi_Hackleme_İndex|İndeks]] · [[08.1_WEP_ARP_Request_Replay|WEP ARP Request Replay]] ▶
+> ◀ [MDK4 ile WPS Kilidi / DoS](07.5_MDK4_ile_WPS_Kilidi_DoS.md) · 📚 [İndeks](00_Wi-Fi_Hackleme_%C4%B0ndex.md) · [WEP ARP Request Replay](08.1_WEP_ARP_Request_Replay.md) ▶

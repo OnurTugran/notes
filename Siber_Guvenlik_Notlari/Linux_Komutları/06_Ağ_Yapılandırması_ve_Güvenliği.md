@@ -14,14 +14,15 @@ tags:
 
 # Ağ Yapılandırması ve Güvenliği
 
-> ◀ [[05_Dosya_Sistemi_ve_Disk|Dosya Sistemi ve Disk Yönetimi]] · 📚 [[00_Linux_Komutları|İndeks]] · [[07_Iptables_Güvenlik_Duvarı|Iptables ve Güvenlik Duvarı]] ▶
+> ◀ [Dosya Sistemi ve Disk Yönetimi](05_Dosya_Sistemi_ve_Disk.md) · 📚 [İndeks](00_Linux_Komutlar%C4%B1.md) · [Iptables ve Güvenlik Duvarı](07_Iptables_G%C3%BCvenlik_Duvar%C4%B1.md) ▶
 
 Sızma testlerinde (penetration testing) Linux ağ ayarlarını yapılandırmak, ağ trafiğini yönlendirmek ve güvenliği sağlamak kritik bir beceridir. Bu bölüm ağ arayüzlerini, erişim modellerini, sorun giderme araçlarını ve sistemi sıkılaştırma (hardening) yöntemlerini kapsar.
 
 ## 1. Ağ Arayüzlerini Yapılandırma
 Linux'ta ağ kartlarını ve bağlantıları yönetmek için geleneksel olarak `ifconfig`, güncel sistemlerde ise `ip` komutu kullanılır.
 
-> [!note] ifconfig/route eskidi
+> [!NOTE]
+> **ifconfig/route eskidi**
 > `ifconfig`, `route` ve `netstat` eski `net-tools` paketindendir. Modern karşılıkları: `ip addr`, `ip route`, `ss`. Aşağıda ikisi yan yana verilmiştir.
 
 ```bash
@@ -97,4 +98,4 @@ Sistemi yetkisiz erişimlere ve sömürülere karşı korumak için üç temel m
 3. **TCP Wrappers:** Gelen bağlantıları IP adresine göre engelleyen (deny) veya izin veren (allow) host-tabanlı basit bir araçtır. Ağ seviyesinde temel bir koruma sağlar.
 
 ---
-> ◀ [[05_Dosya_Sistemi_ve_Disk|Dosya Sistemi ve Disk Yönetimi]] · 📚 [[00_Linux_Komutları|İndeks]] · [[07_Iptables_Güvenlik_Duvarı|Iptables ve Güvenlik Duvarı]] ▶
+> ◀ [Dosya Sistemi ve Disk Yönetimi](05_Dosya_Sistemi_ve_Disk.md) · 📚 [İndeks](00_Linux_Komutlar%C4%B1.md) · [Iptables ve Güvenlik Duvarı](07_Iptables_G%C3%BCvenlik_Duvar%C4%B1.md) ▶

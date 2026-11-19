@@ -19,9 +19,10 @@ tags:
 
 # AI Red Teaming Etiği
 
-> ◀ [[04 - OWASP LLM Top 10|LLM Uygulamaları için OWASP Top 10]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[06 - Model Parmak İzi ve Keşif|Model Parmak İzi ve Keşif]] ▶
+> ◀ [LLM Uygulamaları için OWASP Top 10](04%20-%20OWASP%20LLM%20Top%2010.md) · 📚 [Ana Sayfa (MOC)](00%20-%20Yapay%20zeka.md) · [Model Parmak İzi ve Keşif](06%20-%20Model%20Parmak%20%C4%B0zi%20ve%20Ke%C5%9Fif.md) ▶
 
-> [!abstract] Özet
+> [!NOTE]
+> **Özet**
 > **AI Red Teaming**, yapay zeka sistemlerini güvenlik açıkları, önyargılar ve güvenlik hataları açısından sistematik olarak sınama uygulamasıdır. Geleneksel sızma testlerinden farklı bir **etik çerçeve** gerektirir; çünkü "zafiyetler" çoğu zaman insan benzeri çıktı üreten bir sistemin manipüle edilmesini içerir ve zarar potansiyeli veri ihlallerinin ötesine geçerek **yanlış bilgilendirme, ayrımcılık ve psikolojik manipülasyonu** da kapsayabilir.
 
 ## İçindekiler (Bölüm 5)
@@ -51,8 +52,9 @@ Güvenlik profesyonellerinin (**Red Team** üyeleri) gerçek dünyadaki saldır�
 | **Çıktı** | Proof of Concept ile **tekrarlanabilir** exploit'ler | Saldırı promptları (çoğu zaman **tutarlı biçimde tekrarlanamaz**) |
 | **Beceriler** | Programlama, ağ, işletim sistemi iç yapıları | Dilbilim, psikoloji, sosyal mühendislik, makine öğrenimi bilgisi |
 
-> [!tip] Bağlantı
-> Tekrarlanamazlık sorunu için bkz. [[02 - Yapay Zeka Güvenliği Neden Farklı#Tekrarlanamayan Güvenlik Açıkları|Tekrarlanamayan Güvenlik Açıkları]].
+> [!TIP]
+> **Bağlantı**
+> Tekrarlanamazlık sorunu için bkz. [Tekrarlanamayan Güvenlik Açıkları](02%20-%20Yapay%20Zeka%20G%C3%BCvenli%C4%9Fi%20Neden%20Farkl%C4%B1.md#tekrarlanamayan-güvenlik-açıkları).
 
 ---
 
@@ -72,12 +74,12 @@ flowchart LR
 ### Aşama 1: Keşif ve Kapsam Belirleme
 - Hedef yapay zeka sistemini ve mimarisini tanımla.
 - Model türünü, sağlayıcıyı ve dağıtım yapılandırmasını belirle.
-- **Saldırı yüzeyinin haritasını çıkar** (girdiler, çıktılar, araçlar, entegrasyonlar). Bkz. [[04 - OWASP LLM Top 10#Yapay Zeka Saldırı Yüzeyi|Yapay Zeka Saldırı Yüzeyi]].
+- **Saldırı yüzeyinin haritasını çıkar** (girdiler, çıktılar, araçlar, entegrasyonlar). Bkz. [Yapay Zeka Saldırı Yüzeyi](04%20-%20OWASP%20LLM%20Top%2010.md#yapay-zeka-saldırı-yüzeyi).
 - Kapsamı ve **çalışma kurallarını** (rules of engagement) tanımla.
 
 ### Aşama 2: Tehdit Modelleme
 - Potansiyel **tehdit aktörlerini** ve motivasyonlarını belirle.
-- Saldırı senaryolarını **OWASP LLM Top 10** ile eşleştir. Bkz. [[04 - OWASP LLM Top 10#LLM Uygulamaları için OWASP Top 10 (2025)|LLM Uygulamaları için OWASP Top 10 (2025)]].
+- Saldırı senaryolarını **OWASP LLM Top 10** ile eşleştir. Bkz. [LLM Uygulamaları için OWASP Top 10 (2025)](04%20-%20OWASP%20LLM%20Top%2010.md#llm-uygulamaları-için-owasp-top-10-2025).
 - Riskleri **etki ve olasılığa** göre önceliklendir.
 
 ### Aşama 3: Saldırı Uygulaması
@@ -119,7 +121,8 @@ Bu eğitimde öğretilen her saldırı tekniği hem **savunma** (zafiyetleri bul
 
 ### Etik sınırlar
 
-> [!success] Kabul edilebilir
+> [!TIP]
+> **Kabul edilebilir**
 > - Belirlenen sistemlerde **yetkilendirme ile** test etme
 > - Sızıntı riskini değerlendirmek için **system prompt çıkarma** denemeleri
 > - **Kontrollü ortamlarda** jailbreak gösterimi
@@ -127,7 +130,8 @@ Bu eğitimde öğretilen her saldırı tekniği hem **savunma** (zafiyetleri bul
 > - Savunma amaçlı saldırı tekniklerinin belgelenmesi
 > - **Sorumlu açıklamayla** araştırma yayınlama
 
-> [!failure] Kabul edilemez
+> [!CAUTION]
+> **Kabul edilemez**
 > - Üretim sistemlerini **izinsiz** test etme
 > - Gerçek kullanıcı verilerini çıkarma ve saklama
 > - Keşfedilen zafiyetleri **kişisel kazanç** için kullanma
@@ -144,7 +148,8 @@ Bu eğitimde öğretilen her saldırı tekniği hem **savunma** (zafiyetleri bul
 
 Yapay zeka sistemleri için **risk temelli ve kapsamlı** bir düzenleme çerçevesi. Güvenlik profesyonellerinin bunu anlaması gerekir; çünkü AI sistemlerinin **nasıl test edilebileceğini, dağıtılabileceğini ve izlenebileceğini** doğrudan etkiler.
 
-> [!info] Uygulama zaman çizelgesi (Komisyonun güncel takvimine göre)
+> [!NOTE]
+> **Uygulama zaman çizelgesi (Komisyonun güncel takvimine göre)**
 > | Tarih | Ne başladı / başlayacak |
 > |---|---|
 > | **1 Ağustos 2024** | Yasa yürürlüğe girdi |
@@ -163,7 +168,8 @@ Yapay zeka sistemleri için **risk temelli ve kapsamlı** bir düzenleme çerçe
 | 🟡 **Sınırlı risk (şeffaflık yükümlülükleri)** | Sohbet robotları (AI olduklarını açıklamalı) · Deepfake oluşturucular (çıktıyı etiketlemeli) · Duygu tanıma sistemleri (kullanıcıları bilgilendirmeli) |
 | 🟢 **Minimum risk (kısıtlama yok)** | AI destekli oyunlar · Spam filtreleri · Çoğu genel amaçlı AI asistanı |
 
-> [!important] AI Red Teaming için çıkarımlar
+> [!IMPORTANT]
+> **AI Red Teaming için çıkarımlar**
 > - Uygulama tarihi gelmiş **yüksek riskli** sistemler, güvenlik testlerini de içeren **uygunluk değerlendirmelerinden** geçmelidir.
 > - **Genel amaçlı AI ve frontier model** sağlayıcıları, adversarial testler dahil model değerlendirmeleri yapmalıdır.
 > - Red Teaming; uygunluk değerlendirmeleri, **post-market monitoring** ve siber güvenlik kontrolleri için pratik bir test yöntemidir.
@@ -180,7 +186,8 @@ Yapay zeka sistemleri için **risk temelli ve kapsamlı** bir düzenleme çerçe
 | **Md. 35** | **Veri Koruma Etki Değerlendirmesi (DPIA)** | Profil oluşturma ve otomatik karar içeren yüksek riskli işlemler için gerekli. **AI Red Teaming bu değerlendirmenin bir parçası olabilir** |
 | **Md. 33** | **İhlal bildirimi** | LLM kişisel verileri sızdırırsa bu bir veri ihlali olabilir ve **72 saat içinde bildirim** gerektirir |
 
-> [!question] LLM dağıtımları için GDPR kontrol soruları
+> [!NOTE]
+> **LLM dağıtımları için GDPR kontrol soruları**
 > **Eğitim verileri**
 > - Eğitim setlerindeki kişisel veriler için izin alındı mı?
 > - Bireyler silme hakkını kullanabilir mi?
@@ -214,7 +221,8 @@ Birçok büyük AI sağlayıcısının özellikle **LLM zafiyetlerini** kapsayan
 
 ### Tipik AI Bug Bounty kapsamı
 
-> [!success] Kapsamda
+> [!TIP]
+> **Kapsamda**
 > - Üretim modellerinden **system prompt çıkarma**
 > - **Hassas veri ifşası** (PII, API anahtarları, dahili veriler)
 > - AI aracılığıyla **kimlik doğrulama ve yetkilendirme atlatma**
@@ -223,7 +231,8 @@ Birçok büyük AI sağlayıcısının özellikle **LLM zafiyetlerini** kapsayan
 > - AI kod yorumlayıcıları aracılığıyla **kod yürütme**
 > - Önemli **güvenlik filtre geçişleri** (gerçek dünyada etkili)
 
-> [!failure] Kapsam dışı (genellikle)
+> [!CAUTION]
+> **Kapsam dışı (genellikle)**
 > - **Genel jailbreak'ler** (modelin kötü sözler söylemesine neden olmak)
 > - Bilinen model sınırlamaları (**halüsinasyonlar**)
 > - **Somut bir etkiye yol açmayan** Prompt Injection
@@ -232,11 +241,13 @@ Birçok büyük AI sağlayıcısının özellikle **LLM zafiyetlerini** kapsayan
 > - Şirket çalışanlarına sosyal mühendislik
 > - API uç noktalarına **DDoS**
 
-> [!tip] Kural
+> [!TIP]
+> **Kural**
 > Genel jailbreak genellikle kapsam **dışı**, **veri ifşası kapsam dahilidir**.
 
 ### Başlıca AI Bug Bounty programları
-> [!warning] Doğrulama
+> [!WARNING]
+> **Doğrulama**
 > Aşağıdakiler örnektir; değerlendirme sırasında program sayfalarından doğrula.
 
 | Sağlayıcı | Platform | Kapsam | Not |
@@ -319,8 +330,9 @@ Ortam:
 - İlgili herhangi bir konfigürasyon
 ```
 
-> [!tip] İpucu
-> LLM'ler olasılıksal olduğu için rapora mutlaka **başarı oranı (N denemede X)** ve **temperature** bilgisini ekle. Bkz. [[02 - Yapay Zeka Güvenliği Neden Farklı#Güvenlikle İlgili Determinizm Dışı Zorluklar|Güvenlikle İlgili Determinizm Dışı Zorluklar]].
+> [!TIP]
+> **İpucu**
+> LLM'ler olasılıksal olduğu için rapora mutlaka **başarı oranı (N denemede X)** ve **temperature** bilgisini ekle. Bkz. [Güvenlikle İlgili Determinizm Dışı Zorluklar](02%20-%20Yapay%20Zeka%20G%C3%BCvenli%C4%9Fi%20Neden%20Farkl%C4%B1.md#güvenlikle-i̇lgili-determinizm-dışı-zorluklar).
 
 ---
 
@@ -338,7 +350,8 @@ Ortam:
 
 ## Temel Çıkarımlar (Bölüm 5)
 
-> [!summary] Bölüm özeti
+> [!NOTE]
+> **Bölüm özeti**
 > 1. AI Red Teaming, geleneksel sızma testleri gibi **açık yetkilendirme** gerektirir. Sistemleri asla **yazılı izin olmadan** test etme.
 > 2. **AB Yapay Zeka Yasası** dünyadaki en kapsamlı AI düzenlemesidir. Yüksek riskli sistemler **zorunlu güvenlik değerlendirmeleri** gerektirir.
 > 3. **GDPR**, kişisel veri işleyen tüm LLM'ler için geçerlidir. Veri ezberleme benzersiz uyumluluk zorlukları yaratır.
@@ -357,4 +370,4 @@ Ortam:
 - [[Jailbreak]]
 
 ---
-> ◀ [[04 - OWASP LLM Top 10|LLM Uygulamaları için OWASP Top 10]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[06 - Model Parmak İzi ve Keşif|Model Parmak İzi ve Keşif]] ▶
+> ◀ [LLM Uygulamaları için OWASP Top 10](04%20-%20OWASP%20LLM%20Top%2010.md) · 📚 [Ana Sayfa (MOC)](00%20-%20Yapay%20zeka.md) · [Model Parmak İzi ve Keşif](06%20-%20Model%20Parmak%20%C4%B0zi%20ve%20Ke%C5%9Fif.md) ▶

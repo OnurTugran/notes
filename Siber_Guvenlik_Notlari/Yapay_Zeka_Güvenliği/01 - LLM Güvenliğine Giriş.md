@@ -18,9 +18,10 @@ tags:
 
 # LLM Güvenliğine Giriş
 
-> 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[02 - Yapay Zeka Güvenliği Neden Farklı|Yapay Zeka Güvenliği Neden Farklı?]] ▶
+> 📚 [Ana Sayfa (MOC)](00%20-%20Yapay%20zeka.md) · [Yapay Zeka Güvenliği Neden Farklı?](02%20-%20Yapay%20Zeka%20G%C3%BCvenli%C4%9Fi%20Neden%20Farkl%C4%B1.md) ▶
 
-> [!abstract] Özet
+> [!NOTE]
+> **Özet**
 > Büyük Dil Modellerine (LLM) nasıl saldıracağımızı veya onları nasıl savunacağımızı anlamak için önce içeriden nasıl çalıştıklarını bilmek gerekir. Bu not; mimariyi, mekanizmaları ve temel kavramları **güvenlik odaklı** ele alır.
 
 ## İçindekiler
@@ -39,7 +40,8 @@ tags:
 
 **Büyük Dil Modeli (LLM)**, insan benzeri dili tahmin etmek ve üretmek için büyük miktarda metin verisiyle eğitilmiş bir yapay zeka sistemidir. ChatGPT, Claude veya Gemini'ye soru yazıldığında model insan gibi "düşünmez" veya "anlamaz". Çok karmaşık bir istatistiksel hesap yapar:
 
-> [!question] Temel soru
+> [!NOTE]
+> **Temel soru**
 > Eğitim sırasında gördüğü tüm metinlere göre, üretilecek **bir sonraki token** (kelime veya alt kelime) hangisidir?
 
 ### Güvenlik profesyonelleri için kritik noktalar
@@ -49,7 +51,8 @@ tags:
 - "Biliyor" veya "inanıyor" gibi görünen her şey, milyarlarca parametre boyunca örüntü tanımanın ortaya çıkan bir özelliğidir.
 - Model tehlikeli bir soruyu reddettiğinde ahlaki yargı uygulamaz; **uyum eğitimi (alignment)** aşamasında öğrendiği kalıpları takip eder.
 
-> [!warning] Sonuç
+> [!WARNING]
+> **Sonuç**
 > Reddetme davranışı öğrenilmiş bir kalıp olduğu için, prensipte **hizalama atlanabilir**. Bkz. [[Jailbreak]], [[Prompt Injection]].
 
 ### Model ailelerinin manzarası
@@ -62,7 +65,8 @@ Parametre sayısı, context window, multimodal yetenekler ve araç entegrasyonla
 | Google | Gemini 3.x / 3.5 ailesi |
 | Meta | Llama 4 Scout, Llama 4 Maverick (open-weight) |
 
-> [!note] Not
+> [!NOTE]
+> **Not**
 > Bu liste bir eğitim snapshot'ıdır. Gerçek bir değerlendirmede model adı, context window, cutoff, tool desteği ve veri kullanım kuralları **sağlayıcının resmi dokümantasyonundan** ve test edilen dağıtımdan doğrulanmalıdır.
 
 ---
@@ -118,7 +122,8 @@ Temel mekanizma. Her token için üç vektör hesaplanır:
 
 İki token arasındaki **attention score**, birinin Query'si ile diğerinin Key'inin **dot product** değeriyle hesaplanır. Yüksek skor = yüksek alaka. Her token'ın nihai çıktısı, ağırlıkları attention score olan tüm Value vektörlerinin **ağırlıklı toplamıdır**.
 
-> [!example] Bağlamsal anlam örnekleri
+> [!NOTE]
+> **Bağlamsal anlam örnekleri**
 > **"Nehir kenarındaki kıyı sular altında kaldı"**
 > "kıyı" işlenirken "Nehir" ve "sular altında kaldı" ifadelerine yüksek attention → *riverbank* (coğrafi bağlam)
 >
@@ -146,7 +151,8 @@ Son katmanın çıktısı tüm sözcük dağarcığı üzerinde bir **olasılık
 
 ### Bu güvenlik açısından neden önemli?
 
-> [!danger] Güvenlik sonuçları
+> [!CAUTION]
+> **Güvenlik sonuçları**
 > 1. **Attention bağlama bağlıdır.** Model her tokenı context window'daki diğer tüm tokenlara göre yorumlar. Saldırgan, attention weight'lerini değiştiren girdiler hazırlayarak modelin system prompt'u yorumlama biçimini etkileyebilir.
 > 2. **Ayrıcalıklı bellek bölgesi yoktur.** CPU'daki çekirdek/kullanıcı alanı ayrımının aksine Transformer, context window'daki tüm tokenları eşit ele alır. System prompt, kullanıcı mesajları ve getirilen belgeler **aynı dikkat alanındadır**. [[Prompt Injection]]'ın işe yaramasının temel nedeni budur.
 > 3. **Katman katman işleme fırsatlar yaratır.** Her katman temsili dönüştürür; adversarial girdiler belirli katmanları hedefleyebilir, farklı saldırılar pipeline'ın farklı düzeylerini vurur.
@@ -174,13 +180,16 @@ Modern LLM'ler metni karakter veya kelime kelime işlemez. **BPE (Byte Pair Enco
 
 ### Tokenizasyonun güvenlik etkileri
 
-> [!bug] Token Sınırı İstismarı
+> [!CAUTION]
+> **Token Sınırı İstismarı**
 > Her modelin karakterle değil **tokenla** ölçülen maksimum context window'u vardır. Tokenization'ı anlayan saldırgan, minimum görünür karakterle maksimum token tüketen girdiler üretebilir (veya tersi).
 
-> [!bug] Token Kaçakçılığı (Token Smuggling)
+> [!CAUTION]
+> **Token Kaçakçılığı (Token Smuggling)**
 > Tokenizasyon karakterleri beklenmedik şekillerde bölüp birleştirebildiği için anahtar kelimeye dayalı filtreler atlatılabilir. Örneğin "bomba" arayan bir filtre, saldırgan `b-o-m-b` yazarsa tokenizer farklı tokenlar ürettiği için bunu yakalayamayabilir.
 
-> [!bug] Dil Farklılıkları
+> [!CAUTION]
+> **Dil Farklılıkları**
 > İngilizce genelde verimlidir (kelime başına ~1 token). Çince, Japonca, Korece gibi diller kavram başına daha fazla token kullanabilir. Bu hem context window kullanımını hem de çoğunlukla İngilizce veriyle eğitilmiş **güvenlik filtrelerinin** etkinliğini etkiler.
 
 **Dil bazında örnekler:**
@@ -188,7 +197,8 @@ Modern LLM'ler metni karakter veya kelime kelime işlemez. **BPE (Byte Pair Enco
 - Çince `你好` → çoğu tokenizer'da **2 token**
 - Arapça `مرحبا` → tokenizer'a bağlı olarak yaklaşık **3-5 token**
 
-> [!tip] Çıkarım
+> [!TIP]
+> **Çıkarım**
 > Ağırlıklı olarak İngilizce örüntülerle eğitilmiş güvenlik filtreleri, diğer dillerdeki zararlı içeriği tespit etmede daha az etkili olabilir.
 
 ---
@@ -211,7 +221,8 @@ $$
 | `d_k` | Key vektör boyutu (ölçekleme faktörü) |
 | `softmax` | Ham skorları toplamı 1 olan olasılıklara çevirir |
 
-> [!info] Neden `sqrt(d_k)`'ya bölünür?
+> [!NOTE]
+> **Neden `sqrt(d_k)`'ya bölünür?**
 > Nokta çarpımlarının aşırı büyümesini önler. Aksi halde softmax çok keskinleşir: bir token neredeyse tüm attention'ı alır, diğerleri neredeyse hiç katkı vermez.
 
 ### Context Window (Bağlam Penceresi)
@@ -229,21 +240,25 @@ Modelin aynı anda işleyebileceği **toplam token sayısı**. Şunların hepsin
 | Uzun bağlamlı hosted modeller | Yüz binlerce ila bir milyondan fazla token |
 | Özel retrieval mimarileri | Uzun bağlamı harici bellek veya [[RAG]] ile birleştirebilir |
 
-> [!note] Doğrulama
+> [!NOTE]
+> **Doğrulama**
 > Kesin limitler sağlayıcıya, model sürümüne, hesap katmanına ve API moduna göre sık değişir. Statik eğitim materyaline güvenmek yerine test edilen dağıtımın dokümante edilmiş limitini doğrula.
 
-> [!danger] Güvenlik açısından
+> [!CAUTION]
+> **Güvenlik açısından**
 > Context window, **erişim kontrolü olmayan paylaşılan bir alandır**. Model, güvenilir system prompt tokenları ile güvenilmeyen kullanıcı girdisi tokenları arasında mimari olarak ayrım yapamaz; hepsi aynı attention hesaplamalarına katılır. Bu, [[Prompt Injection]]'ın temel nedenidir.
 
 ### Causal (Autoregressive) Attention
 Metin üreten LLM'ler causal attention kullanır: **N. token üretilirken model yalnızca 1'den N-1'e kadar olan tokenlara bakabilir**. Geleceğe bakamaz. Bu, gelecekteki pozisyonları engelleyen bir **attention mask** ile uygulanır.
 
-> [!example] Örnek
+> [!NOTE]
+> **Örnek**
 > "Kedi ___ üzerine oturdu" cümlesinde boşluktaki token tahmin edilirken yalnızca boşluktan öncekiler görülür. Sonrası henüz üretilmediği için attention'a katılmaz.
 
 LLM'lerin soldan sağa, her seferinde bir token üretmesinin nedeni budur.
 
-> [!warning] Güvenlik etkisi
+> [!WARNING]
+> **Güvenlik etkisi**
 > Modelin davranışı **aşamalı olarak etkilenebilir**. Saldırgan, asıl kötü amaçlı isteği yapmadan önce birden fazla aşamada kademeli bağlam oluşturarak modelin "dikkat ortamını" yönlendirebilir (bkz. [[Multi-turn Jailbreak]]).
 
 ---
@@ -298,7 +313,8 @@ Model aynı prompt için birden fazla yanıt üretir, insanlar bunları sıralar
 | RLHF / DPO | Neyi reddedeceğini öğrenme, safety alignment |
 | Constitutional AI | İlkelere göre öz değerlendirme |
 
-> [!danger] Kritik çıkarım
+> [!CAUTION]
+> **Kritik çıkarım**
 > Her katman güvenliği artırır ama **hiçbiri mimari olarak zorunlu değildir**. Tüm güvenlik önlemleri modelin parametre alanında öğrenilmiş davranışlardır; ayrı bir mimari yetki sınırı oluşturmazlar.
 
 ---
@@ -316,7 +332,8 @@ API üzerinden etkileşimde çıktıyı birkaç parametre kontrol eder. Hem sald
 | `0.7` | Dengeli, biraz rastgelelik | Yaratıcı yazma, sohbet uygulamaları |
 | `1.5+` | Yüksek rastgelelik, tutarsız/beklenmedik | Üretim sistemleri için riskli |
 
-> [!warning] Güvenlik etkisi
+> [!WARNING]
+> **Güvenlik etkisi**
 > Yüksek temperature, modelin güvenlik eğitimini atlayan çıktılar üretmesine yol açabilir. Güvenlik davranışları öğrenilmiş pattern'lerdir; yüksek temperature'da düşük olasılıklı ve potansiyel olarak güvensiz token dizileri daha olası hale gelir.
 
 ### Top-p (Nucleus Sampling)
@@ -336,14 +353,16 @@ Token seçimini **en olası k token** ile sınırlar.
 ### Max Tokens
 Yanıtta üretilecek maksimum token sayısı. **Sert bir kesintidir.**
 
-> [!warning] Güvenlik etkisi
+> [!WARNING]
+> **Güvenlik etkisi**
 > - **Çok yüksek:** Saldırgan çok uzun çıktı ürettirip API kredilerini ve işlem kaynaklarını tüketebilir (bir tür **DoS**).
 > - **Çok düşük:** Güvenlikle ilgili sorumluluk reddi beyanları veya talimatlar kesilebilir.
 
 ### Stop Sequences (Durdurma Dizileri)
 Üretildiğinde modelin üretimini durduran metin dizileri.
 
-> [!warning] Güvenlik etkisi
+> [!WARNING]
+> **Güvenlik etkisi**
 > Stop sequence'leri bilen saldırgan, modeli bu diziyi erken üretmeye kandırıp önemli **güvenlik uyarılarını kısaltabilir**.
 
 ---
@@ -360,7 +379,8 @@ messages = [
 ]
 ```
 
-> [!danger] Güvenlik etkisi
+> [!CAUTION]
+> **Güvenlik etkisi**
 > Rol ayrımına rağmen system prompt ve user prompt, modelin context window'unda **aynı token dizisi** içindedir. Model system prompt'lara daha yüksek öncelik vermeyi öğrenmiştir, ancak bu **mimari bir zorunluluk değil, davranışsal bir pattern**'dir. Bu yüzden **system prompt çıkarma** ve **override** saldırıları mümkündür.
 
 ---
@@ -385,13 +405,15 @@ LLM'lerin kritik uygulamalara hızla konuşlandırılması yeni ve benzeri gör�
 - Kod asistanına saldırı → **üretim yazılımında güvenlik açıkları**
 
 ### Gerçek dünya olayları
-> [!example] Teorik değil, gerçek
+> [!NOTE]
+> **Teorik değil, gerçek**
 > - **2023:** Bir Chevrolet bayisi sohbet robotu, hedef kaçırma (goal hijacking) saldırısıyla bir arabayı **1 dolara** satmayı kabul edecek şekilde kandırıldı.
 > - **Samsung:** Çalışanlar özel kaynak kodunu ChatGPT'ye yapıştırarak yanlışlıkla sızdırdı.
 > - **Araştırmacılar:** ChatGPT'nin kişisel olarak tanımlanabilir bilgiler dahil **eğitim verilerini aynen yeniden üretecek** şekilde kullanılabileceğini gösterdi.
 > - **Microsoft "Sydney"** (Copilot öncesi sohbet deneyimi): Lansmandan kısa süre sonra **jailbreak** ve **system prompt sızıntısı** örnekleriyle gündeme geldi.
 
-> [!success] Sonuç
+> [!TIP]
+> **Sonuç**
 > LLM güvenliği alanı hızla gelişiyor. Temel kavramları doğru anlamak; saldırı yüzeylerini tanımlamak, güvenlik risklerini değerlendirmek ve uygulanabilir azaltma stratejileri geliştirmek için kritiktir.
 
 ---
@@ -406,4 +428,4 @@ LLM'lerin kritik uygulamalara hızla konuşlandırılması yeni ve benzeri gör�
 #siber-guvenlik #llm #yapay-zeka
 
 ---
-> 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[02 - Yapay Zeka Güvenliği Neden Farklı|Yapay Zeka Güvenliği Neden Farklı?]] ▶
+> 📚 [Ana Sayfa (MOC)](00%20-%20Yapay%20zeka.md) · [Yapay Zeka Güvenliği Neden Farklı?](02%20-%20Yapay%20Zeka%20G%C3%BCvenli%C4%9Fi%20Neden%20Farkl%C4%B1.md) ▶

@@ -14,7 +14,7 @@ tags:
 
 # WordPress Temelleri ve Dosya Yapısı
 
-> 📚 [[00_WordPress_İndeks|İndeks]] · [[02_WordPress_Keşif_ve_Numaralandırma|WordPress Keşif ve Numaralandırma]] ▶
+> 📚 [İndeks](00_WordPress_%C4%B0ndeks.md) · [WordPress Keşif ve Numaralandırma](02_WordPress_Ke%C5%9Fif_ve_Numaraland%C4%B1rma.md) ▶
 
 ## WordPress ve CMS Temelleri
 
@@ -113,7 +113,8 @@ Kök dizin, WordPress'in doğru çalışacak şekilde yapılandırılması için
 - `/login.php`
 - `/wp-login.php`
 
-> [!tip] Pentest Notu
+> [!TIP]
+> **Pentest Notu**
 > Güvenliği artırmak ve giriş sayfasını bulmayı zorlaştırmak için bu dosyanın adı sıkça değiştirilebilir. Yönetici panelini bulmak her zaman varsayılan yollarla mümkün olmayabilir.
 
 ---
@@ -121,7 +122,8 @@ Kök dizin, WordPress'in doğru çalışacak şekilde yapılandırılması için
 ## ⚙️ Yapılandırma Dosyası: `wp-config.php`
 WordPress'in veritabanına bağlanması için gereken tüm bilgileri içerir. Veritabanı adı, sunucusu, kullanıcı adı, parolası, kimlik doğrulama anahtarları (salts) ve veritabanı tablo ön eki burada yer alır. Ayrıca sorun giderme aşamasında faydalı olabilecek **DEBUG** (hata ayıklama) modu bu yapılandırma dosyasından aktif edilebilir.
 
-> [!warning] Kritik Dosya
+> [!WARNING]
+> **Kritik Dosya**
 > Sızma testlerinde (LFI/RFI veya dizin gezinme zafiyetleri aracılığıyla) bu dosyanın okunması, doğrudan veritabanı ele geçirilmesine yol açar.
 
 ```php
@@ -165,7 +167,8 @@ require_once ABSPATH . 'wp-settings.php';
 ### 1. `wp-content`
 Eklentilerin (plugins) ve temaların (themes) depolandığı ana dizindir. İçerisindeki `uploads/` alt dizini, genellikle platforma yüklenen tüm dosyaların saklandığı yerdir.
 
-> [!warning] Numaralandırma (Enumeration) Önemi
+> [!WARNING]
+> **Numaralandırma (Enumeration) Önemi**
 > Bu dizinler ve dosyalar dikkatlice numaralandırılmalıdır (enumerated). Uzaktan kod çalıştırmaya (RCE) veya diğer zafiyetlerin ve yanlış yapılandırmaların sömürülmesine yol açabilecek hassas veriler içerebilirler.
 
 ```shell
@@ -205,7 +208,8 @@ Dizin listeleme (Directory Indexing) zafiyetini manuel olarak test ederken, tara
 - `/wp-content/plugins/`
 - `/wp-content/themes/`
 
-> [!tip] CTF ve Pentest İpucu
+> [!TIP]
+> **CTF ve Pentest İpucu**
 > Hedefte özellikle **`/wp-content/uploads/`** dizinine dikkat edin. CTF (Capture The Flag) yarışmalarında aranan bayrak dosyaları (`flag.txt`) veya gerçek sızma testlerinde hassas kullanıcı dosyaları genellikle buraya veya bu dizinin alt klasörlerine saklanır.
 
 ## 👥 WordPress Kullanıcı Rolleri
@@ -220,7 +224,8 @@ Standart bir WordPress kurulumunda beş temel kullanıcı tipi (rolü) bulunur:
 | **Contributor (Katkıda Bulunan)** | Kendi gönderilerini yazabilir ve yönetebilir, ancak bunları **yayınlayamaz**. |
 | **Subscriber (Abone)** | Gönderilere göz atabilen ve sadece kendi profillerini düzenleyebilen normal kullanıcılardır. |
 
-> [!danger] Pentest Notu: Rollerin Önemi
+> [!CAUTION]
+> **Pentest Notu: Rollerin Önemi**
 > Sunucu üzerinde **kod çalıştırma (Code Execution / RCE)** yetkisi elde etmek için genellikle sisteme bir **Administrator (Yönetici)** olarak erişim sağlamak gerekir. Ancak, **Editörler** ve **Yazarlar** da normal kullanıcıların erişemediği, zafiyet barındıran bazı eklentilere (vulnerable plugins) erişim sağlayabilir ve bu durum sistemin ele geçirilmesine kapı aralayabilir.
 
 ## 🔍 WordPress Çekirdek Sürümü Bilgi Toplama (Core Version Enumeration)
@@ -275,10 +280,11 @@ Kaynak koddaki `meta generator` etiketi gizlenmiş olsa bile, CSS (stil şablonl
 ...SNIP...
 ```
 
-> [!info] Ekstra Bilgi: Eski Sürümler
+> [!NOTE]
+> **Ekstra Bilgi: Eski Sürümler**
 > Eski WordPress sürümlerinde, sürüm bilgisini açığa çıkaran bir diğer önemli kaynak, doğrudan WordPress kök dizininde (root directory) bulunan `readme.html` dosyasıdır.
 
 ---
 
 ---
-> 📚 [[00_WordPress_İndeks|İndeks]] · [[02_WordPress_Keşif_ve_Numaralandırma|WordPress Keşif ve Numaralandırma]] ▶
+> 📚 [İndeks](00_WordPress_%C4%B0ndeks.md) · [WordPress Keşif ve Numaralandırma](02_WordPress_Ke%C5%9Fif_ve_Numaraland%C4%B1rma.md) ▶

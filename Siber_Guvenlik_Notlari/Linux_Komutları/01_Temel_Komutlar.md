@@ -13,7 +13,7 @@ tags:
 
 # Temel Komutlar
 
-> 📚 [[00_Linux_Komutları|İndeks]] · [[02_Metin_İşleme_ve_Regex|Metin İşleme ve Regex]] ▶
+> 📚 [İndeks](00_Linux_Komutlar%C4%B1.md) · [Metin İşleme ve Regex](02_Metin_%C4%B0%C5%9Fleme_ve_Regex.md) ▶
 
 ## 📁 Dizin ve Dosya İşlemleri
 - `pwd` : Kullanıcının o an bulunduğu mevcut dizini (çalışma alanını) ekrana yazdırır.
@@ -61,8 +61,9 @@ tags:
   - `awk '{print $1}' dosya.txt` : Dosyadaki her satırın 1. sütununu ekrana yazdırır.
   - `awk -F ','` : Virgülle ayrılmış dosyalarda işlem yapmak için alan ayırıcı (Field Separator) belirtir.
 
-> [!tip] Devamı
-> `cut`, `tr`, `awk`, `sed`, regex ve ayrıntılı filtreleme: [[02_Metin_İşleme_ve_Regex]].
+> [!TIP]
+> **Devamı**
+> `cut`, `tr`, `awk`, `sed`, regex ve ayrıntılı filtreleme: [02_Metin_İşleme_ve_Regex](02_Metin_%C4%B0%C5%9Fleme_ve_Regex.md).
 
 ---
-> 📚 [[00_Linux_Komutları|İndeks]] · [[02_Metin_İşleme_ve_Regex|Metin İşleme ve Regex]] ▶
+> 📚 [İndeks](00_Linux_Komutlar%C4%B1.md) · [Metin İşleme ve Regex](02_Metin_%C4%B0%C5%9Fleme_ve_Regex.md) ▶

@@ -12,7 +12,7 @@ tags:
 
 # NFS (Network File System)
 
-> ◀ [[07_Iptables_Güvenlik_Duvarı|Iptables ve Güvenlik Duvarı]] · 📚 [[00_Linux_Komutları|İndeks]] · [[09_Web_Sunucusu_ve_Dosya_Transferi|Web Sunucusu ve Dosya Transferi]] ▶
+> ◀ [Iptables ve Güvenlik Duvarı](07_Iptables_G%C3%BCvenlik_Duvar%C4%B1.md) · 📚 [İndeks](00_Linux_Komutlar%C4%B1.md) · [Web Sunucusu ve Dosya Transferi](09_Web_Sunucusu_ve_Dosya_Transferi.md) ▶
 
 NFS, uzak sistemlerdeki (sunuculardaki) dosyaları sanki kendi yerel bilgisayarımızda (lokalimizde) depolanıyormuş gibi kullanmamızı ve yönetmemizi sağlayan bir ağ protokolüdür.
 
@@ -26,4 +26,4 @@ NFS, uzak sistemlerdeki (sunuculardaki) dosyaları sanki kendi yerel bilgisayar�
 Eğer sızma testi yaptığın hedef sistemde dosya transferi yapmak için **FTP istemcisi (client) yoksa**, ancak sistemde NFS servisi çalışıyorsa, NFS'i tıpkı FTP gibi kullanabilirsin. Hedef makinedeki paylaşıma açık bir NFS klasörünü kendi makinenize bağlayarak (mount ederek) hedefe zararlı dosya yükleyebilir (upload) veya sistemden hassas verileri çekebilirsin (exfiltration).
 
 ---
-> ◀ [[07_Iptables_Güvenlik_Duvarı|Iptables ve Güvenlik Duvarı]] · 📚 [[00_Linux_Komutları|İndeks]] · [[09_Web_Sunucusu_ve_Dosya_Transferi|Web Sunucusu ve Dosya Transferi]] ▶
+> ◀ [Iptables ve Güvenlik Duvarı](07_Iptables_G%C3%BCvenlik_Duvar%C4%B1.md) · 📚 [İndeks](00_Linux_Komutlar%C4%B1.md) · [Web Sunucusu ve Dosya Transferi](09_Web_Sunucusu_ve_Dosya_Transferi.md) ▶

@@ -15,7 +15,7 @@ tags:
 
 # Metin İşleme ve Regex
 
-> ◀ [[01_Temel_Komutlar|Temel Komutlar]] · 📚 [[00_Linux_Komutları|İndeks]] · [[03_Paket_Yönetimi|Paket Yönetimi]] ▶
+> ◀ [Temel Komutlar](01_Temel_Komutlar.md) · 📚 [İndeks](00_Linux_Komutlar%C4%B1.md) · [Paket Yönetimi](03_Paket_Y%C3%B6netimi.md) ▶
 
 ## 1. cut
 Belirli bir ayırıcıya (delimiter) göre satırları böler ve sadece istenen alanı (sütunu) ekrana yazdırır.
@@ -145,4 +145,4 @@ grep -E "yes$" /etc/ssh/sshd_config
 ```
 
 ---
-> ◀ [[01_Temel_Komutlar|Temel Komutlar]] · 📚 [[00_Linux_Komutları|İndeks]] · [[03_Paket_Yönetimi|Paket Yönetimi]] ▶
+> ◀ [Temel Komutlar](01_Temel_Komutlar.md) · 📚 [İndeks](00_Linux_Komutlar%C4%B1.md) · [Paket Yönetimi](03_Paket_Y%C3%B6netimi.md) ▶

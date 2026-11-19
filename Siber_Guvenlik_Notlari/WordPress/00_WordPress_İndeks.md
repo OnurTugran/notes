@@ -12,17 +12,19 @@ tags:
 
 # WordPress Pentest
 
-> 📚 [[Siber_Güvenlik_Ana_Sayfa|Ana Sayfa]]
+> 📚 [Ana Sayfa](../Siber_G%C3%BCvenlik_Ana_Sayfa.md)
 
-> [!abstract] Bu klasör
+> [!NOTE]
+> **Bu klasör**
 > WordPress sızma testi: keşif → numaralandırma → saldırı → savunma sırasıyla.
 
-> [!warning] Yasal uyarı
+> [!WARNING]
+> **Yasal uyarı**
 > Yalnızca izinli hedeflerde uygula. Notlardaki API anahtarı ve IP adresleri `<...>` ile maskelenmiştir; kendi değerlerini koy.
 
 | Not | İçerik |
 |---|---|
-| [[01_WordPress_Temelleri_ve_Dosya_Yapısı\|WordPress Temelleri ve Dosya Yapısı]] | CMS nedir, wp-config.php, dizin yapısı, roller |
-| [[02_WordPress_Keşif_ve_Numaralandırma\|WordPress Keşif ve Numaralandırma]] | Eklenti/tema, dizin listeleme, kullanıcı bulma, WPScan |
-| [[03_WordPress_Saldırıları\|WordPress Saldırıları]] | Brute force, xmlrpc, Mail Masta LFI, tema düzenleyici RCE, Metasploit |
-| [[04_WordPress_Sertleştirme\|WordPress Sertleştirme (Hardening)]] | Güncelleme, giriş koruması, dosya izinleri, WAF |
+| [WordPress Temelleri ve Dosya Yapısı](01_WordPress_Temelleri_ve_Dosya_Yap%C4%B1s%C4%B1.md) | CMS nedir, wp-config.php, dizin yapısı, roller |
+| [WordPress Keşif ve Numaralandırma](02_WordPress_Ke%C5%9Fif_ve_Numaraland%C4%B1rma.md) | Eklenti/tema, dizin listeleme, kullanıcı bulma, WPScan |
+| [WordPress Saldırıları](03_WordPress_Sald%C4%B1r%C4%B1lar%C4%B1.md) | Brute force, xmlrpc, Mail Masta LFI, tema düzenleyici RCE, Metasploit |
+| [WordPress Sertleştirme (Hardening)](04_WordPress_Sertle%C5%9Ftirme.md) | Güncelleme, giriş koruması, dosya izinleri, WAF |

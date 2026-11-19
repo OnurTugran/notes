@@ -12,7 +12,7 @@ tags:
 
 # Solaris ve Linux Farkları
 
-> ◀ [[13_Sistem_Logları|Sistem Logları ve Güvenlik Analizi]] · 📚 [[00_Linux_Komutları|İndeks]]
+> ◀ [Sistem Logları ve Güvenlik Analizi](13_Sistem_Loglar%C4%B1.md) · 📚 [İndeks](00_Linux_Komutlar%C4%B1.md)
 
 Solaris, 1990'larda Sun Microsystems (daha sonra Oracle tarafından satın alındı) tarafından geliştirilen Unix tabanlı, kapalı kaynak (proprietary) bir işletim sistemidir. Özellikle bankacılık, finans ve büyük veri merkezleri gibi yüksek güvenlik, kararlılık ve performans gerektiren kurumsal (mission-critical) ortamlarda kullanılır.
 
@@ -48,8 +48,9 @@ Hedef sistemde çalışan bir servisin veya uygulamanın ne yaptığını (hangi
 *   **`pfiles`:** Linux'taki `lsof` aracının karşılığıdır. Çalışan bir sürecin ağ soketleri ve dosya tanımlayıcıları (file descriptors) dahil olmak üzere açtığı her şeyi gösterir.
 *   **`truss`:** Linux'taki `strace` aracının karşılığıdır. Süreçlerin işletim sistemine yaptığı çağrıları (system calls) canlı olarak izler. `strace`'ten en büyük farkı ve avantajı; sadece hedef süreci değil, o sürecin yarattığı **alt süreçleri (child processes)** ve sürece gönderilen **sinyalleri (signals)** de izleyebilmesidir.
 
-> [!note] `-perm 4000` ile `-perm -4000`
+> [!NOTE]
+> **`-perm 4000` ile `-perm -4000`**
 > `-perm 4000` **yalnızca** izni tam olarak `4000` olan dosyaları bulur. `-perm -4000` ise SUID biti **set olan tüm** dosyaları bulur (örn. `4755`). SUID taramasında hep `-4000` kullan.
 
 ---
-> ◀ [[13_Sistem_Logları|Sistem Logları ve Güvenlik Analizi]] · 📚 [[00_Linux_Komutları|İndeks]]
+> ◀ [Sistem Logları ve Güvenlik Analizi](13_Sistem_Loglar%C4%B1.md) · 📚 [İndeks](00_Linux_Komutlar%C4%B1.md)

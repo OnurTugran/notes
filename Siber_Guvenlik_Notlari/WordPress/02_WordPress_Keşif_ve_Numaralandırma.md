@@ -14,7 +14,7 @@ tags:
 
 # WordPress Keşif ve Numaralandırma
 
-> ◀ [[01_WordPress_Temelleri_ve_Dosya_Yapısı|WordPress Temelleri ve Dosya Yapısı]] · 📚 [[00_WordPress_İndeks|İndeks]] · [[03_WordPress_Saldırıları|WordPress Saldırıları]] ▶
+> ◀ [WordPress Temelleri ve Dosya Yapısı](01_WordPress_Temelleri_ve_Dosya_Yap%C4%B1s%C4%B1.md) · 📚 [İndeks](00_WordPress_%C4%B0ndeks.md) · [WordPress Saldırıları](03_WordPress_Sald%C4%B1r%C4%B1lar%C4%B1.md) ▶
 
 ## Eklenti (Plugin) ve Tema Bilgi Toplama
 
@@ -63,14 +63,16 @@ $ curl -I -X GET http://blog.inlanefreight.com/wp-content/plugins/someplugin
 
 *(Not: Aynı aktif tespit mantığı `wp-content/themes/` dizini altındaki temalar için de geçerlidir.)*
 
-> [!tip] Otomasyon (Pentest Notu)
+> [!TIP]
+> **Otomasyon (Pentest Notu)**
 > Bilgi toplama sürecini hızlandırmak için bu denemeleri tek tek elle yapmak yerine basit bir **Bash betiği (script)** yazılabilir veya süreci otomatize eden **`wfuzz`** ya da **`WPScan`** gibi güçlü araçlar kullanılabilir.
 
 ## Dizin Listeleme (Directory Indexing)
 
 Bir WordPress web sitesini değerlendirirken (pentest aşamasında) odak noktamız sadece **aktif** eklentiler olmamalıdır.
 
-> [!danger] Kritik Hata: Devre Dışı Bırakılan Eklentiler
+> [!CAUTION]
+> **Kritik Hata: Devre Dışı Bırakılan Eklentiler**
 > Zafiyet barındıran bir eklentiyi sadece **devre dışı bırakmak (deactivate)**, WordPress sitesinin güvenliğini artırmaz. Eklenti devre dışı bırakılsa bile dosyalarına, script'lerine ve fonksiyonlarına dışarıdan erişilmeye devam edilebilir. En iyi güvenlik uygulaması (best practice), kullanılmayan eklentileri tamamen **kaldırmak** veya güncel tutmaktır.
 
 Örneğin, devre dışı bırakılmış olan "Mail Masta" eklentisine tarayıcı üzerinden şu şekilde gidildiğinde dizin içeriği görüntülenebilir:
@@ -161,7 +163,8 @@ Content-Type: text/html; charset=UTF-8
 
 İkinci yöntem, kullanıcı listesini elde etmemizi sağlayan JSON uç noktasıyla (endpoint) etkileşime girmektir.
 
-> [!info] WordPress Sürüm Farklılıkları
+> [!NOTE]
+> **WordPress Sürüm Farklılıkları**
 > Bu özellik WordPress çekirdeğinin **4.7.1 sürümünden sonra değiştirildi**. Sonraki sürümler yalnızca bir kullanıcının yapılandırılıp yapılandırılmadığını gösterir. Bu sürümden **önceki** sürümlerde ise, gönderi (post) yayınlamış olan tüm kullanıcılar varsayılan olarak açıkça listeleniyordu.
 
 ### JSON Uç Noktasından Kullanıcı Çekme (cURL & jq)
@@ -195,7 +198,8 @@ $ curl -s http://blog.inlanefreight.com/wp-json/wp/v2/users | jq
 
 `--enumerate` bayrağı (flag), WordPress uygulamasının eklentiler, temalar ve kullanıcılar gibi çeşitli bileşenlerini numaralandırmak için kullanılır. Varsayılan olarak WPScan; zafiyetli eklentileri, temaları, kullanıcıları, medya dosyalarını ve yedeklemeleri tarar. Ancak belirli argümanlar verilerek tarama sınırlandırılabilir (Örneğin; tüm eklentileri taramak için `--enumerate ap` argümanı kullanılır).
 
-> [!info] Thread (İş Parçacığı) Notu
+> [!NOTE]
+> **Thread (İş Parçacığı) Notu**
 > WPScan taramalarında varsayılan iş parçacığı (thread) sayısı 5'tir. Bu değer `-t` bayrağı yardımıyla değiştirilebilir.
 
 ---
@@ -215,4 +219,4 @@ nuclei -u  http://<HEDEF_IP>:<PORT> -t wp-content/plugins/
 nuclei -u  http://<HEDEF_IP>:<PORT> -t http/vulnerabilities/wordpress/
 
 ---
-> ◀ [[01_WordPress_Temelleri_ve_Dosya_Yapısı|WordPress Temelleri ve Dosya Yapısı]] · 📚 [[00_WordPress_İndeks|İndeks]] · [[03_WordPress_Saldırıları|WordPress Saldırıları]] ▶
+> ◀ [WordPress Temelleri ve Dosya Yapısı](01_WordPress_Temelleri_ve_Dosya_Yap%C4%B1s%C4%B1.md) · 📚 [İndeks](00_WordPress_%C4%B0ndeks.md) · [WordPress Saldırıları](03_WordPress_Sald%C4%B1r%C4%B1lar%C4%B1.md) ▶

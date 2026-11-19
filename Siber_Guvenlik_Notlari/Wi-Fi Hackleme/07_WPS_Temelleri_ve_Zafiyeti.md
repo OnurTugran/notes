@@ -13,13 +13,15 @@ tags:
 
 # WPS Temelleri ve Zafiyeti
 
-> ◀ [[06.6_Aircrack-ng_Parola_Kırma|Aircrack-ng ile Parola Kırma]] · 📚 [[00_Wi-Fi_Hackleme_İndex|İndeks]] · [[07.1_WPS_Keşif_ve_Tarama|WPS Keşif ve Tarama]] ▶
+> ◀ [Aircrack-ng ile Parola Kırma](06.6_Aircrack-ng_Parola_K%C4%B1rma.md) · 📚 [İndeks](00_Wi-Fi_Hackleme_%C4%B0ndex.md) · [WPS Keşif ve Tarama](07.1_WPS_Ke%C5%9Fif_ve_Tarama.md) ▶
 
-> [!abstract] Özet
+> [!NOTE]
+> **Özet**
 > **WPS**, uzun WPA parolası girmeden tuş veya **8 haneli PIN** ile bağlanmayı sağlar. PIN iki yarı halinde doğrulandığı için yalnızca **11.000** denemede kırılabilir. PIN bulunursa AP, gerçek **WPA/WPA2 parolasını (PSK)** verir. Güçlü bir parola kullanmak bu durumda bile işe yaramaz.
 
-> [!tip] Saldırı seçimi
-> Kilit yoksa → [[07.2_WPS_Online_PIN_Brute-Force|online brute-force]]. Chipset zayıfsa → [[07.3_WPS_Pixie_Dust|Pixie Dust]] (saniyeler). Sadece buton modu açıksa → [[07.4_WPS_PBC_Saldırısı|PBC]]. AP kilitleniyorsa → [[07.5_MDK4_ile_WPS_Kilidi_DoS|MDK4]]. Önce hep [[07.1_WPS_Keşif_ve_Tarama|keşif]].
+> [!TIP]
+> **Saldırı seçimi**
+> Kilit yoksa → [online brute-force](07.2_WPS_Online_PIN_Brute-Force.md). Chipset zayıfsa → [Pixie Dust](07.3_WPS_Pixie_Dust.md) (saniyeler). Sadece buton modu açıksa → [PBC](07.4_WPS_PBC_Sald%C4%B1r%C4%B1s%C4%B1.md). AP kilitleniyorsa → [MDK4](07.5_MDK4_ile_WPS_Kilidi_DoS.md). Önce hep [keşif](07.1_WPS_Ke%C5%9Fif_ve_Tarama.md).
 
 WPS, kullanıcıların uzun ve karmaşık WPA/WPA2 parolalarını girmek zorunda kalmadan, bir tuşa basarak veya **8 haneli bir PIN** girerek ağa kolayca bağlanmasını sağlamak için **Wi-Fi Alliance** tarafından 2006'da sunulmuş bir özelliktir.
 
@@ -32,7 +34,8 @@ WPS iletişimi bir dizi **EAP (Extensible Authentication Protocol)** mesajı üz
 * **Enrollee (İstemci/Station):** Ağa bağlanmak isteyen cihaz.
 * **Registrar (Kayıtçı/Access Point):** Ağa giriş yetkisi veren cihaz (genellikle modemin/router'ın kendisi).
 
-> [!important] PIN saldırısında roller ters döner
+> [!IMPORTANT]
+> **PIN saldırısında roller ters döner**
 > Normal kullanımda AP "Registrar", bağlanan cihaz "Enrollee" olur. **PIN saldırısında** ise **AP = Enrollee** (PIN'i doğrulayan taraf), **saldırgan = Registrar** (PIN'i tahmin eden taraf) olur. Bu yüzden sözlükteki `PKe`, `E-Hash` gibi "E" ile başlayan değerler **AP'ye**, "R" ile başlayanlar **saldırgana** aittir.
 
 ---
@@ -117,4 +120,4 @@ sequenceDiagram
 ```
 
 ---
-> ◀ [[06.6_Aircrack-ng_Parola_Kırma|Aircrack-ng ile Parola Kırma]] · 📚 [[00_Wi-Fi_Hackleme_İndex|İndeks]] · [[07.1_WPS_Keşif_ve_Tarama|WPS Keşif ve Tarama]] ▶
+> ◀ [Aircrack-ng ile Parola Kırma](06.6_Aircrack-ng_Parola_K%C4%B1rma.md) · 📚 [İndeks](00_Wi-Fi_Hackleme_%C4%B0ndex.md) · [WPS Keşif ve Tarama](07.1_WPS_Ke%C5%9Fif_ve_Tarama.md) ▶

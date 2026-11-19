@@ -20,10 +20,11 @@ tags:
 
 # Savunma: Keşif ve Bilgi İfşasının Azaltılması
 
-> ◀ [[09 - Hassas Bilgi İfşası|Hassas Bilgi İfşası]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]]
+> ◀ [Hassas Bilgi İfşası](09%20-%20Hassas%20Bilgi%20%C4%B0f%C5%9Fas%C4%B1.md) · 📚 [Ana Sayfa (MOC)](00%20-%20Yapay%20zeka.md)
 
-> [!abstract] Özet
-> Bu bölüm, önceki bölümlerde anlatılan **keşif** ([[06 - Model Parmak İzi ve Keşif|Bölüm 6]]) ve **bilgi ifşa** ([[08 - Sistem Prompt Çıkarma Teknikleri|Bölüm 8]], [[09 - Hassas Bilgi İfşası|Bölüm 9]]) saldırılarına karşı **savunma tekniklerini ve mimari kalıpları** toplar. Her saldırıya karşılık gelen bir savunma vardır, ancak LLM davranışı **olasılıksal** olduğu için **hiçbir savunma tek başına yeterli değildir**. Savunma **katmanlı** olmalıdır.
+> [!NOTE]
+> **Özet**
+> Bu bölüm, önceki bölümlerde anlatılan **keşif** ([Bölüm 6](06%20-%20Model%20Parmak%20%C4%B0zi%20ve%20Ke%C5%9Fif.md)) ve **bilgi ifşa** ([Bölüm 8](08%20-%20Sistem%20Prompt%20%C3%87%C4%B1karma%20Teknikleri.md), [Bölüm 9](09%20-%20Hassas%20Bilgi%20%C4%B0f%C5%9Fas%C4%B1.md)) saldırılarına karşı **savunma tekniklerini ve mimari kalıpları** toplar. Her saldırıya karşılık gelen bir savunma vardır, ancak LLM davranışı **olasılıksal** olduğu için **hiçbir savunma tek başına yeterli değildir**. Savunma **katmanlı** olmalıdır.
 
 ## İçindekiler (Bölüm 10)
 - [[#Sistem Prompt Sağlamlaştırma]]
@@ -40,9 +41,9 @@ tags:
 
 | Saldırı (bölüm) | Ana savunma | Bu bölümde |
 |---|---|---|
-| Sistem prompt çıkarma ([[08 - Sistem Prompt Çıkarma Teknikleri\|B8]]) | Sır tutmama, çıkarma karşıtı talimat, canary token, sızıntı tespiti | [[#Sistem Prompt Sağlamlaştırma]], [[#Çıktı Filtreleme]] |
-| PII / eğitim verisi sızıntısı ([[09 - Hassas Bilgi İfşası\|B9]]) | Giriş ve çıkış PII redaksiyonu | [[#Kişisel Bilgilerin Düzenlenmesi (PII Redaksiyonu)]] |
-| Model parmak izi, HTTP başlığı, hata mesajı ([[06 - Model Parmak İzi ve Keşif\|B6]]) | Metadata temizleme, header gizleme, zamanlama normalizasyonu | [[#API Güvenliği ve Meta Veri Gizleme]] |
+| Sistem prompt çıkarma ([B8](08%20-%20Sistem%20Prompt%20%C3%87%C4%B1karma%20Teknikleri.md)) | Sır tutmama, çıkarma karşıtı talimat, canary token, sızıntı tespiti | [[#Sistem Prompt Sağlamlaştırma]], [[#Çıktı Filtreleme]] |
+| PII / eğitim verisi sızıntısı ([B9](09%20-%20Hassas%20Bilgi%20%C4%B0f%C5%9Fas%C4%B1.md)) | Giriş ve çıkış PII redaksiyonu | [[#Kişisel Bilgilerin Düzenlenmesi (PII Redaksiyonu)]] |
+| Model parmak izi, HTTP başlığı, hata mesajı ([B6](06%20-%20Model%20Parmak%20%C4%B0zi%20ve%20Ke%C5%9Fif.md)) | Metadata temizleme, header gizleme, zamanlama normalizasyonu | [[#API Güvenliği ve Meta Veri Gizleme]] |
 | Tekrarlı sondalama, otomatik keşif | Hız sınırı, anomali tespiti | [[#Hız Sınırlama ve Anormallik Tespiti]] |
 
 ```mermaid
@@ -65,7 +66,8 @@ Sistem prompt, bir LLM uygulamasının **hem en değerli hem de en savunmasız**
 
 ### İlke: Sistem prompt'larda asla sır saklamayın
 
-> [!danger] En önemli kural
+> [!CAUTION]
+> **En önemli kural**
 > Tüm hassas veriyi sistem prompt'tan **tamamen kaldırın**. API anahtarları, dahili uç noktalar, veritabanı kimlik bilgileri ve diğer sırlar **uygulama katmanında** ele alınmalı, prompt'ta bulunmamalıdır.
 
 **Savunmasız yaklaşım:** sırlar doğrudan prompt'un içinde.
@@ -98,7 +100,7 @@ MAX_TRANSFER = int(os.environ.get("MAX_TRANSFER_AMOUNT", 5000))
 ESCALATION_EMAIL = os.environ.get("ESCALATION_EMAIL")
 ```
 
-Bu yapıda **LLM gerçek değerleri hiç görmez**. Sistem prompt çıkarılsa bile API anahtarı, veritabanı adresi veya escalation e-postası açığa çıkmaz. Bkz. [[08 - Sistem Prompt Çıkarma Teknikleri#Sistem Prompt'lar Neden Önemlidir|Sistem prompt'lar neden önemlidir?]]
+Bu yapıda **LLM gerçek değerleri hiç görmez**. Sistem prompt çıkarılsa bile API anahtarı, veritabanı adresi veya escalation e-postası açığa çıkmaz. Bkz. [Sistem prompt'lar neden önemlidir?](08%20-%20Sistem%20Prompt%20%C3%87%C4%B1karma%20Teknikleri.md#sistem-promptlar-neden-önemlidir)
 
 ### Çıkarmayı önleme talimatları
 
@@ -124,11 +126,12 @@ GÜVENLİK KURALLARI (EN YÜKSEK ÖNCELİKLİ):
 """
 ```
 
-Bu talimatlar, [[08 - Sistem Prompt Çıkarma Teknikleri#Basit doğrudan istekler (Teknik 1-5)|doğrudan]], [[08 - Sistem Prompt Çıkarma Teknikleri#Kodlama ve format püf noktaları (Teknik 15-19)|kodlama]] ve yetki iddiası temelli tekniklere karşı yazılmıştır.
+Bu talimatlar, [doğrudan](08%20-%20Sistem%20Prompt%20%C3%87%C4%B1karma%20Teknikleri.md#basit-doğrudan-istekler-teknik-1-5), [kodlama](08%20-%20Sistem%20Prompt%20%C3%87%C4%B1karma%20Teknikleri.md#kodlama-ve-format-püf-noktaları-teknik-15-19) ve yetki iddiası temelli tekniklere karşı yazılmıştır.
 
 ### Sistem prompt'larda canary token
 
-> [!tip] Canary token nedir?
+> [!TIP]
+> **Canary token nedir?**
 > Sistem prompt'a yerleştirilen ve **modelin çıktısında görülürse prompt'un sızdığını gösteren** gizli bir işarettir. Sızıntıyı **engellemez, tespit eder**.
 
 ```python
@@ -158,14 +161,15 @@ def check_response_for_canary(response_text):
 
 Canary token normal bir model çıktısında **asla görünmemesi gereken** bir UUID'dir. Görünüyorsa sistem prompt sızmıştır.
 
-> [!warning] Canary'nin sınırı
+> [!WARNING]
+> **Canary'nin sınırı**
 > Yalnızca **belirli tokenin aynen çıkmasını** yakalar. Prompt başka sözcüklerle anlatılırsa veya kısmen sızarsa canary tetiklenmez. Bunu [[#Sistem prompt sızıntı tespiti|benzerlik kontrolüyle]] tamamlayın.
 
 ---
 
 ## Kişisel Bilgilerin Düzenlenmesi (PII Redaksiyonu)
 
-**PII (Personally Identifiable Information; kişisel olarak tanımlanabilir bilgi) redaksiyonu**, hassas bilgileri kullanıcıya ulaşmadan **önce filtreler**. Hem [[RAG]] sistemleri (getirilen belgeler PII içerebilir) hem de ezberlenmiş eğitim verisi sızdırabilecek modeller için gereklidir. Bkz. [[09 - Hassas Bilgi İfşası#Model Yanıtları Yoluyla PII Sızıntısı|PII sızıntısı]].
+**PII (Personally Identifiable Information; kişisel olarak tanımlanabilir bilgi) redaksiyonu**, hassas bilgileri kullanıcıya ulaşmadan **önce filtreler**. Hem [[RAG]] sistemleri (getirilen belgeler PII içerebilir) hem de ezberlenmiş eğitim verisi sızdırabilecek modeller için gereklidir. Bkz. [PII sızıntısı](09%20-%20Hassas%20Bilgi%20%C4%B0f%C5%9Fas%C4%B1.md#model-yanıtları-yoluyla-pii-sızıntısı).
 
 ### Çıktı seviyesinde PII algılama ve redaksiyon
 
@@ -201,7 +205,8 @@ def chat(user_message):
     return redact_pii(response)
 ```
 
-> [!example] Örnek sonuç
+> [!NOTE]
+> **Örnek sonuç**
 > **Önce:** `Müşterinin e-postası john@acme.com ve SSN değeri 123-45-6789`
 > **Sonra:** `Müşterinin e-postası [REDACTED_EMAIL] ve SSN değeri [REDACTED_SSN]`
 
@@ -232,7 +237,8 @@ def redact_pii_advanced(text):
     return anonymized.text
 ```
 
-> [!example] Örnek sonuç
+> [!NOTE]
+> **Örnek sonuç**
 > **Girdi:** `John Smith ile john@acme.com veya (555) 123-4567 üzerinden iletişime geç`
 > **Çıktı:** `<PERSON> ile <EMAIL_ADDRESS> veya <PHONE_NUMBER> üzerinden iletişime geç`
 
@@ -278,7 +284,7 @@ LLM, "E-postam john@acme.com ve yardıma ihtiyacım var" yerine **"E-postam [USE
 
 ## Hız Sınırlama ve Anormallik Tespiti
 
-**Hız sınırlama**, saldırganın bilgi çıkarmak için hızlı ve tekrarlı denemeler yapmasını engeller. **Anormallik tespiti** ise saldırıyı işaret eden olağandışı örüntüleri bulur. Parmak izi çıkarma ve [[08 - Sistem Prompt Çıkarma Teknikleri#Çok turlu ekstraksiyon (Teknik 20)|çok turlu çıkarma]] çok sayıda istek gerektirdiği için bu katman özellikle etkilidir.
+**Hız sınırlama**, saldırganın bilgi çıkarmak için hızlı ve tekrarlı denemeler yapmasını engeller. **Anormallik tespiti** ise saldırıyı işaret eden olağandışı örüntüleri bulur. Parmak izi çıkarma ve [çok turlu çıkarma](08%20-%20Sistem%20Prompt%20%C3%87%C4%B1karma%20Teknikleri.md#çok-turlu-ekstraksiyon-teknik-20) çok sayıda istek gerektirdiği için bu katman özellikle etkilidir.
 
 ### API hız sınırlaması
 
@@ -314,7 +320,8 @@ def chat():
     return jsonify({"response": response})
 ```
 
-> [!bug] Kaynak koddaki dikkat noktası
+> [!CAUTION]
+> **Kaynak koddaki dikkat noktası**
 > `key_func` sabit bir string (`"extraction_pattern"`) döndürdüğü için **tüm kullanıcıların şüpheli istekleri aynı kovayı paylaşır**: bir saldırgan herkesin limitini tüketir, ya da tersine kullanıcı bazlı ayrım kaybolur. Gerçek uygulamada anahtar `kullanıcı_id + ":extraction"` gibi **kullanıcıya özgü** olmalıdır. Ayrıca yeni Flask-Limiter sürümlerinde `Limiter(get_remote_address, app=app, ...)` biçimi kullanılır.
 
 ### Konuşma örüntüsü analizi
@@ -364,14 +371,15 @@ class ConversationMonitor:
 
 | Sinyal | Puan | Neden şüpheli? |
 |---|---|---|
-| Extraction anahtar kelimesi (`system prompt`, `verbatim`...) | +10 (her biri) | [[08 - Sistem Prompt Çıkarma Teknikleri#Doğrudan Ekstraksiyon Teknikleri\|Doğrudan teknikler]] bu ifadeleri kullanır |
+| Extraction anahtar kelimesi (`system prompt`, `verbatim`...) | +10 (her biri) | [Doğrudan teknikler](08%20-%20Sistem%20Prompt%20%C3%87%C4%B1karma%20Teknikleri.md#doğrudan-ekstraksiyon-teknikleri) bu ifadeleri kullanır |
 | 5 dk içinde 3'ten fazla "yetenek/kural" sorusu | +20 | Sistematik keşif davranışı |
 | Kodlama isteği (`base64`, `rot13`...) | +15 | Çıktı filtresini atlatma girişimi |
 | Toplam > 30 | engelle | |
 | Toplam 16-30 | izle | |
 | Toplam ≤ 15 | izin ver | |
 
-> [!warning] Yanlış pozitif riski
+> [!WARNING]
+> **Yanlış pozitif riski**
 > `translate`, `repeat`, `admin`, `debug` gibi sözcükler **masum kullanıcı mesajlarında da** geçer. Anahtar kelime puanlaması tek başına kullanılmamalı, eşikler gerçek trafiğe göre ayarlanmalı ve "engelle" yerine önce "izle / doğrula" tercih edilmelidir.
 
 ---
@@ -427,7 +435,7 @@ def chat(user_message):
     return response
 ```
 
-Engellenen yanıtların kullanıcıya nasıl göründüğü ve bunun nasıl bir **sızıntı oracle'ı** olabileceği için bkz. [[08 - Sistem Prompt Çıkarma Teknikleri#Guardrail Tarafından Engellenen Yanıtlar|Guardrail tarafından engellenen yanıtlar]].
+Engellenen yanıtların kullanıcıya nasıl göründüğü ve bunun nasıl bir **sızıntı oracle'ı** olabileceği için bkz. [Guardrail tarafından engellenen yanıtlar](08%20-%20Sistem%20Prompt%20%C3%87%C4%B1karma%20Teknikleri.md#guardrail-tarafından-engellenen-yanıtlar).
 
 ---
 
@@ -465,7 +473,7 @@ def chat():
     return jsonify(sanitized)
 ```
 
-İstemci; model adı/sürümü, token kullanımı, sistem parmak izi veya sağlayıcıya özgü request ID'lerini **görmez**. Bu alanların keşifte nasıl kullanıldığı: [[06 - Model Parmak İzi ve Keşif#API Düzeyinde Keşif|API düzeyinde keşif]].
+İstemci; model adı/sürümü, token kullanımı, sistem parmak izi veya sağlayıcıya özgü request ID'lerini **görmez**. Bu alanların keşifte nasıl kullanıldığı: [API düzeyinde keşif](06%20-%20Model%20Parmak%20%C4%B0zi%20ve%20Ke%C5%9Fif.md#api-düzeyinde-keşif).
 
 ### HTTP başlıklarını gizleme
 
@@ -494,14 +502,16 @@ server {
 }
 ```
 
-> [!note] Zamanlama
-> [[06 - Model Parmak İzi ve Keşif#Tepki zamanlaması analizi|Timing analysis]] riskini azaltmak için yanıt süresi **uygulama katmanında ayrıca normalize edilmelidir** (örneğin sabit bir minimum bekleme süresi veya rastgele gecikme). Header gizlemek tek başına yetmez.
+> [!NOTE]
+> **Zamanlama**
+> [Timing analysis](06%20-%20Model%20Parmak%20%C4%B0zi%20ve%20Ke%C5%9Fif.md#tepki-zamanlaması-analizi) riskini azaltmak için yanıt süresi **uygulama katmanında ayrıca normalize edilmelidir** (örneğin sabit bir minimum bekleme süresi veya rastgele gecikme). Header gizlemek tek başına yetmez.
 
 ---
 
 ## Derinlemesine Savunma Mimarisi
 
-> [!important] Hiçbir savunma tek başına yeterli değildir
+> [!IMPORTANT]
+> **Hiçbir savunma tek başına yeterli değildir**
 > Mimari, birden fazla koruma katmanını birleştirir: bir katman aşılırsa sonraki yakalar. Bkz. [[Defense in Depth]].
 
 | # | Katman | İçerik |
@@ -578,26 +588,30 @@ def chat():
     })
 ```
 
-> [!info] Kodda eksik görünenler
+> [!NOTE]
+> **Kodda eksik görünenler**
 > `detect_extraction_attempt`, `redact_pii`, `call_llm`, `check_prompt_similarity`, `log_security_event`, `generate_internal_id` bu örnekte **tanımlı değil**, önceki bölümlerdeki parçalara karşılık gelen yer tutuculardır. Katman 6 (izleme) bu kodda ayrıca gösterilmemiş, `log_security_event` çağrıları onun veri kaynağıdır.
 
 ---
 
 ## Savunmanın Sınırlamaları
 
-> [!warning] Hiçbiri kusursuz değil
+> [!WARNING]
+> **Hiçbiri kusursuz değil**
 > - **Regex tabanlı PII algılama** yeni formatları ve uç durumları kaçırır. Daha iyi kapsam için özel **NER (Adlandırılmış Varlık Tanıma)** modelleri kullanın.
 > - Prompt'taki **çıkarmayı önleme talimatları davranışsaldır**, yeterince yaratıcı promptlarla atlatılabilir.
 > - **Hız sınırlaması**, dağıtılmış saldırılarla (birden fazla IP/hesap) atlatılabilir.
 > - **Çıktı benzerlik kontrolleri**, model prompt'u kelimesi kelimesine değil başka sözcüklerle ifade ederse aldatılabilir.
 > - **Canary token'lar** yalnızca belirli tokenin çıkmasını algılar, başka sözcüklerle ifade edilmiş veya **kısmi** sızıntıyı algılamaz.
 
-> [!quote] Gerçekçi hedef
+> [!NOTE]
+> **Gerçekçi hedef**
 > Amaç **mükemmel güvenlik değildir** (mevcut LLM mimarisiyle imkânsızdır). Amaç, saldırının **maliyetini ve zorluğunu kabul edilebilir bir seviyeye çıkarırken girişimleri hızla tespit edip yanıt vermektir**.
 
 ## Temel Çıkarımlar (Bölüm 10)
 
-> [!summary] Akılda kalacaklar
+> [!NOTE]
+> **Akılda kalacaklar**
 > 1. Sistem prompt'ta **asla sır** (API anahtarı, kimlik bilgisi, dahili uç nokta) tutmayın. **Ortam değişkenleri ve uygulama katmanı yapılandırması** kullanın.
 > 2. **Presidio** gibi kütüphanelerle PII düzenlemesini **hem girişte hem çıkışta** uygulayın.
 > 3. Sızıntı tespiti için prompt'a **canary token** ekleyin, ama tek savunma olarak güvenmeyin.
@@ -615,4 +629,4 @@ def chat():
 - [[Principle of Least Privilege]]
 
 ---
-> ◀ [[09 - Hassas Bilgi İfşası|Hassas Bilgi İfşası]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]]
+> ◀ [Hassas Bilgi İfşası](09%20-%20Hassas%20Bilgi%20%C4%B0f%C5%9Fas%C4%B1.md) · 📚 [Ana Sayfa (MOC)](00%20-%20Yapay%20zeka.md)

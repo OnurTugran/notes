@@ -14,9 +14,10 @@ tags:
 
 # Linux Capability ile Hak Yükseltme
 
-> 📚 [[00_Yetki_Yükseltme|İndeks]]
+> 📚 [İndeks](00_Yetki_Y%C3%BCkseltme.md)
 
-> [!info] Referans
+> [!NOTE]
+> **Referans**
 > [GTFOBins: Python](https://gtfobins.github.io/gtfobins/python/)
 
 ## 1. Zafiyet Tespiti: `getcap` Komutu
@@ -70,8 +71,9 @@ Bu zafiyeti kapatmak ve yetkili durumu geri almak için root yetkileriyle şu ko
 sudo setcap -r /usr/bin/python3.8
 ```
 
-> [!tip] Diğer yollar
-> SUID dosyaları için `find / -perm -4000 2>/dev/null` ([[14_Solaris_ile_Farklar|ayrıntı]]), sudo yetkileri için `sudo -l`, zamanlanmış görevler için [[04_Süreçler_ve_Görev_Zamanlama]].
+> [!TIP]
+> **Diğer yollar**
+> SUID dosyaları için `find / -perm -4000 2>/dev/null` ([ayrıntı](../Linux_Komutlar%C4%B1/14_Solaris_ile_Farklar.md)), sudo yetkileri için `sudo -l`, zamanlanmış görevler için [04_Süreçler_ve_Görev_Zamanlama](../Linux_Komutlar%C4%B1/04_S%C3%BCre%C3%A7ler_ve_G%C3%B6rev_Zamanlama.md).
 
 ---
-> 📚 [[00_Yetki_Yükseltme|İndeks]]
+> 📚 [İndeks](00_Yetki_Y%C3%BCkseltme.md)

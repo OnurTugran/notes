@@ -15,7 +15,7 @@ tags:
 
 # Uzak Masaüstü ve Görüntü Protokolleri
 
-> ◀ [[10_Yedekleme_ve_Rsync|Yedekleme ve Rsync]] · 📚 [[00_Linux_Komutları|İndeks]] · [[12_Konteynerler_Docker_ve_LXC|Konteynerler: Docker ve LXC]] ▶
+> ◀ [Yedekleme ve Rsync](10_Yedekleme_ve_Rsync.md) · 📚 [İndeks](00_Linux_Komutlar%C4%B1.md) · [Konteynerler: Docker ve LXC](12_Konteynerler_Docker_ve_LXC.md) ▶
 
 Sızma testlerinde hedef sistemde grafiksel bir arayüze (GUI) erişmek veya sistemi uzaktan yönetmek için kullanılan temel protokoller şunlardır:
 
@@ -96,4 +96,4 @@ xtightvncviewer localhost:5901
 ```
 
 ---
-> ◀ [[10_Yedekleme_ve_Rsync|Yedekleme ve Rsync]] · 📚 [[00_Linux_Komutları|İndeks]] · [[12_Konteynerler_Docker_ve_LXC|Konteynerler: Docker ve LXC]] ▶
+> ◀ [Yedekleme ve Rsync](10_Yedekleme_ve_Rsync.md) · 📚 [İndeks](00_Linux_Komutlar%C4%B1.md) · [Konteynerler: Docker ve LXC](12_Konteynerler_Docker_ve_LXC.md) ▶

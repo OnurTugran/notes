@@ -13,7 +13,7 @@ tags:
 
 # SQL Injection Temelleri
 
-> 📚 [[00_Web_Hacking_Index|İndeks]] · [[01.1_SQLi_Union|SQLi UNION Saldırıları]] ▶
+> 📚 [İndeks](00_Web_Hacking_Index.md) · [SQLi UNION Saldırıları](01.1_SQLi_Union.md) ▶
 
 **Etiket:** #web_hacking
 **Temel Hedef:** Kullanıcı girdisi üzerinden arka plandaki veritabanı sorgusunu manipüle etmek.
@@ -58,12 +58,12 @@ SELECT * FROM products WHERE category = 'Gifts' AND released = 1
 
 ## 🔗 Alt Kategoriler ve Spesifik Taktikler
 *(Eğitimde yeni modüllere geçtikçe dosyalarını oluşturup buraya bağlayabilirsin)*
-- [[01.1_SQLi_Union]]
-- [[01.2_Blind_SQL]]
-- [[01.3_Error-Based_SQL_Injection]]
-- [[01.4_Time_Based_Blind_SQL]]
-- [[01.5_Out-of-Band_OAST|Out-of-Band (OAST)]]
-- [[01.6_Farklı_Bağlamlarda_SQLi|Farklı Bağlamlarda SQLi]]
+- [01.1_SQLi_Union](01.1_SQLi_Union.md)
+- [01.2_Blind_SQL](01.2_Blind_SQL.md)
+- [01.3_Error-Based_SQL_Injection](01.3_Error-Based_SQL_Injection.md)
+- [01.4_Time_Based_Blind_SQL](01.4_Time_Based_Blind_SQL.md)
+- [Out-of-Band (OAST)](01.5_Out-of-Band_OAST.md)
+- [Farklı Bağlamlarda SQLi](01.6_Farkl%C4%B1_Ba%C4%9Flamlarda_SQLi.md)
 
 ---
-> 📚 [[00_Web_Hacking_Index|İndeks]] · [[01.1_SQLi_Union|SQLi UNION Saldırıları]] ▶
+> 📚 [İndeks](00_Web_Hacking_Index.md) · [SQLi UNION Saldırıları](01.1_SQLi_Union.md) ▶

@@ -13,7 +13,7 @@ tags:
 
 # Aircrack-ng Genel Bakış
 
-> ◀ [[05_Wi-Fi_Çalışma_Modları|Wi-Fi Çalışma Modları]] · 📚 [[00_Wi-Fi_Hackleme_İndex|İndeks]] · [[06.1_Airmon-ng|Airmon-ng]] ▶
+> ◀ [Wi-Fi Çalışma Modları](05_Wi-Fi_%C3%87al%C4%B1%C5%9Fma_Modlar%C4%B1.md) · 📚 [İndeks](00_Wi-Fi_Hackleme_%C4%B0ndex.md) · [Airmon-ng](06.1_Airmon-ng.md) ▶
 
 Aircrack-ng, Wi-Fi ağ güvenliğinin değerlendirilmesi için tasarlanmış kapsamlı bir araç setidir (suite). Kablosuz ağları analiz etmeye veya istismar etmeye (exploit) başlamadan önce, bu araçların temel işlevlerini kavramak şarttır.
 
@@ -49,8 +49,8 @@ flowchart LR
 ```
 
 ## Araç notları
-- [[06.1_Airmon-ng]] · [[06.2_Airodump-ng]] · [[06.3_Airgraph-ng]]
-- [[06.4_Aireplay-ng]] · [[06.5_Airdecap-ng]] · [[06.6_Aircrack-ng_Parola_Kırma]]
+- [06.1_Airmon-ng](06.1_Airmon-ng.md) · [06.2_Airodump-ng](06.2_Airodump-ng.md) · [06.3_Airgraph-ng](06.3_Airgraph-ng.md)
+- [06.4_Aireplay-ng](06.4_Aireplay-ng.md) · [06.5_Airdecap-ng](06.5_Airdecap-ng.md) · [06.6_Aircrack-ng_Parola_Kırma](06.6_Aircrack-ng_Parola_K%C4%B1rma.md)
 
 ---
-> ◀ [[05_Wi-Fi_Çalışma_Modları|Wi-Fi Çalışma Modları]] · 📚 [[00_Wi-Fi_Hackleme_İndex|İndeks]] · [[06.1_Airmon-ng|Airmon-ng]] ▶
+> ◀ [Wi-Fi Çalışma Modları](05_Wi-Fi_%C3%87al%C4%B1%C5%9Fma_Modlar%C4%B1.md) · 📚 [İndeks](00_Wi-Fi_Hackleme_%C4%B0ndex.md) · [Airmon-ng](06.1_Airmon-ng.md) ▶

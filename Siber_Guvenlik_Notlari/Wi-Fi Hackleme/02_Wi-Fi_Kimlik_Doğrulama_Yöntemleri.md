@@ -13,9 +13,10 @@ tags:
 
 # Wi-Fi Kimlik Doğrulama Yöntemleri
 
-> ◀ [[01_Wi-Fi_Güvenlik_Protokolleri|Wi-Fi Güvenlik Protokolleri ve Sızma Testi Temelleri]] · 📚 [[00_Wi-Fi_Hackleme_İndex|İndeks]] · [[03_802.11_Çerçeveleri_ve_Bağlantı_Döngüsü|802.11 Çerçeveleri ve Bağlantı Döngüsü]] ▶
+> ◀ [Wi-Fi Güvenlik Protokolleri ve Sızma Testi Temelleri](01_Wi-Fi_G%C3%BCvenlik_Protokolleri.md) · 📚 [İndeks](00_Wi-Fi_Hackleme_%C4%B0ndex.md) · [802.11 Çerçeveleri ve Bağlantı Döngüsü](03_802.11_%C3%87er%C3%A7eveleri_ve_Ba%C4%9Flant%C4%B1_D%C3%B6ng%C3%BCs%C3%BC.md) ▶
 
-> [!abstract] Özet
+> [!NOTE]
+> **Özet**
 > Wi-Fi'da iki temel kimlik doğrulama sistemi vardır: **Open System** (parola yok) ve **Shared Key** (ortak parola, challenge-response ile kanıtlanır). WPA/WPA2/WPA3 ağlarında ise parola doğrulaması **handshake / SAE** ile yapılır.
 
 | Yöntem | Parola | Nasıl doğrular? | Saldırı etkisi |
@@ -59,4 +60,4 @@ WEP'in zayıflıklarını kapatan ve günümüzde en çok karşılaştığımız
 * **Pentest Etkisi:** SAE sayesinde saldırganların yakaladığı paketleri eve götürüp çevrimdışı (offline) olarak devasa kelime listeleriyle (brute-force) kırma ihtimali çok büyük ölçüde engellenmiştir. Ancak eski cihaz donanımları desteklemediği için WPA2 kadar yaygınlaşmamıştır.
 
 ---
-> ◀ [[01_Wi-Fi_Güvenlik_Protokolleri|Wi-Fi Güvenlik Protokolleri ve Sızma Testi Temelleri]] · 📚 [[00_Wi-Fi_Hackleme_İndex|İndeks]] · [[03_802.11_Çerçeveleri_ve_Bağlantı_Döngüsü|802.11 Çerçeveleri ve Bağlantı Döngüsü]] ▶
+> ◀ [Wi-Fi Güvenlik Protokolleri ve Sızma Testi Temelleri](01_Wi-Fi_G%C3%BCvenlik_Protokolleri.md) · 📚 [İndeks](00_Wi-Fi_Hackleme_%C4%B0ndex.md) · [802.11 Çerçeveleri ve Bağlantı Döngüsü](03_802.11_%C3%87er%C3%A7eveleri_ve_Ba%C4%9Flant%C4%B1_D%C3%B6ng%C3%BCs%C3%BC.md) ▶

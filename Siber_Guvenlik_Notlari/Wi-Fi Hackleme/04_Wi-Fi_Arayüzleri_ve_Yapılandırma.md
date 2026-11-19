@@ -14,9 +14,10 @@ tags:
 
 # Wi-Fi Arayüzleri ve Yapılandırma
 
-> ◀ [[03_802.11_Çerçeveleri_ve_Bağlantı_Döngüsü|802.11 Çerçeveleri ve Bağlantı Döngüsü]] · 📚 [[00_Wi-Fi_Hackleme_İndex|İndeks]] · [[05_Wi-Fi_Çalışma_Modları|Wi-Fi Çalışma Modları]] ▶
+> ◀ [802.11 Çerçeveleri ve Bağlantı Döngüsü](03_802.11_%C3%87er%C3%A7eveleri_ve_Ba%C4%9Flant%C4%B1_D%C3%B6ng%C3%BCs%C3%BC.md) · 📚 [İndeks](00_Wi-Fi_Hackleme_%C4%B0ndex.md) · [Wi-Fi Çalışma Modları](05_Wi-Fi_%C3%87al%C4%B1%C5%9Fma_Modlar%C4%B1.md) ▶
 
-> [!abstract] Özet
+> [!NOTE]
+> **Özet**
 > Sızma testinin başarısı büyük ölçüde **ağ kartına** bağlıdır. Kartın **monitor mode + packet injection** desteği ve Linux'ta iyi bir **sürücüsü** olmalıdır. Hız ikincil önemdedir.
 
 Wi-Fi arayüzleri (ağ kartları/adaptörler) sızma testinin temel taşıdır. Verileri bu arayüzler aracılığıyla iletir ve alırız. Zayıf veya uyumsuz bir ağ kartı seçmek, sızma testi çabalarımızın başarısız olmasına (örneğin paket yakalayamamaya) neden olur.
@@ -60,7 +61,8 @@ sudo iwconfig wlan0 txpower 20
 sudo ifconfig wlan0 up
 ```
 
-> [!note] Modern alternatif
+> [!NOTE]
+> **Modern alternatif**
 > Yeni sürücülerde `iwconfig txpower` çalışmayabilir. Bu durumda `iw` kullan (birim mBm'dir, 2000 mBm = 20 dBm):
 > ```bash
 > sudo iw dev wlan0 set txpower fixed 2000
@@ -110,4 +112,4 @@ sudo ifconfig wlan0 up
 ```
 
 ---
-> ◀ [[03_802.11_Çerçeveleri_ve_Bağlantı_Döngüsü|802.11 Çerçeveleri ve Bağlantı Döngüsü]] · 📚 [[00_Wi-Fi_Hackleme_İndex|İndeks]] · [[05_Wi-Fi_Çalışma_Modları|Wi-Fi Çalışma Modları]] ▶
+> ◀ [802.11 Çerçeveleri ve Bağlantı Döngüsü](03_802.11_%C3%87er%C3%A7eveleri_ve_Ba%C4%9Flant%C4%B1_D%C3%B6ng%C3%BCs%C3%BC.md) · 📚 [İndeks](00_Wi-Fi_Hackleme_%C4%B0ndex.md) · [Wi-Fi Çalışma Modları](05_Wi-Fi_%C3%87al%C4%B1%C5%9Fma_Modlar%C4%B1.md) ▶

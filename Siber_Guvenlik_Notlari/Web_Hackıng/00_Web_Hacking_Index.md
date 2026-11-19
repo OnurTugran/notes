@@ -12,30 +12,32 @@ tags:
 
 # Web Hacking
 
-> 📚 [[Siber_Güvenlik_Ana_Sayfa|Ana Sayfa]]
+> 📚 [Ana Sayfa](../Siber_G%C3%BCvenlik_Ana_Sayfa.md)
 
-> [!abstract] Bu klasör
+> [!NOTE]
+> **Bu klasör**
 > Web uygulama zafiyetleri. Şu an SQL Injection ağırlıklı; öğrenme sırasına göre dizilmiştir.
 
-> [!warning] Yasal uyarı
+> [!WARNING]
+> **Yasal uyarı**
 > Yalnızca izinli laboratuvar ve hedeflerde uygula.
 
 | Not | İçerik |
 |---|---|
-| [[01_SQL_Injection_Temelleri\|SQL Injection Temelleri]] | Test noktaları, Burp keşfi, temel payload'lar |
-| [[01.1_SQLi_Union\|SQLi UNION Saldırıları]] | Sütun sayısı, veri tipi, veri çekme |
-| [[01.2_Blind_SQL\|Blind (Kör) SQL Injection]] | Koşullu yanıtlar, mantıksal sorular |
-| [[01.3_Error-Based_SQL_Injection\|Error-Based SQL Injection]] | Hata mesajlarından veri sızdırma |
-| [[01.4_Time_Based_Blind_SQL\|Time-Based Blind SQL Injection]] | Gecikme ile veri çıkarma |
-| [[01.5_Out-of-Band_OAST\|Out-of-Band (OAST) SQL Injection]] | DNS/HTTP ile veri sızdırma, Burp Collaborator |
-| [[01.6_Farklı_Bağlamlarda_SQLi\|Farklı Bağlamlarda SQL Injection]] | JSON/XML, ikinci derece SQLi, filtre atlatma |
+| [SQL Injection Temelleri](01_SQL_Injection_Temelleri.md) | Test noktaları, Burp keşfi, temel payload'lar |
+| [SQLi UNION Saldırıları](01.1_SQLi_Union.md) | Sütun sayısı, veri tipi, veri çekme |
+| [Blind (Kör) SQL Injection](01.2_Blind_SQL.md) | Koşullu yanıtlar, mantıksal sorular |
+| [Error-Based SQL Injection](01.3_Error-Based_SQL_Injection.md) | Hata mesajlarından veri sızdırma |
+| [Time-Based Blind SQL Injection](01.4_Time_Based_Blind_SQL.md) | Gecikme ile veri çıkarma |
+| [Out-of-Band (OAST) SQL Injection](01.5_Out-of-Band_OAST.md) | DNS/HTTP ile veri sızdırma, Burp Collaborator |
+| [Farklı Bağlamlarda SQL Injection](01.6_Farkl%C4%B1_Ba%C4%9Flamlarda_SQLi.md) | JSON/XML, ikinci derece SQLi, filtre atlatma |
 
 ## Hangi teknik ne zaman?
 
 | Durum | Teknik |
 |---|---|
-| Sorgu sonucu sayfada görünüyor | [[01.1_SQLi_Union\|UNION]] |
-| Hata mesajı sayfada görünüyor | [[01.3_Error-Based_SQL_Injection\|Error-based]] |
-| Sayfa içeriği doğru/yanlışa göre değişiyor | [[01.2_Blind_SQL\|Blind (boolean)]] |
-| Hiçbir fark yok | [[01.4_Time_Based_Blind_SQL\|Time-based]] |
-| Sorgu asenkron çalışıyor | [[01.5_Out-of-Band_OAST\|OAST]] |
+| Sorgu sonucu sayfada görünüyor | [UNION](01.1_SQLi_Union.md) |
+| Hata mesajı sayfada görünüyor | [Error-based](01.3_Error-Based_SQL_Injection.md) |
+| Sayfa içeriği doğru/yanlışa göre değişiyor | [Blind (boolean)](01.2_Blind_SQL.md) |
+| Hiçbir fark yok | [Time-based](01.4_Time_Based_Blind_SQL.md) |
+| Sorgu asenkron çalışıyor | [OAST](01.5_Out-of-Band_OAST.md) |

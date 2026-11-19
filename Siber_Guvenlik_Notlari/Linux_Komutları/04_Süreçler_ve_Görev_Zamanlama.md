@@ -14,7 +14,7 @@ tags:
 
 # Süreçler ve Görev Zamanlama
 
-> ◀ [[03_Paket_Yönetimi|Paket Yönetimi]] · 📚 [[00_Linux_Komutları|İndeks]] · [[05_Dosya_Sistemi_ve_Disk|Dosya Sistemi ve Disk Yönetimi]] ▶
+> ◀ [Paket Yönetimi](03_Paket_Y%C3%B6netimi.md) · 📚 [İndeks](00_Linux_Komutlar%C4%B1.md) · [Dosya Sistemi ve Disk Yönetimi](05_Dosya_Sistemi_ve_Disk.md) ▶
 
 ## Süreç yönetimi
 
@@ -74,4 +74,4 @@ Bir Crontab satırı **5 zaman parametresi** ve **1 komut/script yolundan** olu�
 *   **Cron:** Görevlerin ne zaman çalıştırılacağını cron daemon'ına (arka plan servisine) bildirmek için yapılandırılmış tek bir "crontab" dosyası kullanır.
 
 ---
-> ◀ [[03_Paket_Yönetimi|Paket Yönetimi]] · 📚 [[00_Linux_Komutları|İndeks]] · [[05_Dosya_Sistemi_ve_Disk|Dosya Sistemi ve Disk Yönetimi]] ▶
+> ◀ [Paket Yönetimi](03_Paket_Y%C3%B6netimi.md) · 📚 [İndeks](00_Linux_Komutlar%C4%B1.md) · [Dosya Sistemi ve Disk Yönetimi](05_Dosya_Sistemi_ve_Disk.md) ▶

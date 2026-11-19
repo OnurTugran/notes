@@ -13,7 +13,7 @@ tags:
 
 # Iptables ve Güvenlik Duvarı
 
-> ◀ [[06_Ağ_Yapılandırması_ve_Güvenliği|Ağ Yapılandırması ve Güvenliği]] · 📚 [[00_Linux_Komutları|İndeks]] · [[08_NFS|NFS (Network File System)]] ▶
+> ◀ [Ağ Yapılandırması ve Güvenliği](06_A%C4%9F_Yap%C4%B1land%C4%B1rmas%C4%B1_ve_G%C3%BCvenli%C4%9Fi.md) · 📚 [İndeks](00_Linux_Komutlar%C4%B1.md) · [NFS (Network File System)](08_NFS.md) ▶
 
 Linux sistemlerinde ağ trafiğini izlemek, filtrelemek ve yetkisiz erişimleri engellemek için güvenlik duvarları (firewalls) kullanılır. Geçmişte `ipchains` kullanılırken, günümüzde standart olarak **`iptables`** (veya onun daha modern, basitleştirilmiş versiyonları olan `nftables`, `ufw`, `firewalld`) yaygındır.
 
@@ -72,8 +72,9 @@ sudo iptables -N KENDI_ZINCIRIM
 sudo iptables -D INPUT 1
 ```
 
-> [!warning] Kural sırası ve kalıcılık
+> [!WARNING]
+> **Kural sırası ve kalıcılık**
 > `iptables` kuralları **yukarıdan aşağı** değerlendirilir, ilk eşleşen uygulanır. Kurallar yeniden başlatmada silinir; kalıcı yapmak için `iptables-persistent` veya `netfilter-persistent save` kullan. Uzaktan çalışırken önce SSH'a izin veren kuralı ekle, sonra `DROP` politikası uygula, yoksa kendini dışarıda bırakırsın.
 
 ---
-> ◀ [[06_Ağ_Yapılandırması_ve_Güvenliği|Ağ Yapılandırması ve Güvenliği]] · 📚 [[00_Linux_Komutları|İndeks]] · [[08_NFS|NFS (Network File System)]] ▶
+> ◀ [Ağ Yapılandırması ve Güvenliği](06_A%C4%9F_Yap%C4%B1land%C4%B1rmas%C4%B1_ve_G%C3%BCvenli%C4%9Fi.md) · 📚 [İndeks](00_Linux_Komutlar%C4%B1.md) · [NFS (Network File System)](08_NFS.md) ▶

@@ -14,7 +14,7 @@ tags:
 
 # Yedekleme ve Rsync
 
-> ◀ [[09_Web_Sunucusu_ve_Dosya_Transferi|Web Sunucusu ve Dosya Transferi]] · 📚 [[00_Linux_Komutları|İndeks]] · [[11_Uzak_Masaüstü_ve_Görüntü_Protokolleri|Uzak Masaüstü ve Görüntü Protokolleri]] ▶
+> ◀ [Web Sunucusu ve Dosya Transferi](09_Web_Sunucusu_ve_Dosya_Transferi.md) · 📚 [İndeks](00_Linux_Komutlar%C4%B1.md) · [Uzak Masaüstü ve Görüntü Protokolleri](11_Uzak_Masa%C3%BCst%C3%BC_ve_G%C3%B6r%C3%BCnt%C3%BC_Protokolleri.md) ▶
 
 Linux'ta (özellikle Ubuntu) verileri yedeklemek ve korumak için üç temel araç öne çıkar:
 1. **Rsync:** Sadece değişen veya yeni eklenen dosyaları aktardığı için inanılmaz hızlı ve verimlidir. Ağ üzerinden dosya kopyalamak için endüstri standardıdır.
@@ -80,4 +80,4 @@ Crontab dosyasının en altına şu satırı ekleyerek her saat başı (0. dakik
 `0 * * * * /path/to/RSYNC_Backup.sh`
 
 ---
-> ◀ [[09_Web_Sunucusu_ve_Dosya_Transferi|Web Sunucusu ve Dosya Transferi]] · 📚 [[00_Linux_Komutları|İndeks]] · [[11_Uzak_Masaüstü_ve_Görüntü_Protokolleri|Uzak Masaüstü ve Görüntü Protokolleri]] ▶
+> ◀ [Web Sunucusu ve Dosya Transferi](09_Web_Sunucusu_ve_Dosya_Transferi.md) · 📚 [İndeks](00_Linux_Komutlar%C4%B1.md) · [Uzak Masaüstü ve Görüntü Protokolleri](11_Uzak_Masa%C3%BCst%C3%BC_ve_G%C3%B6r%C3%BCnt%C3%BC_Protokolleri.md) ▶

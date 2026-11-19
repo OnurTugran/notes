@@ -14,7 +14,7 @@ tags:
 
 # Paket Yönetimi
 
-> ◀ [[02_Metin_İşleme_ve_Regex|Metin İşleme ve Regex]] · 📚 [[00_Linux_Komutları|İndeks]] · [[04_Süreçler_ve_Görev_Zamanlama|Süreçler ve Görev Zamanlama]] ▶
+> ◀ [Metin İşleme ve Regex](02_Metin_%C4%B0%C5%9Fleme_ve_Regex.md) · 📚 [İndeks](00_Linux_Komutlar%C4%B1.md) · [Süreçler ve Görev Zamanlama](04_S%C3%BCre%C3%A7ler_ve_G%C3%B6rev_Zamanlama.md) ▶
 
 | Komut | Açıklama |
 | :--- | :--- |
@@ -69,4 +69,4 @@ sudo dpkg -i strace_4.21-1ubuntu1_amd64.deb
 ```
 
 ---
-> ◀ [[02_Metin_İşleme_ve_Regex|Metin İşleme ve Regex]] · 📚 [[00_Linux_Komutları|İndeks]] · [[04_Süreçler_ve_Görev_Zamanlama|Süreçler ve Görev Zamanlama]] ▶
+> ◀ [Metin İşleme ve Regex](02_Metin_%C4%B0%C5%9Fleme_ve_Regex.md) · 📚 [İndeks](00_Linux_Komutlar%C4%B1.md) · [Süreçler ve Görev Zamanlama](04_S%C3%BCre%C3%A7ler_ve_G%C3%B6rev_Zamanlama.md) ▶

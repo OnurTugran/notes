@@ -11,17 +11,19 @@ tags:
 
 # Siber Güvenlik
 
-> [!abstract] Merkez
+> [!NOTE]
+> **Merkez**
 > Tüm siber güvenlik notlarının giriş noktası.
 
 | Konu | Not |
 |---|---|
-| Yapay zeka / LLM güvenliği | [[00 - Yapay zeka\|Yapay Zeka Güvenliği (10 bölüm)]] |
-| Kablosuz ağlar | [[00_Wi-Fi_Hackleme_İndex\|Wi-Fi Hackleme]] |
-| Web zafiyetleri | [[00_Web_Hacking_Index\|Web Hacking / SQL Injection]] |
-| CMS | [[00_WordPress_İndeks\|WordPress Pentest]] |
-| Yetki yükseltme | [[00_Yetki_Yükseltme\|Yetki Yükseltme]] |
-| Linux | [[00_Linux_Komutları\|Linux Komutları]] |
+| Yapay zeka / LLM güvenliği | [Yapay Zeka Güvenliği (10 bölüm)](Yapay_Zeka_G%C3%BCvenli%C4%9Fi/00%20-%20Yapay%20zeka.md) |
+| Açık kaynak istihbaratı | [OSINT](OSINT/00_OSINT_%C4%B0ndeks.md) |
+| Kablosuz ağlar | [Wi-Fi Hackleme](Wi-Fi%20Hackleme/00_Wi-Fi_Hackleme_%C4%B0ndex.md) |
+| Web zafiyetleri | [Web Hacking / SQL Injection](Web_Hack%C4%B1ng/00_Web_Hacking_Index.md) |
+| CMS | [WordPress Pentest](WordPress/00_WordPress_%C4%B0ndeks.md) |
+| Yetki yükseltme | [Yetki Yükseltme](Yetki%20Y%C3%BCkseltme/00_Yetki_Y%C3%BCkseltme.md) |
+| Linux | [Linux Komutları](Linux_Komutlar%C4%B1/00_Linux_Komutlar%C4%B1.md) |
 
 ```mermaid
 flowchart LR

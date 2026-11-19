@@ -15,7 +15,7 @@ tags:
 
 # Web Sunucusu ve Dosya Transferi
 
-> ◀ [[08_NFS|NFS (Network File System)]] · 📚 [[00_Linux_Komutları|İndeks]] · [[10_Yedekleme_ve_Rsync|Yedekleme ve Rsync]] ▶
+> ◀ [NFS (Network File System)](08_NFS.md) · 📚 [İndeks](00_Linux_Komutlar%C4%B1.md) · [Yedekleme ve Rsync](10_Yedekleme_ve_Rsync.md) ▶
 
 ## 1. Apache Web Sunucusu
 Apache, dünyadaki en popüler web sunucularından biridir. Bir evin iskeleti gibidir; farklı odalar (modüller) ekleyerek özelleştirebilirsin. Örneğin, `mod_ssl` modülünü ekleyerek trafiği şifreleyebilir veya PHP/Python gibi dillerle dinamik web siteleri çalıştırabilirsin.
@@ -66,4 +66,4 @@ python3 -m http.server
 Bu komutu çalıştırdığında terminal açık kalır. Hedef makine (veya başka biri) senin dosyalarına tıkladığında veya indirdiğinde, terminal ekranında anında canlı log kayıtları düşer. (Örn: `127.0.0.1 - "GET /script.sh HTTP/1.1" 200`). Böylece hedefin dosyayı başarıyla çekip çekmediğini canlı izleyebilirsin.
 
 ---
-> ◀ [[08_NFS|NFS (Network File System)]] · 📚 [[00_Linux_Komutları|İndeks]] · [[10_Yedekleme_ve_Rsync|Yedekleme ve Rsync]] ▶
+> ◀ [NFS (Network File System)](08_NFS.md) · 📚 [İndeks](00_Linux_Komutlar%C4%B1.md) · [Yedekleme ve Rsync](10_Yedekleme_ve_Rsync.md) ▶

@@ -14,7 +14,7 @@ tags:
 
 # Konteynerler: Docker ve LXC
 
-> ◀ [[11_Uzak_Masaüstü_ve_Görüntü_Protokolleri|Uzak Masaüstü ve Görüntü Protokolleri]] · 📚 [[00_Linux_Komutları|İndeks]] · [[13_Sistem_Logları|Sistem Logları ve Güvenlik Analizi]] ▶
+> ◀ [Uzak Masaüstü ve Görüntü Protokolleri](11_Uzak_Masa%C3%BCst%C3%BC_ve_G%C3%B6r%C3%BCnt%C3%BC_Protokolleri.md) · 📚 [İndeks](00_Linux_Komutlar%C4%B1.md) · [Sistem Logları ve Güvenlik Analizi](13_Sistem_Loglar%C4%B1.md) ▶
 
 ## 1. Konteyner Nedir?
 Konteynerler, bir uygulamanın çalışması için gereken her şeyi (kod, kütüphaneler, ayarlar) tek bir pakete koyup, o uygulamanın her bilgisayarda aynı şekilde (izole bir şekilde) çalışmasını sağlayan yapılardır.
@@ -87,4 +87,4 @@ sudo lxc-cgroup -n linuxcontainer memory.limit_in_bytes 512M
 ```
 
 ---
-> ◀ [[11_Uzak_Masaüstü_ve_Görüntü_Protokolleri|Uzak Masaüstü ve Görüntü Protokolleri]] · 📚 [[00_Linux_Komutları|İndeks]] · [[13_Sistem_Logları|Sistem Logları ve Güvenlik Analizi]] ▶
+> ◀ [Uzak Masaüstü ve Görüntü Protokolleri](11_Uzak_Masa%C3%BCst%C3%BC_ve_G%C3%B6r%C3%BCnt%C3%BC_Protokolleri.md) · 📚 [İndeks](00_Linux_Komutlar%C4%B1.md) · [Sistem Logları ve Güvenlik Analizi](13_Sistem_Loglar%C4%B1.md) ▶

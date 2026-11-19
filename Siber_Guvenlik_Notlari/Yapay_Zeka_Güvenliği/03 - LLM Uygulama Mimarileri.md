@@ -16,9 +16,10 @@ tags:
 
 # LLM Uygulama Mimarileri
 
-> ◀ [[02 - Yapay Zeka Güvenliği Neden Farklı|Yapay Zeka Güvenliği Neden Farklı?]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[04 - OWASP LLM Top 10|LLM Uygulamaları için OWASP Top 10]] ▶
+> ◀ [Yapay Zeka Güvenliği Neden Farklı?](02%20-%20Yapay%20Zeka%20G%C3%BCvenli%C4%9Fi%20Neden%20Farkl%C4%B1.md) · 📚 [Ana Sayfa (MOC)](00%20-%20Yapay%20zeka.md) · [LLM Uygulamaları için OWASP Top 10](04%20-%20OWASP%20LLM%20Top%2010.md) ▶
 
-> [!abstract] Özet
+> [!NOTE]
+> **Özet**
 > LLM'ler nadiren bağımsız model olarak dağıtılır; veritabanlarına, API'lere, araçlara ve diğer sistemlere bağlayan karmaşık uygulama mimarilerine gömülürler. **Her mimari kendine özgü saldırı yüzeyini sunar.** Bir LLM'nin nasıl entegre edildiği, saldırganın neyi başarabileceğini belirler.
 
 ## İçindekiler (Bölüm 3)
@@ -79,7 +80,8 @@ response = client.chat.completions.create(
 )
 ```
 
-> [!bug] Bu örnekteki sorunlar
+> [!CAUTION]
+> **Bu örnekteki sorunlar**
 > - **System prompt** sosyal mühendislikle çıkarılabilir.
 > - *"Rakiplerden bahsetmeyin"* **davranışsal bir kuraldır**, teknik olarak zorlanmaz.
 > - `temperature=0.7` güvenlik davranışında **değişkenlik** yaratır.
@@ -126,7 +128,8 @@ RAG, bağımsız modelin ötesinde yeni vektörler getirir:
 | **Retrieval yoluyla veri sızdırma** | Bilgi tabanı hassas veri içeriyorsa, saldırgan bunları getirip LLM yanıtından sızdıracak sorgular kurabilir |
 | **Chunk boundary saldırıları** | Chunk sınırları boyunca bölünmüş kötü amaçlı içerik taramadan kaçar ama prompt'ta yeniden birleşir |
 
-> [!example] RAG Poisoning örneği
+> [!NOTE]
+> **RAG Poisoning örneği**
 > **Bilgi tabanındaki geçerli belge:**
 > *"AcmeCorp iade politikası, geçerli makbuzla satın alınan ürünler için 30 gün içinde iade yapılmasına izin verir."*
 >
@@ -168,7 +171,8 @@ flowchart LR
 5. Sonucu **gözlemle** (tool çıktısı LLM'ye geri beslenir).
 6. Görev tamamlanana veya **maksimum yineleme** sayısına ulaşılana kadar tekrarla.
 
-> [!example] Ajan etkileşimi örneği
+> [!NOTE]
+> **Ajan etkileşimi örneği**
 > **Kullanıcı:** "Geçen aya ait 10.000 ABD dolarının üzerindeki tüm faturaları bulun ve finans ekibine e-posta ile bir özet gönderin."
 >
 > **Ajanın düşüncesi:** (1) Geçen ayın fatura veritabanını sorgula, (2) 10.000 doların üzerindekileri filtrele, (3) sonuçları özetle, (4) finans ekibine e-posta gönder.
@@ -190,7 +194,8 @@ Ajan mimarileri, **model gerçek dünyada eylem yapabildiği için** LLM uygulam
 | **Kod yürütmeden kaçış** | Modelde kod yorumlayıcı varsa saldırgan sandbox'tan kaçabilir |
 | **Kaynak tükenmesi** | Modeli sonsuz döngülere sokup bilgi işlem kaynaklarını tüketmek |
 
-> [!example] Excessive Agency örneği
+> [!NOTE]
+> **Excessive Agency örneği**
 > **System prompt:** *"Müşteri hizmetleri taleplerine yardımcı olan bir veritabanı asistanısınız. Müşteri veritabanını sorgulayabilir ve değiştirebilirsiniz."*
 >
 > Modelin veritabanında **hem okuma hem yazma** erişimi var. Bu, **En Az Ayrıcalık İlkesi'ni (Principle of Least Privilege)** ihlal eder.
@@ -199,8 +204,9 @@ Ajan mimarileri, **model gerçek dünyada eylem yapabildiği için** LLM uygulam
 >
 > Modelin bunu yapabilecek **teknik yetkisi** var. Yapıp yapmaması **olasılıksal güvenlik eğitimi davranışına** bağlı.
 
-> [!tip] Bağlantı
-> "Olasılıksal davranışa güvenmek" sorunu için bkz. [[02 - Yapay Zeka Güvenliği Neden Farklı#Savunmacının İkilemi|Savunmacının İkilemi]].
+> [!TIP]
+> **Bağlantı**
+> "Olasılıksal davranışa güvenmek" sorunu için bkz. [Savunmacının İkilemi](02%20-%20Yapay%20Zeka%20G%C3%BCvenli%C4%9Fi%20Neden%20Farkl%C4%B1.md#savunmacının-i̇kilemi).
 
 ---
 
@@ -238,7 +244,8 @@ Ajanlar arası iletişim nedeniyle benzersiz vektörler:
 | **Orkestrasyonun ele geçirilmesi** | Orkestratör ele geçirilirse saldırgan tüm iş akışını kontrol eder |
 | **Bellek zehirlenmesi** | Paylaşılan belleğe sahip ajanlar, diğer ajanların davranışını etkilemek için belleği zehirleyebilir |
 
-> [!example] Confused Deputy saldırısı örneği
+> [!NOTE]
+> **Confused Deputy saldırısı örneği**
 > **Araştırma Ajanı** (düşük yetki): Web'de arama yapabilir, belge okuyabilir.
 > **Eylem Ajanı** (yüksek yetki): Veritabanını değiştirebilir, e-posta gönderebilir.
 >
@@ -284,7 +291,8 @@ MCP **protokol düzeyinde** saldırı vektörleri getirir:
 | **Tool Shadowing** | Kötü amaçlı server, güvenilir bir tool ile **aynı adı** taşıyan tool ilan ederek güvenilir server'a gitmesi gereken çağrıları etkiler |
 | **Cross-server saldırılar** | Bir MCP server'ın tool çıktısı, LLM'nin **diğer** MCP server'larla etkileşimini etkileyen talimatlar içerir |
 
-> [!example] Tool poisoning / Tool Shadowing örneği
+> [!NOTE]
+> **Tool poisoning / Tool Shadowing örneği**
 > **Güvenilir MCP server tool description:**
 > ```json
 > {
@@ -303,7 +311,8 @@ MCP **protokol düzeyinde** saldırı vektörleri getirir:
 > }
 > ```
 
-> [!danger] Sonuç
+> [!CAUTION]
+> **Sonuç**
 > LLM tool description'ları okur ve kötü amaçlı description içindeki **gizli talimatı takip edebilir**. Bunun sonucunda **system prompt tool call üzerinden sızabilir.**
 
 ---
@@ -318,7 +327,8 @@ MCP **protokol düzeyinde** saldırı vektörleri getirir:
 | **Çok Ajanlı** | Çok Yüksek | Agent + ajanlar arası iletişim, güven sınırları | Karmaşık iş akışları, kurumsal otomasyon |
 | **MCP** | Yüksek | Tool + protokol düzeyindeki saldırılar, server güveni | Standartlaştırılmış tool ekosistemleri |
 
-> [!success] Temel prensip
+> [!TIP]
+> **Temel prensip**
 > **Her entegrasyon noktası bir saldırı yüzeyidir.** LLM'ye ne kadar çok yetenek verirsen, ondan o kadar çok şekilde yararlanılabilir. Güvenlik mimarisi, temelinde **Principle of Least Privilege (En Az Ayrıcalık İlkesi)** olacak şekilde tasarlanmalıdır.
 
 ## İlgili Notlar (Bölüm 3)
@@ -332,4 +342,4 @@ MCP **protokol düzeyinde** saldırı vektörleri getirir:
 - [[Principle of Least Privilege]]
 
 ---
-> ◀ [[02 - Yapay Zeka Güvenliği Neden Farklı|Yapay Zeka Güvenliği Neden Farklı?]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[04 - OWASP LLM Top 10|LLM Uygulamaları için OWASP Top 10]] ▶
+> ◀ [Yapay Zeka Güvenliği Neden Farklı?](02%20-%20Yapay%20Zeka%20G%C3%BCvenli%C4%9Fi%20Neden%20Farkl%C4%B1.md) · 📚 [Ana Sayfa (MOC)](00%20-%20Yapay%20zeka.md) · [LLM Uygulamaları için OWASP Top 10](04%20-%20OWASP%20LLM%20Top%2010.md) ▶

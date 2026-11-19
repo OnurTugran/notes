@@ -13,7 +13,7 @@ tags:
 
 # Sistem Logları ve Güvenlik Analizi
 
-> ◀ [[12_Konteynerler_Docker_ve_LXC|Konteynerler: Docker ve LXC]] · 📚 [[00_Linux_Komutları|İndeks]] · [[14_Solaris_ile_Farklar|Solaris ve Linux Farkları]] ▶
+> ◀ [Konteynerler: Docker ve LXC](12_Konteynerler_Docker_ve_LXC.md) · 📚 [İndeks](00_Linux_Komutlar%C4%B1.md) · [Solaris ve Linux Farkları](14_Solaris_ile_Farklar.md) ▶
 
 Linux sistem logları, arka planda gerçekleşen her türlü sistem, ağ, uygulama ve kullanıcı hareketini kaydeder. Bir sızma testi uzmanı (veya sistem yöneticisi) için bu loglar; yetkisiz girişleri (brute-force saldırıları vb.), zafiyetli servisleri, düz metin (clear-text) unutulan parolaları ve sistemdeki anormal aktiviteleri tespit etmenin anahtarıdır.
 
@@ -47,4 +47,4 @@ Hedef sistemde (veya kendi sisteminizde) logları analiz ederken grafik arayüz�
 *   **`sed`**: Metin manipülasyonu ve ileri seviye filtreleme yapmak için kullanılır.
 
 ---
-> ◀ [[12_Konteynerler_Docker_ve_LXC|Konteynerler: Docker ve LXC]] · 📚 [[00_Linux_Komutları|İndeks]] · [[14_Solaris_ile_Farklar|Solaris ve Linux Farkları]] ▶
+> ◀ [Konteynerler: Docker ve LXC](12_Konteynerler_Docker_ve_LXC.md) · 📚 [İndeks](00_Linux_Komutlar%C4%B1.md) · [Solaris ve Linux Farkları](14_Solaris_ile_Farklar.md) ▶

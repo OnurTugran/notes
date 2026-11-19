@@ -14,9 +14,10 @@ tags:
 
 # Wi-Fi Çalışma Modları
 
-> ◀ [[04_Wi-Fi_Arayüzleri_ve_Yapılandırma|Wi-Fi Arayüzleri ve Yapılandırma]] · 📚 [[00_Wi-Fi_Hackleme_İndex|İndeks]] · [[06_Aircrack-ng_Genel_Bakış|Aircrack-ng Genel Bakış]] ▶
+> ◀ [Wi-Fi Arayüzleri ve Yapılandırma](04_Wi-Fi_Aray%C3%BCzleri_ve_Yap%C4%B1land%C4%B1rma.md) · 📚 [İndeks](00_Wi-Fi_Hackleme_%C4%B0ndex.md) · [Aircrack-ng Genel Bakış](06_Aircrack-ng_Genel_Bak%C4%B1%C5%9F.md) ▶
 
-> [!abstract] Özet
+> [!NOTE]
+> **Özet**
 > Ağ kartı 5 modda çalışabilir. Parola kırma ve trafik dinleme için **Monitor**, sahte AP (Evil Twin) için **Master/AP** modu gerekir.
 
 | Mod | Ne yapar? | Pentest kullanımı |
@@ -91,4 +92,4 @@ sudo iw dev wlan0 set type mesh
 > *   Sahte Ağ (Evil Twin) Kurma -> **Master Mode** (hostapd desteği ile) gereklidir.
 
 ---
-> ◀ [[04_Wi-Fi_Arayüzleri_ve_Yapılandırma|Wi-Fi Arayüzleri ve Yapılandırma]] · 📚 [[00_Wi-Fi_Hackleme_İndex|İndeks]] · [[06_Aircrack-ng_Genel_Bakış|Aircrack-ng Genel Bakış]] ▶
+> ◀ [Wi-Fi Arayüzleri ve Yapılandırma](04_Wi-Fi_Aray%C3%BCzleri_ve_Yap%C4%B1land%C4%B1rma.md) · 📚 [İndeks](00_Wi-Fi_Hackleme_%C4%B0ndex.md) · [Aircrack-ng Genel Bakış](06_Aircrack-ng_Genel_Bak%C4%B1%C5%9F.md) ▶

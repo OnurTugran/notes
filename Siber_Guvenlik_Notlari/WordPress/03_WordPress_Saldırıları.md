@@ -15,7 +15,7 @@ tags:
 
 # WordPress Saldırıları
 
-> ◀ [[02_WordPress_Keşif_ve_Numaralandırma|WordPress Keşif ve Numaralandırma]] · 📚 [[00_WordPress_İndeks|İndeks]] · [[04_WordPress_Sertleştirme|WordPress Sertleştirme (Hardening)]] ▶
+> ◀ [WordPress Keşif ve Numaralandırma](02_WordPress_Ke%C5%9Fif_ve_Numaraland%C4%B1rma.md) · 📚 [İndeks](00_WordPress_%C4%B0ndeks.md) · [WordPress Sertleştirme (Hardening)](04_WordPress_Sertle%C5%9Ftirme.md) ▶
 
 ## Giriş ve Kaba Kuvvet (Login & Brute Force) Saldırıları
 
@@ -84,7 +84,8 @@ $ curl -X POST -d "<methodCall><methodName>wp.getUsersBlogs</methodName><params>
 
 ---
 
-> [!info] Sonuç: Manuel Bilgi Toplamanın (Enumeration) Önemi
+> [!NOTE]
+> **Sonuç: Manuel Bilgi Toplamanın (Enumeration) Önemi**
 > Otomatik araçlar (WPScan, wfuzz vb.) sızma testi sürecini büyük ölçüde hızlandırsa da, değerlendirdiğimiz sistemler üzerindeki etkilerini anlamak bizim sorumluluğumuzdadır. Otomatik araçları kullanmaya çalışmadan önce **manuel yöntemleri** anlamak çok önemlidir. Manuel bilgi toplama yöntemlerini iyi kavramak, otomatik araçların düzgün çalışmadığı veya beklenmedik çıktılar verdiği durumlarda sorun gidermenize (troubleshooting) büyük ölçüde yardımcı olacaktır.
 
 ## WPScan ile WordPress Kullanıcı Brute Force Saldırısı
@@ -191,7 +192,8 @@ created: 2026-11-11
 
 ## WordPress Metasploit ile Exploitation
 
-> [!info] Özet
+> [!NOTE]
+> **Özet**
 > `exploit/unix/webapp/wp_admin_shell_upload` modülü, geçerli bir WordPress hesabıyla sunucuda dosya yükleyip reverse shell almayı otomatize eder. Modülün çalışması için hesabın webshell oluşturabileceği yetkiye sahip olması gerekir.
 
 ## Gereksinimler
@@ -234,7 +236,8 @@ options
 | `Proxies` | Hayır | Proxy zinciri |
 | `VHOST` | Hayır | Sanal host adı |
 
-> [!tip] İpucu
+> [!TIP]
+> **İpucu**
 > Varsayılan değerleri kontrol etmek için `show options` komutunu kullanın. Hedef HTTPS çalışıyorsa `SSL` değerini `true` yapmayı unutmayın.
 
 ## Parametreleri Ayarlama ve Çalıştırma
@@ -262,18 +265,20 @@ meterpreter > getuid
 Server username: www-data (33)
 ```
 
-> [!note] Yetki Seviyesi
+> [!NOTE]
+> **Yetki Seviyesi**
 > Shell, web sunucusunun çalıştığı kullanıcının (`www-data`) yetkileriyle açılır. Bu, sistemde yerel yetki yükseltme (privilege escalation) gerektiğini gösterir.
 
 ## Sonraki Adımlar
 
-- [[00_Yetki_Yükseltme|Yetki Yükseltme]] ile `www-data`'dan yükseltme
+- [Yetki Yükseltme](../Yetki%20Y%C3%BCkseltme/00_Yetki_Y%C3%BCkseltme.md) ile `www-data`'dan yükseltme
 - Yapılandırma dosyalarında kimlik bilgisi arama (`wp-config.php`)
 - Veritabanı erişimi ve kullanıcı hash'lerini inceleme
 
 ## Savunma Önerileri
 
-> [!warning] Korunma
+> [!WARNING]
+> **Korunma**
 > - Güçlü ve benzersiz yönetici parolaları kullanın
 > - Yönetici hesaplarında iki faktörlü doğrulama (2FA) etkinleştirin
 > - Panelden eklenti/tema dosyası düzenlemeyi kapatın: `define('DISALLOW_FILE_EDIT', true);`
@@ -283,12 +288,12 @@ Server username: www-data (33)
 
 ## İlgili Notlar
 
-- [[03_WordPress_Saldırıları|Metasploit ile Exploitation]]
-- [[04_WordPress_Sertleştirme|WordPress Sertleştirme]]
+- Metasploit ile Exploitation
+- [WordPress Sertleştirme](04_WordPress_Sertle%C5%9Ftirme.md)
 - Reverse Shell Türleri
 - Meterpreter Temelleri
 
 ---
 
 ---
-> ◀ [[02_WordPress_Keşif_ve_Numaralandırma|WordPress Keşif ve Numaralandırma]] · 📚 [[00_WordPress_İndeks|İndeks]] · [[04_WordPress_Sertleştirme|WordPress Sertleştirme (Hardening)]] ▶
+> ◀ [WordPress Keşif ve Numaralandırma](02_WordPress_Ke%C5%9Fif_ve_Numaraland%C4%B1rma.md) · 📚 [İndeks](00_WordPress_%C4%B0ndeks.md) · [WordPress Sertleştirme (Hardening)](04_WordPress_Sertle%C5%9Ftirme.md) ▶

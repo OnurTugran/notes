@@ -13,11 +13,12 @@ tags:
 
 # WordPress Sertleştirme (Hardening)
 
-> ◀ [[03_WordPress_Saldırıları|WordPress Saldırıları]] · 📚 [[00_WordPress_İndeks|İndeks]]
+> ◀ [WordPress Saldırıları](03_WordPress_Sald%C4%B1r%C4%B1lar%C4%B1.md) · 📚 [İndeks](00_WordPress_%C4%B0ndeks.md)
 
 ## WordPress Hardening (Sertleştirme)
 
-> [!info] Özet
+> [!NOTE]
+> **Özet**
 > WordPress sitelerine yönelik saldırıları önlemek için güncellemeler, eklenti/tema yönetimi, güvenlik eklentileri, kullanıcı yönetimi ve yapılandırma ayarları üzerine temel en iyi uygulamalar.
 
 ## Düzenli Güncelleme
@@ -32,7 +33,8 @@ add_filter( 'auto_update_plugin', '__return_true' );
 add_filter( 'auto_update_theme', '__return_true' );
 ```
 
-> [!tip] Not
+> [!TIP]
+> **Not**
 > Yönetim panelinde güncelleme bildirimleri genellikle otomatik olarak görünür. Ancak güncellemeleri ihmal etmek en sık yapılan hatalardan biridir.
 
 ## Eklenti ve Tema Yönetimi
@@ -42,7 +44,8 @@ add_filter( 'auto_update_theme', '__return_true' );
 - Uzun süredir güncellenmemiş eklentiler terk edilmiş ve açık barındırıyor olabilir
 - Düzenli denetim yapın, kullanılmayan eklenti ve temaları kaldırın
 
-> [!warning] Dikkat
+> [!WARNING]
+> **Dikkat**
 > Kullanılmayan ama kurulu duran eklentiler, unutulduğu için en çok güvenlik açığı barındıran bileşenlerdir.
 
 ## Güvenlik Eklentileri
@@ -53,7 +56,8 @@ add_filter( 'auto_update_theme', '__return_true' );
 | **iThemes Security** | 30+ koruma yöntemi, 2FA, WordPress tuzları (salts), Google reCAPTCHA, kullanıcı işlem günlüğü |
 | **Wordfence Security** | Uç nokta güvenlik duvarı (WAF), zararlı yazılım tarayıcısı; premium sürümde gerçek zamanlı kural ve IP kara listesi |
 
-> [!note] Ayrım
+> [!NOTE]
+> **Ayrım**
 > Bu eklentiler WAF, zararlı yazılım tarama, izleme, brute force önleme ve güçlü parola zorlaması gibi işlevleri sağlar.
 
 ## Kullanıcı Yönetimi
@@ -72,15 +76,16 @@ Kullanıcılar, kuruluşlardaki en zayıf halka olarak sıkça hedef alınır.
 - Giriş denemelerini sınırlayarak brute force saldırılarını önleyin
 - `wp-login.php` sayfasını yeniden adlandırın, taşıyın veya yalnızca belirli IP'lerden erişilebilir yapın
 
-> [!example] Örnek Saldırı Bağlantısı
-> Yukarıdaki [[03_WordPress_Saldırıları|Metasploit ile Exploitation]]te kullanılan `wp_admin_shell_upload` modülü, geçerli yönetici kimlik bilgileri olduğunda çalışır. Bu yüzden güçlü parola, 2FA ve en az ayrıcalık ilkeleri doğrudan bu saldırıyı zorlaştırır.
+> [!NOTE]
+> **Örnek Saldırı Bağlantısı**
+> Yukarıdaki [Metasploit ile Exploitation](03_WordPress_Sald%C4%B1r%C4%B1lar%C4%B1.md)te kullanılan `wp_admin_shell_upload` modülü, geçerli yönetici kimlik bilgileri olduğunda çalışır. Bu yüzden güçlü parola, 2FA ve en az ayrıcalık ilkeleri doğrudan bu saldırıyı zorlaştırır.
 
 ## İlgili Notlar
 
-- [[04_WordPress_Sertleştirme|WordPress Sertleştirme]]
-- [[03_WordPress_Saldırıları|Metasploit ile Exploitation]]
-- [[03_WordPress_Saldırıları|WordPress Saldırıları]]
-- [[04_WordPress_Sertleştirme|WordPress Sertleştirme]]
+- WordPress Sertleştirme
+- [Metasploit ile Exploitation](03_WordPress_Sald%C4%B1r%C4%B1lar%C4%B1.md)
+- [WordPress Saldırıları](03_WordPress_Sald%C4%B1r%C4%B1lar%C4%B1.md)
+- WordPress Sertleştirme
 
 ---
-> ◀ [[03_WordPress_Saldırıları|WordPress Saldırıları]] · 📚 [[00_WordPress_İndeks|İndeks]]
+> ◀ [WordPress Saldırıları](03_WordPress_Sald%C4%B1r%C4%B1lar%C4%B1.md) · 📚 [İndeks](00_WordPress_%C4%B0ndeks.md)

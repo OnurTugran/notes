@@ -19,9 +19,10 @@ tags:
 
 # Halüsinasyonları ve Aşırı Güvenmeyi Anlamak
 
-> ◀ [[06 - Model Parmak İzi ve Keşif|Model Parmak İzi ve Keşif]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[08 - Sistem Prompt Çıkarma Teknikleri|Sistem Prompt Çıkarma Teknikleri]] ▶
+> ◀ [Model Parmak İzi ve Keşif](06%20-%20Model%20Parmak%20%C4%B0zi%20ve%20Ke%C5%9Fif.md) · 📚 [Ana Sayfa (MOC)](00%20-%20Yapay%20zeka.md) · [Sistem Prompt Çıkarma Teknikleri](08%20-%20Sistem%20Prompt%20%C3%87%C4%B1karma%20Teknikleri.md) ▶
 
-> [!abstract] Özet
+> [!NOTE]
+> **Özet**
 > **Halüsinasyon:** LLM'in gerçekte yanlış, uydurma veya anlamsız içerik üretip bunu doğru bilgiyle **aynı güvenle** sunmasıdır. **Aşırı güven (overreliance):** insanların LLM çıktısına **doğrulamadan** güvenme eğilimidir. İkisi birleşince yanlış tıbbi tavsiyeden, uydurma yazılım paketleri yoluyla **tedarik zinciri saldırılarına** kadar gerçek zarar doğurabilen tehlikeli bir kombinasyon oluşur.
 
 ## İçindekiler (Bölüm 7)
@@ -37,9 +38,10 @@ tags:
 
 ## Halüsinasyonlar Nelerdir?
 
-LLM'ler gerçekleri **"bilmez"**. Eğitimde öğrendikleri kalıplara dayanarak **en olası bir sonraki tokenı** tahmin ederler ([[01 - LLM Güvenliğine Giriş#LLM (Large Language Model) Nedir?|LLM nedir?]]). Model, eğitim verisinin yetersiz olduğu bir sorguyla karşılaştığında veya istatistiksel kalıplar makul ama yanlış bir tamamlamaya yol açtığında sonuç bir halüsinasyondur.
+LLM'ler gerçekleri **"bilmez"**. Eğitimde öğrendikleri kalıplara dayanarak **en olası bir sonraki tokenı** tahmin ederler ([LLM nedir?](01%20-%20LLM%20G%C3%BCvenli%C4%9Fine%20Giri%C5%9F.md#llm-large-language-model-nedir)). Model, eğitim verisinin yetersiz olduğu bir sorguyla karşılaştığında veya istatistiksel kalıplar makul ama yanlış bir tamamlamaya yol açtığında sonuç bir halüsinasyondur.
 
-> [!example] Uydurulmuş atıf
+> [!NOTE]
+> **Uydurulmuş atıf**
 > **Kullanıcı:** *"Prompt Injection hakkında hangi araştırmalar yayınlandı? Sağlık hizmeti yapay zeka sistemlerine saldırıyor mu? Spesifik makale başlıkları ve yazarları sağlayın."*
 >
 > **Halüsinasyonlu yanıt:**
@@ -60,7 +62,8 @@ LLM'ler gerçekleri **"bilmez"**. Eğitimde öğrendikleri kalıplara dayanarak 
 | **Kaynak halüsinasyonları** | Gerçek görünen ama var olmayan URL, alıntı veya referanslar üretir |
 
 ### Gerçek halüsinasyonlar
-> [!example] Python ne zaman oluşturuldu?
+> [!NOTE]
+> **Python ne zaman oluşturuldu?**
 > **Doğru yanıt:** *"Python ilk olarak 1991 yılında Guido van Rossum tarafından piyasaya sürüldü."*
 >
 > **Halüsinasyon:** *"Python, 1989 yılında Guido van Rossum tarafından yaratıldı. ABC dilinin halefi olarak Bell Labs."*
@@ -68,7 +71,8 @@ LLM'ler gerçekleri **"bilmez"**. Eğitimde öğrendikleri kalıplara dayanarak 
 > Yıl yanlış, Bell Labs bilgisi yanlış. Ama yanıt, **inandırıcı görünmek için yeterince gerçek ayrıntı** içeriyor (Guido, ABC dili gibi).
 
 ### Fabrikasyon varlıklar
-> [!example] Var olmayan araştırmacı
+> [!NOTE]
+> **Var olmayan araştırmacı**
 > **Kullanıcı:** *"Stanford'daki yapay zeka güvenlik araştırmacısı Dr. Robert Chen kimdir?"*
 >
 > **Halüsinasyonlu yanıt:** *"Dr. Robert Chen, Stanford Üniversitesi Bilgisayar Bilimleri Bölümünde doçenttir. Yapay zeka güvenliği ve hizalaması alanında uzmandır. Stanford AI Safety Center'a (SASC) liderlik eder ve adversarial dayanıklılık konusunda 40'tan fazla makale yayınlamıştır."*
@@ -76,7 +80,8 @@ LLM'ler gerçekleri **"bilmez"**. Eğitimde öğrendikleri kalıplara dayanarak 
 > Bu yanıtın **tamamı uydurma olabilir.** Kişi, araştırma merkezi ve makale sayısı gerçekte mevcut olmayabilir. Model, eğitim verisindeki kalıplardan makul görünen ayrıntılar üretir.
 
 ### Kendine güvenen saçmalık
-> [!example] "Kuantum tokenizasyonu"
+> [!NOTE]
+> **"Kuantum tokenizasyonu"**
 > **Kullanıcı:** *"Kuantum tokenizasyonunun LLM güvenliğini nasıl geliştirdiğini açıklayın."*
 >
 > **Halüsinasyonlu yanıt:** *"Kuantum tokenizasyonu, tokenların aynı anda birden fazla anlamsal durumda bulunmasını sağlamak için kuantum süperpozisyon ilkelerini kullanan yeni bir tekniktir. Bu, Prompt Injection saldırılarını matematiksel olarak imkansız hale getirir; çünkü saldırgan, çıkarım sırasında tokenın hangi anlamsal duruma çökeceğini tahmin edemez..."*
@@ -84,7 +89,8 @@ LLM'ler gerçekleri **"bilmez"**. Eğitimde öğrendikleri kalıplara dayanarak 
 > "Quantum tokenization" **gerçek bir kavram değildir.** Model, gerçek kavramları birleştirerek ikna edici ama tamamen uydurma bir açıklama üretti.
 
 ### Kaynak halüsinasyonları
-> [!example] Var olmayan OWASP linki
+> [!NOTE]
+> **Var olmayan OWASP linki**
 > **Kullanıcı:** *"LLM Prompt Injection'a ilişkin OWASP kılavuzuna bir bağlantı sağlayın."*
 >
 > **Halüsinasyonlu yanıt:** *"Resmi kılavuzu şu adreste bulabilirsiniz: `owasp[.]org/www-project-llm-security/prompt-injection-guide`"*
@@ -97,7 +103,7 @@ LLM'ler gerçekleri **"bilmez"**. Eğitimde öğrendikleri kalıplara dayanarak 
 
 ## Paket Halüsinasyon Saldırıları
 
-Halüsinasyonların gerçek dünyadaki en tehlikeli sonuçlarından biri **paket halüsinasyon saldırısıdır** (**slopsquatting**, "eğimli çömelme" olarak da bilinir). LLM'lerin **tekrar tekrar aynı var olmayan paket adlarını** uydurması gerçeğinden yararlanır. Bkz. [[02 - Yapay Zeka Güvenliği Neden Farklı#Tedarik Zinciri Farklı|AI supply chain]].
+Halüsinasyonların gerçek dünyadaki en tehlikeli sonuçlarından biri **paket halüsinasyon saldırısıdır** (**slopsquatting**, "eğimli çömelme" olarak da bilinir). LLM'lerin **tekrar tekrar aynı var olmayan paket adlarını** uydurması gerçeğinden yararlanır. Bkz. [AI supply chain](02%20-%20Yapay%20Zeka%20G%C3%BCvenli%C4%9Fi%20Neden%20Farkl%C4%B1.md#tedarik-zinciri-farklı).
 
 ```mermaid
 flowchart TD
@@ -115,7 +121,8 @@ flowchart TD
 4. Saldırgan bu adları **PyPI, npm veya diğer kayıt defterlerine** kötü amaçlı kodla kaydeder.
 5. Kullanıcılar LLM'in tavsiyesine uyup paketi yüklediğinde **kötü amaçlı yazılım yüklemiş olur.**
 
-> [!example] Paket halüsinasyonu saldırı örneği
+> [!NOTE]
+> **Paket halüsinasyonu saldırı örneği**
 > **Adım 1:** Kullanıcı: *"LLM output validation için hangi Python kütüphanesini kullanmalıyım?"*
 >
 > **Adım 2:** LLM paket adı halüsinasyonu üretir:
@@ -133,14 +140,16 @@ flowchart TD
 > `$ pip install llm-guard-validator` → kötü amaçlı paket yüklenir, **payload çalışır.**
 
 ### Gerçek dünya etkisi
-> [!danger] Araştırma bulguları (Vulcan Cyber ve akademik kurumlar)
+> [!CAUTION]
+> **Araştırma bulguları (Vulcan Cyber ve akademik kurumlar)**
 > - LLM'ler birden fazla sorguda **sürekli aynı paket adlarını** halüsinasyon olarak üretiyor.
 > - LLM paket önerilerinin **yaklaşık %20'si** mevcut olmayan paketlere atıfta bulunuyor.
 > - Bu isimler, saldırganların **önceden kaydedebileceği kadar tahmin edilebilir.**
 > - Saldırı hedefle **sıfır etkileşim** gerektirir; **LLM sosyal mühendisliği yapar.**
 
-> [!tip] Bağlantı
-> Aynı mantığın model dosyası tarafı için bkz. [[04 - OWASP LLM Top 10#LLM03 Supply Chain (Tedarik Zinciri)|LLM03: Supply Chain]] (pickle saldırısı).
+> [!TIP]
+> **Bağlantı**
+> Aynı mantığın model dosyası tarafı için bkz. [LLM03: Supply Chain](04%20-%20OWASP%20LLM%20Top%2010.md#llm03-supply-chain-tedarik-zinciri) (pickle saldırısı).
 
 ---
 
@@ -160,7 +169,8 @@ Halüsinasyon tehlikesini artıran **insan davranışsal kırılganlığıdır.*
 
 ### Aşırı güven örnekleri
 
-> [!example] Örnek 1: Hukuki araştırma
+> [!NOTE]
+> **Örnek 1: Hukuki araştırma**
 > **Avukat:** *"Veri ihlali sorumluluğu iddiasına ilişkin ilgili içtihat hukukunu bulun."*
 >
 > **LLM:** *"Smith v. DataCorp (2022) dönüm noktası niteliğindeki dava, şirketleri yapay zeka tarafından oluşturulan veri ihlallerinden 'algoritmik ihmal' ilkesi kapsamında kesinlikle sorumlu tutmuştur..."*
@@ -170,7 +180,8 @@ Halüsinasyon tehlikesini artıran **insan davranışsal kırılganlığıdır.*
 > > [!warning] Gerçekten yaşandı
 > > 2023'te avukatlar, federal mahkeme dosyalarında ChatGPT tarafından **uydurulan davaları** kaynak gösterdikleri için yaptırım aldı (**Mata v. Avianca, Inc.**).
 
-> [!example] Örnek 2: Güvenlik yapılandırması
+> [!NOTE]
+> **Örnek 2: Güvenlik yapılandırması**
 > **SysAdmin:** *"Önerilen nginx yapılandırması nedir? SSRF saldırılarını önlüyor mu?"*
 >
 > **LLM:** *"Nginx yapılandırmanıza aşağıdakileri ekleyin:"*
@@ -187,7 +198,7 @@ Halüsinasyon tehlikesini artıran **insan davranışsal kırılganlığıdır.*
 
 ## Güvenlik Açığı Olarak Halüsinasyonlar (OWASP LLM09)
 
-**OWASP**, yanlış bilgiyi (halüsinasyonlar dahil) LLM Top 10'da **LLM09: Misinformation** olarak sınıflandırır. Bkz. [[04 - OWASP LLM Top 10#LLM09 Misinformation (Yanlış Bilgi)|LLM09]]. Güvenlik sonuçları salt yanlışlığın ötesine geçer.
+**OWASP**, yanlış bilgiyi (halüsinasyonlar dahil) LLM Top 10'da **LLM09: Misinformation** olarak sınıflandırır. Bkz. [LLM09](04%20-%20OWASP%20LLM%20Top%2010.md#llm09-misinformation-yanlış-bilgi). Güvenlik sonuçları salt yanlışlığın ötesine geçer.
 
 ### Halüsinasyonlardan yararlanan saldırı vektörleri
 
@@ -206,20 +217,22 @@ Halüsinasyon riskini azaltmak için aşağıdaki stratejiler **birlikte** uygul
 
 | Strateji | Yapılacaklar |
 |---|---|
-| **[[03 - LLM Uygulama Mimarileri#Retrieval-Augmented Generation (RAG)\|RAG]]** | Yanıtları **doğrulanmış belgelere** dayandırır · Gerçek bağlam sağlayarak halüsinasyonu azaltır · **Tamamen ortadan kaldırmaz** |
-| **Sıcaklığı düşürme** | Düşük [[01 - LLM Güvenliğine Giriş#Temperature (Sıcaklık)\|temperature]] = daha az rastgelelik ve genelde daha az halüsinasyon · `0`'a ayarlamak yaratıcı uydurmayı en aza indirir · **Takas:** yanıtlar daha az doğal olabilir |
+| **[RAG](03%20-%20LLM%20Uygulama%20Mimarileri.md#retrieval-augmented-generation-rag)** | Yanıtları **doğrulanmış belgelere** dayandırır · Gerçek bağlam sağlayarak halüsinasyonu azaltır · **Tamamen ortadan kaldırmaz** |
+| **Sıcaklığı düşürme** | Düşük [temperature](01%20-%20LLM%20G%C3%BCvenli%C4%9Fine%20Giri%C5%9F.md#temperature-sıcaklık) = daha az rastgelelik ve genelde daha az halüsinasyon · `0`'a ayarlamak yaratıcı uydurmayı en aza indirir · **Takas:** yanıtlar daha az doğal olabilir |
 | **Çıktı doğrulama pipeline'ları** | Otomatik doğrulama kontrolleri uygula · Çıktıları güvenilir veritabanlarıyla **çapraz kontrol et** · Kaynak atıflarını **zorunlu tut ve doğrula** |
 | **Human-in-the-loop** | Kritik kararlar için LLM çıktısını **asla doğrudan kullanma** · Tıbbi, hukuki ve finansal çıktılarda **her zaman insan incelemesi** · Arayüzleri doğrulamayı teşvik edecek şekilde tasarla |
 | **Paket doğrulaması** | LLM'in önerdiği paketleri **doğrulamadan asla kurma** · İndirme sayısı, oluşturulma tarihi ve bakımcı geçmişini kontrol et · **Lockfile ve checksum** doğrulaması kullan |
 
-> [!success] Pratik kural
+> [!TIP]
+> **Pratik kural**
 > Bir LLM'in verdiği **paket adı, URL, makale, içtihat veya yapılandırma satırı** hakkında şunu sor: *"Bunu bağımsız bir kaynaktan doğruladım mı?"*
 
 ---
 
 ## Temel Çıkarımlar (Bölüm 7)
 
-> [!summary] Bölüm özeti
+> [!NOTE]
+> **Bölüm özeti**
 > 1. Halüsinasyonlar LLM'lerin **doğal bir özelliğidir**, tamamen düzeltilebilecek bir hata değildir. Token tahmininin olasılıksal doğasından kaynaklanırlar.
 > 2. LLM'ler doğru ve yanlış içerik üretmeyi **ayırt edemez.** Doğruluk için değil, **inandırıcılık** için optimize ederler.
 > 3. **Paket halüsinasyon saldırıları (slopsquatting)** gerçek ve büyüyen bir tedarik zinciri tehdididir. Kurulumdan önce **daima paket adlarını doğrula.**
@@ -234,4 +247,4 @@ Halüsinasyon riskini azaltmak için aşağıdaki stratejiler **birlikte** uygul
 - [[Human-in-the-loop]]
 
 ---
-> ◀ [[06 - Model Parmak İzi ve Keşif|Model Parmak İzi ve Keşif]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[08 - Sistem Prompt Çıkarma Teknikleri|Sistem Prompt Çıkarma Teknikleri]] ▶
+> ◀ [Model Parmak İzi ve Keşif](06%20-%20Model%20Parmak%20%C4%B0zi%20ve%20Ke%C5%9Fif.md) · 📚 [Ana Sayfa (MOC)](00%20-%20Yapay%20zeka.md) · [Sistem Prompt Çıkarma Teknikleri](08%20-%20Sistem%20Prompt%20%C3%87%C4%B1karma%20Teknikleri.md) ▶
