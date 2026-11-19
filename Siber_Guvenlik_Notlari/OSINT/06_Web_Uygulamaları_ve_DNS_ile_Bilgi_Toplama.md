@@ -16,7 +16,7 @@ tags:
 
 # Web Uygulamaları ve DNS ile Bilgi Toplama
 
-> ◀ [Sosyal Medya ve Görseller ile Bilgi Toplama](05_Sosyal_Medya_ve_G%C3%B6rseller_ile_Bilgi_Toplama.md) · 📚 [İndeks](00_OSINT_%C4%B0ndeks.md)
+> ◀ [Sosyal Medya ve Görseller ile Bilgi Toplama](05_Sosyal_Medya_ve_G%C3%B6rseller_ile_Bilgi_Toplama.md) · 📚 [İndeks](00_OSINT_%C4%B0ndeks.md) · [İnternet Arama Motorları: Shodan ve Censys](07_%C4%B0nternet_Arama_Motorlar%C4%B1_Shodan_ve_Censys.md) ▶
 
 Web uygulamaları ve DNS (Domain Name System) üzerinden bilgi toplama, siber güvenlik ve sızma testlerinde kritik öneme sahip bir tekniktir. Bu süreç, hedef sistemler hakkında ayrıntılı bilgi edinmek ve potansiyel zafiyetleri belirlemek için kullanılır. Web uygulamaları üzerinde yapılan bilgi toplama çalışmaları, uygulama yapısı, kullanılan teknolojiler ve açık portlar hakkında bilgi sağlar. DNS üzerinden yapılan bilgi toplama ise, alan adları, IP adresleri, alt alan adları ve MX (Mail Exchange) kayıtları gibi bilgileri içerir. Bu bilgiler, saldırı yüzeyini genişletmek ve daha etkili bir saldırı planı oluşturmak için kullanılır.
 
@@ -219,4 +219,4 @@ youtube.com.		300	IN	A	172.217.17.110
 ```
 
 ---
-> ◀ [Sosyal Medya ve Görseller ile Bilgi Toplama](05_Sosyal_Medya_ve_G%C3%B6rseller_ile_Bilgi_Toplama.md) · 📚 [İndeks](00_OSINT_%C4%B0ndeks.md)
+> ◀ [Sosyal Medya ve Görseller ile Bilgi Toplama](05_Sosyal_Medya_ve_G%C3%B6rseller_ile_Bilgi_Toplama.md) · 📚 [İndeks](00_OSINT_%C4%B0ndeks.md) · [İnternet Arama Motorları: Shodan ve Censys](07_%C4%B0nternet_Arama_Motorlar%C4%B1_Shodan_ve_Censys.md) ▶
