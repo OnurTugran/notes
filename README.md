@@ -29,6 +29,7 @@ Obsidian notlarım: otomatik eşitlenen kişisel bilgi tabanı. Aşağıdaki lis
 - [Sosyal Medya ve Görseller ile Bilgi Toplama](Siber_Guvenlik_Notlari/OSINT/05_Sosyal_Medya_ve_G%C3%B6rseller_ile_Bilgi_Toplama.md)
 - [Web Uygulamaları ve DNS ile Bilgi Toplama](Siber_Guvenlik_Notlari/OSINT/06_Web_Uygulamalar%C4%B1_ve_DNS_ile_Bilgi_Toplama.md)
 - [İnternet Arama Motorları: Shodan ve Censys](Siber_Guvenlik_Notlari/OSINT/07_%C4%B0nternet_Arama_Motorlar%C4%B1_Shodan_ve_Censys.md)
+- [Sızıntı Veri, Dark Web ve Deep Web Araçları](Siber_Guvenlik_Notlari/OSINT/08_S%C4%B1z%C4%B1nt%C4%B1_Veri_Dark_Web_ve_Deep_Web_Ara%C3%A7lar%C4%B1.md)
 
 ### [Wi-Fi Hackleme](Siber_Guvenlik_Notlari/Wi-Fi%20Hackleme/00_Wi-Fi_Hackleme_%C4%B0ndex.md)
 

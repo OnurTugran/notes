@@ -14,7 +14,7 @@ tags:
 
 # İnternet Arama Motorları: Shodan ve Censys
 
-> ◀ [Web Uygulamaları ve DNS ile Bilgi Toplama](06_Web_Uygulamalar%C4%B1_ve_DNS_ile_Bilgi_Toplama.md) · 📚 [İndeks](00_OSINT_%C4%B0ndeks.md)
+> ◀ [Web Uygulamaları ve DNS ile Bilgi Toplama](06_Web_Uygulamalar%C4%B1_ve_DNS_ile_Bilgi_Toplama.md) · 📚 [İndeks](00_OSINT_%C4%B0ndeks.md) · [Sızıntı Veri, Dark Web ve Deep Web Araçları](08_S%C4%B1z%C4%B1nt%C4%B1_Veri_Dark_Web_ve_Deep_Web_Ara%C3%A7lar%C4%B1.md) ▶
 
 İnternet arama motorları, siber güvenlik uzmanları ve sızma testi (penetration testing) uzmanları için değerli araçlardır. Bu motorlar, internete bağlı cihazların, sistemlerin ve hizmetlerin durumunu analiz etmeye ve izlemeye yardımcı olur. Bu sayede, güvenlik açıklarını tespit etmek, tehditleri analiz etmek ve ağ güvenliğini güçlendirmek mümkün hale gelir. İnternet arama motorları, geniş veri tabanlarına sahiptir ve çeşitli sorgulama teknikleriyle bu verileri kullanarak bilgi toplar.
 
@@ -170,4 +170,4 @@ services.software.product: "nginx" and services.software.version: "1.14.0"
 ```
 
 ---
-> ◀ [Web Uygulamaları ve DNS ile Bilgi Toplama](06_Web_Uygulamalar%C4%B1_ve_DNS_ile_Bilgi_Toplama.md) · 📚 [İndeks](00_OSINT_%C4%B0ndeks.md)
+> ◀ [Web Uygulamaları ve DNS ile Bilgi Toplama](06_Web_Uygulamalar%C4%B1_ve_DNS_ile_Bilgi_Toplama.md) · 📚 [İndeks](00_OSINT_%C4%B0ndeks.md) · [Sızıntı Veri, Dark Web ve Deep Web Araçları](08_S%C4%B1z%C4%B1nt%C4%B1_Veri_Dark_Web_ve_Deep_Web_Ara%C3%A7lar%C4%B1.md) ▶
