@@ -1,5 +1,23 @@
+---
+title: "Wi-Fi Arayüzleri ve Yapılandırma"
+ana-not: "[[00_Wi-Fi_Hackleme_İndex]]"
+tarih: 2026-11-19
+aliases:
+  - Wi-Fi Arayüzleri ve Yapılandırma
+tags:
+  - siber-guvenlik
+  - wifi
+  - kablosuz-ag
+  - interface
+  - iw
+---
 
-# Wi-Fi Arayüzleri ve Yapılandırma (Wi-Fi Interfaces)
+# Wi-Fi Arayüzleri ve Yapılandırma
+
+> ◀ [[03_802.11_Çerçeveleri_ve_Bağlantı_Döngüsü|802.11 Çerçeveleri ve Bağlantı Döngüsü]] · 📚 [[00_Wi-Fi_Hackleme_İndex|İndeks]] · [[05_Wi-Fi_Çalışma_Modları|Wi-Fi Çalışma Modları]] ▶
+
+> [!abstract] Özet
+> Sızma testinin başarısı büyük ölçüde **ağ kartına** bağlıdır. Kartın **monitor mode + packet injection** desteği ve Linux'ta iyi bir **sürücüsü** olmalıdır. Hız ikincil önemdedir.
 
 Wi-Fi arayüzleri (ağ kartları/adaptörler) sızma testinin temel taşıdır. Verileri bu arayüzler aracılığıyla iletir ve alırız. Zayıf veya uyumsuz bir ağ kartı seçmek, sızma testi çabalarımızın başarısız olmasına (örneğin paket yakalayamamaya) neden olur.
 
@@ -7,16 +25,17 @@ Wi-Fi arayüzleri (ağ kartları/adaptörler) sızma testinin temel taşıdır. 
 Bir Wi-Fi adaptörü alırken sadece hızına değil, sızma testi yeteneklerine bakmalıyız. Tek bantlı (sadece 2.4GHz) bir kart, iyi bir Linux sürücüsü varsa çift bantlı bir karttan çok daha iyi performans gösterebilir. Aranması gereken temel özellikler şunlardır:
 1. **IEEE 802.11ac veya IEEE 802.11ax (Wi-Fi 6) desteği** (Güncel ağları görebilmek için).
 2. **Monitor Mode (İzleme Modu)** ve **Packet Injection (Paket Enjeksiyonu)** desteği.
-3. Donanımın yonga seti (Chipset) ve Linux işletim sistemindeki sürücü (driver) uyumluluğu. 
+3. Donanımın yonga seti (Chipset) ve Linux işletim sistemindeki sürücü (driver) uyumluluğu.
 
 ---
 
 ## 2. Arayüz Gücü ve Bölge Ayarları (Interface Strength & TX Power)
 Fiziksel konumlandırma kablosuz ağ saldırılarında çok önemlidir. Kartımızın menzili ve iletim gücü (TX Power) yetersizse saldırılarımız hedefe ulaşmaz.
 
-Kartımızın mevcut gücünü `iwconfig` komutuyla görebiliriz:
+Kartımızın mevcut gücünü `iwconfig` (veya yeni araç `iw dev`) ile görebiliriz:
 ```bash
 iwconfig
+iw dev wlan0 info
 ```
 
 Varsayılan iletim gücü, işletim sistemindeki bölge/ülke koduna göre yasal sınırlarla kısıtlanmıştır. Türkiye (BTK/ETSI standartları) için bu sınır 2.4 GHz bandında yasal olarak **20 dBm'dir** (100 mW). Mevcut bölge ayarlarını görmek için:
@@ -40,6 +59,13 @@ sudo iwconfig wlan0 txpower 20
 # 4. Arayüzü tekrar aç
 sudo ifconfig wlan0 up
 ```
+
+> [!note] Modern alternatif
+> Yeni sürücülerde `iwconfig txpower` çalışmayabilir. Bu durumda `iw` kullan (birim mBm'dir, 2000 mBm = 20 dBm):
+> ```bash
+> sudo iw dev wlan0 set txpower fixed 2000
+> ```
+> Bölge kodunu değiştirmek **yasal sınırları aşmak için değil**, bulunduğun ülkenin kurallarına uymak içindir.
 
 ---
 
@@ -83,68 +109,5 @@ sudo iwconfig wlan0 freq "5.52G"
 sudo ifconfig wlan0 up
 ```
 
-
-# Wi-Fi Ağ Kartı Çalışma Modları (Interface Modes)
-
-Sızma testlerinde ağ kartımızın (interface) hangi rolde çalıştığı çok önemlidir. WPA şifrelerini kırmak için farklı, sahte bir ağ (Rogue AP) oluşturmak için farklı bir mod kullanmamız gerekir. Temelde 5 ana çalışma modu vardır:
-
-## 1. Yönetilen Mod (Managed Mode)
-Ağ kartının varsayılan, standart çalışma modudur. Cihazın bir son kullanıcı (istemci) gibi davranarak etraftaki ağları (AP) bulmasını ve onlara bağlanmasını sağlar.
-
-**Kullanım:** Kartı bu moda almak ve bir ağa bağlanmak için:
-```bash
-sudo ifconfig wlan0 down
-sudo iwconfig wlan0 mode managed
-sudo iwconfig wlan0 essid HTB-Wifi # Bağlanılacak ağın (ESSID) adı
-sudo iwconfig # Durumu kontrol et
-```
-
-## 2. İzleme Modu (Monitor Mode / Promiscuous Mode)
-Sızma testlerinin kalbidir. Normalde bir ağ kartı sadece "kendisine" gelen paketleri okur. Ancak İzleme modunda kart, hedefin kim olduğuna bakılmaksızın **havadaki tüm Wi-Fi trafiğini (şifreler, el sıkışmalar, aranan ağlar) yakalar ve kaydeder.** WEP, WPA, WPA2 kırmak için bu mod şarttır.
-
-**Kullanım:** Kartı İzleme (Monitor) moduna almak için:
-```bash
-sudo ifconfig wlan0 down
-sudo iw wlan0 set monitor control
-sudo ifconfig wlan0 up
-iwconfig # Mode:Monitor olarak değiştiğini doğrula
-```
-
-## 3. Ana Mod / Erişim Noktası Modu (Master Mode)
-Ağ kartımızın bir İstemci (bağlanan) değil, **Modem (Access Point)** gibi davranıp etrafa yayın yaptığı moddur. Sızma testlerinde "Evil-Twin" (Sahte Erişim Noktası / Rogue AP) saldırıları yapmak için kartın bu modu desteklemesi gerekir.
-*Bu mod doğrudan `iwconfig` ile açılamaz. `hostapd` gibi harici bir yönetim yazılımı (daemon) gerektirir.*
-
-**Kullanım:** `hostapd` ile sahte bir ağ ayağa kaldırmak:
-```bash
-# Önce bir konfigürasyon dosyası (open.conf) oluşturulur:
-# interface=wlan0
-# driver=nl80211
-# ssid=HTB-Hello-World
-# channel=2
-# hw_mode=g
-
-# Ardından ağ başlatılır:
-sudo hostapd open.conf
-```
-
-## 4. Ad-Hoc Modu
-Merkezi bir modem (AP) olmadan, cihazların doğrudan birbirleriyle (Peer-to-Peer / P2P) iletişim kurduğu merkezsiz moddur. Genellikle evlerdeki "Mesh" sistemlerinin kendi aralarındaki iletişim (backhaul) için kullanılır.
-
-**Kullanım:**
-```bash
-sudo iwconfig wlan0 mode ad-hoc
-sudo iwconfig wlan0 essid HTB-Mesh
-```
-
-## 5. Mesh Modu
-Büyük fiziksel alanlarda (kurumsal şirketler, kampüsler) cihazın kendini yapılandıran devasa bir yönlendirme ağına "Mesh Point" (Düğüm) olarak katıldığı moddur. Bu ağlardaki zafiyetleri (node impersonation) sömürmek için kullanılır.
-
-**Kullanım:**
-```bash
-sudo iw dev wlan0 set type mesh
-```
-
 ---
-> **Pentest Özet Çıkarımı:**
-> *   Parola Kırma ve Trafik Dinleme -> **Monitor Mode** yeterlidir.
-> *   Sahte Ağ (Evil Twin) Kurma -> **Master Mode** (hostapd desteği ile) gereklidir.
+> ◀ [[03_802.11_Çerçeveleri_ve_Bağlantı_Döngüsü|802.11 Çerçeveleri ve Bağlantı Döngüsü]] · 📚 [[00_Wi-Fi_Hackleme_İndex|İndeks]] · [[05_Wi-Fi_Çalışma_Modları|Wi-Fi Çalışma Modları]] ▶

@@ -30,6 +30,7 @@ aliases:
 | 7 | [[07 - Halüsinasyonlar ve Aşırı Güven\|Halüsinasyonları ve Aşırı Güvenmeyi Anlamak]] | Halüsinasyon türleri, slopsquatting (paket halüsinasyonu), aşırı güven, LLM09, savunma stratejileri |
 | 8 | [[08 - Sistem Prompt Çıkarma Teknikleri\|Sistem Prompt Çıkarma Teknikleri]] | LLM07, doğrudan/dolaylı/gelişmiş extraction teknikleri (25 teknik), tespit göstergeleri, savunma |
 | 9 | [[09 - Hassas Bilgi İfşası\|Hassas Bilgi İfşası]] | LLM02, eğitim verisi ezberleme, kullanıcılar arası sızıntı (ChatGPT 2023), RAG'de PII, API key sızıntısı, hata mesajları, Samsung vakası |
+| 10 | [[10 - Keşif ve Bilgi İfşası Savunması\|Savunma: Keşif ve Bilgi İfşasının Azaltılması]] | Sır tutmama, çıkarma karşıtı talimat, canary token, PII redaksiyonu (Presidio), hız sınırı, çıktı filtreleme, metadata/header gizleme, 6 katmanlı derinlemesine savunma |
 
 ```mermaid
 flowchart LR
@@ -41,6 +42,7 @@ flowchart LR
     F --> G["7. Halüsinasyon ve aşırı güven"]
     G --> H["8. Sistem prompt çıkarma"]
     H --> I["9. Hassas bilgi ifşası"]
+    I --> J["10. Savunma"]
 ```
 
 ## Hızlı erişim
@@ -58,6 +60,9 @@ flowchart LR
 - **Eğitim verisi ezberleme ve ekstraksiyon:** [[09 - Hassas Bilgi İfşası#Eğitim Verilerinin Ezberlenmesi|Prefix/completion attack]]
 - **ChatGPT veri sızıntısı vakası (2023):** [[09 - Hassas Bilgi İfşası#ChatGPT veri sızıntısı olayı (Mart 2023)|Redis bug'ı]]
 - **API key ve credential sızıntı yolları:** [[09 - Hassas Bilgi İfşası#API Anahtarı ve Kimlik Bilgilerinin Açığa Çıkması|4 yol]]
+- **Derinlemesine savunma (6 katman):** [[10 - Keşif ve Bilgi İfşası Savunması#Derinlemesine Savunma Mimarisi|Katman tablosu]]
+- **Canary token ve sızıntı tespiti:** [[10 - Keşif ve Bilgi İfşası Savunması#Sistem prompt'larda canary token|Canary token]] · [[10 - Keşif ve Bilgi İfşası Savunması#Sistem prompt sızıntı tespiti|Sızıntı tespiti]]
+- **PII redaksiyonu (giriş ve çıkış):** [[10 - Keşif ve Bilgi İfşası Savunması#Kişisel Bilgilerin Düzenlenmesi (PII Redaksiyonu)|PII redaksiyonu]]
 - **Model parmak izi veritabanı yapısı:** [[06 - Model Parmak İzi ve Keşif#Model Parmak İzi Veritabanı Oluşturma|JSON yapısı]]
 
 ## Temel fikirler (tek cümlede)
@@ -72,6 +77,7 @@ flowchart LR
 > 7. **LLM doğruluk için değil inandırıcılık için optimize edilir.** Paket adı, URL, içtihat ve yapılandırmayı bağımsız kaynakla doğrula.
 > 8. **System prompt gizli kalmaz.** Sırları (API key, şifre) prompt'a koyma, kuralları uygulama kodunda zorla.
 > 9. **Veri üç yoldan sızar:** modelin ezberinden, paylaşılan oturum/bellek hatalarından ve kullanıcının kendi yapıştırdığı veriden. Erişim kontrolü, PII redaction ve DLP şart.
+> 10. **Savunma katmanlıdır; mükemmel savunma yoktur.** Prompt'ta sır tutma, girişte ve çıkışta PII redakte et, canary ile sızıntıyı tespit et, metadata'yı temizle. Hedef, saldırı maliyetini yükseltip hızlı tespit etmektir.
 
 ## Bağlantılı konular
 - [[Prompt Injection]] · [[Jailbreak]] · [[RAG]] · [[SSRF]] · [[Excessive Agency]]

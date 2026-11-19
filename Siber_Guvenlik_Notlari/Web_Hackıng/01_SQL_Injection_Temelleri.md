@@ -1,4 +1,19 @@
-# 01_SQL_Injection
+---
+title: "SQL Injection Temelleri"
+ana-not: "[[00_Web_Hacking_Index]]"
+tarih: 2026-11-19
+aliases:
+  - SQL Injection Temelleri
+tags:
+  - siber-guvenlik
+  - web-hacking
+  - sqli
+  - temel
+---
+
+# SQL Injection Temelleri
+
+> 📚 [[00_Web_Hacking_Index|İndeks]] · [[01.1_SQLi_Union|SQLi UNION Saldırıları]] ▶
 
 **Etiket:** #web_hacking
 **Temel Hedef:** Kullanıcı girdisi üzerinden arka plandaki veritabanı sorgusunu manipüle etmek.
@@ -11,7 +26,7 @@ URL parametreleri (`?id=1`), arama çubukları, login formları, HTTP Header'lar
 ## 🛠️ Burp Suite Keşif Adımları
 1. İsteği Intercept ile yakala ve Repeater'a yolla.
 2. Hedef parametrenin sonuna tek tırnak (`'`) ekle. Sunucu `500 Internal Server Error` veya veritabanı hatası (syntax error) dönüyorsa açık potansiyeli yüksektir.
-3. Mantıksal doğrulama (Boolean test) yap: 
+3. Mantıksal doğrulama (Boolean test) yap:
    - `id=1 AND 1=1` (Sorgu True döner -> Sayfa normal yüklenmeli)
    - `id=1 AND 1=2` (Sorgu False döner -> Sayfa boş veya hatalı yüklenmeli)
 
@@ -24,7 +39,7 @@ URL parametreleri (`?id=1`), arama çubukları, login formları, HTTP Header'lar
 
 ## ⚙️ Yardımcı Araç Komutu (SQLMap)
 ```bash
-sqlmap -u "[http://hedefsite.com/page?id=1](http://hedefsite.com/page?id=1)" --dbs --batch
+sqlmap -u "http://hedefsite.com/page?id=1" --dbs --batch
 
 ```
 
@@ -41,12 +56,14 @@ SELECT * FROM products WHERE category = 'Gifts' AND released = 1
 - **`products`** From products diyince productstakileri çekiyor.
 - **`category`** Neresi kategorisi hediye ve released'ı  bir neresi ise verisini çek diyoruz.
 
-
 ## 🔗 Alt Kategoriler ve Spesifik Taktikler
 *(Eğitimde yeni modüllere geçtikçe dosyalarını oluşturup buraya bağlayabilirsin)*
 - [[01.1_SQLi_Union]]
 - [[01.2_Blind_SQL]]
 - [[01.3_Error-Based_SQL_Injection]]
 - [[01.4_Time_Based_Blind_SQL]]
-- [[01.5_Out-of-Band (Ağ Üzerinden Veri Sızdırma)]]
-- [[01.6_Farklı_Bağlamlarda_SQL_Injection]]
+- [[01.5_Out-of-Band_OAST|Out-of-Band (OAST)]]
+- [[01.6_Farklı_Bağlamlarda_SQLi|Farklı Bağlamlarda SQLi]]
+
+---
+> 📚 [[00_Web_Hacking_Index|İndeks]] · [[01.1_SQLi_Union|SQLi UNION Saldırıları]] ▶

@@ -18,7 +18,7 @@ tags:
 
 # Hassas Bilgi İfşası
 
-> ◀ [[08 - Sistem Prompt Çıkarma Teknikleri|Sistem Prompt Çıkarma Teknikleri]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]]
+> ◀ [[08 - Sistem Prompt Çıkarma Teknikleri|Sistem Prompt Çıkarma Teknikleri]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[10 - Keşif ve Bilgi İfşası Savunması|Savunma: Keşif ve Bilgi İfşasının Azaltılması]] ▶
 
 > [!abstract] Özet
 > **Hassas bilgi ifşası**, bir LLM'in **ifşa etmemesi gereken gizli verileri** açığa çıkarmasıdır. Kapsam: eğitim verisinden ezberlenen **PII**, çok kiracılı sistemlerde **kullanıcılar arası veri sızıntısı**, dahili sistem ayrıntılarının açığa çıkması ve özel iş bilgilerinin istenmeden ifşası. OWASP LLM Top 10'da **LLM02** olarak sınıflandırılır. Bkz. [[04 - OWASP LLM Top 10#LLM02 Sensitive Information Disclosure (Hassas Bilgi İfşası)|LLM02]].
@@ -270,4 +270,4 @@ Samsung çalışanları, hata ayıklama ve optimizasyon için **özel kaynak kod
 - [[RAG]]
 
 ---
-> ◀ [[08 - Sistem Prompt Çıkarma Teknikleri|Sistem Prompt Çıkarma Teknikleri]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]]
+> ◀ [[08 - Sistem Prompt Çıkarma Teknikleri|Sistem Prompt Çıkarma Teknikleri]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[10 - Keşif ve Bilgi İfşası Savunması|Savunma: Keşif ve Bilgi İfşasının Azaltılması]] ▶
