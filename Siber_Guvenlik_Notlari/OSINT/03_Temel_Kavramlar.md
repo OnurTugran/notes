@@ -23,11 +23,11 @@ tags:
 
 | Kavram | Kısa tanım |
 |---|---|
-| [[#Open Source (Açık Kaynak)\|Open Source]] | Herkesin erişebildiği her türlü bilgi |
-| [[#Doğrulama\|Doğrulama]] | Bilginin doğruluğunu çapraz kontrolle teyit etme |
-| [[#Veri Madenciliği\|Veri Madenciliği]] | Büyük veri kümelerinden anlamlı bilgi çıkarma |
-| [[#HUMINT\|HUMINT]] | İnsan kaynaklı istihbarat |
-| [[#Metadata Analizi\|Metadata Analizi]] | Dosyaların içindeki gizli bilgileri inceleme |
+| [Open Source](#open-source-açık-kaynak) | Herkesin erişebildiği her türlü bilgi |
+| [Doğrulama](#doğrulama) | Bilginin doğruluğunu çapraz kontrolle teyit etme |
+| [Veri Madenciliği](#veri-madenciliği) | Büyük veri kümelerinden anlamlı bilgi çıkarma |
+| [HUMINT](#humint) | İnsan kaynaklı istihbarat |
+| [Metadata Analizi](#metadata-analizi) | Dosyaların içindeki gizli bilgileri inceleme |
 
 ## Open Source (Açık Kaynak)
 Kamuya açık veya erişilebilir her tür bilgi: web siteleri, sosyal medya, kamu veritabanları ve diğer çevrimiçi kaynaklar. Buradaki "açık", yazılımın kaynak kodunun açık olmasından farklı olarak **bilginin herkese erişilebilir olması** demektir.

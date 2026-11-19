@@ -26,13 +26,13 @@ tags:
 > **Halüsinasyon:** LLM'in gerçekte yanlış, uydurma veya anlamsız içerik üretip bunu doğru bilgiyle **aynı güvenle** sunmasıdır. **Aşırı güven (overreliance):** insanların LLM çıktısına **doğrulamadan** güvenme eğilimidir. İkisi birleşince yanlış tıbbi tavsiyeden, uydurma yazılım paketleri yoluyla **tedarik zinciri saldırılarına** kadar gerçek zarar doğurabilen tehlikeli bir kombinasyon oluşur.
 
 ## İçindekiler (Bölüm 7)
-- [[#Halüsinasyonlar Nelerdir?]]
-- [[#Halüsinasyon Türleri]]
-- [[#Paket Halüsinasyon Saldırıları]]
-- [[#Aşırı Güven (Overreliance)]]
-- [[#Güvenlik Açığı Olarak Halüsinasyonlar (OWASP LLM09)]]
-- [[#Halüsinasyonlara Karşı Savunma]]
-- [[#Temel Çıkarımlar (Bölüm 7)]]
+- [Halüsinasyonlar Nelerdir?](#halüsinasyonlar-nelerdir)
+- [Halüsinasyon Türleri](#halüsinasyon-türleri)
+- [Paket Halüsinasyon Saldırıları](#paket-halüsinasyon-saldırıları)
+- [Aşırı Güven (Overreliance)](#aşırı-güven-overreliance)
+- [Güvenlik Açığı Olarak Halüsinasyonlar (OWASP LLM09)](#güvenlik-açığı-olarak-halüsinasyonlar-owasp-llm09)
+- [Halüsinasyonlara Karşı Savunma](#halüsinasyonlara-karşı-savunma)
+- [Temel Çıkarımlar (Bölüm 7)](#temel-çıkarımlar-bölüm-7)
 
 ---
 
@@ -192,7 +192,7 @@ Halüsinasyon tehlikesini artıran **insan davranışsal kırılganlığıdır.*
 > }
 > ```
 >
-> `X-SSRF-Protection` header'ı **mevcut değildir ve hiçbir şey yapmaz.** Sistem yöneticisi korunduğunu düşünerek bu "güvenlik" yapılandırmasını deploy eder; gerçekte **korunmuyordur.** Bkz. [[SSRF]].
+> `X-SSRF-Protection` header'ı **mevcut değildir ve hiçbir şey yapmaz.** Sistem yöneticisi korunduğunu düşünerek bu "güvenlik" yapılandırmasını deploy eder; gerçekte **korunmuyordur.** Bkz. SSRF.
 
 ---
 
@@ -238,13 +238,6 @@ Halüsinasyon riskini azaltmak için aşağıdaki stratejiler **birlikte** uygul
 > 3. **Paket halüsinasyon saldırıları (slopsquatting)** gerçek ve büyüyen bir tedarik zinciri tehdididir. Kurulumdan önce **daima paket adlarını doğrula.**
 > 4. **Aşırı güven**, halüsinasyonların teknik kırılganlığını artıran **insani bir güvenlik açığıdır.**
 > 5. Savunma, **teknik önlemlerin** (RAG, sıcaklık kontrolü, çıktı doğrulaması) ve **insan uygulamalarının** (eleştirel değerlendirme, doğrulama iş akışları) kombinasyonunu gerektirir.
-
-## İlgili Notlar (Bölüm 7)
-- [[Slopsquatting]]
-- [[Halüsinasyon]]
-- [[Overreliance]]
-- [[AI Supply Chain]]
-- [[Human-in-the-loop]]
 
 ---
 > ◀ [Model Parmak İzi ve Keşif](06%20-%20Model%20Parmak%20%C4%B0zi%20ve%20Ke%C5%9Fif.md) · 📚 [Ana Sayfa (MOC)](00%20-%20Yapay%20zeka.md) · [Sistem Prompt Çıkarma Teknikleri](08%20-%20Sistem%20Prompt%20%C3%87%C4%B1karma%20Teknikleri.md) ▶

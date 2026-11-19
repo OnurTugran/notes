@@ -24,15 +24,15 @@ tags:
 > Geleneksel yazılım güvenliği ile yapay zeka güvenliği aynı disiplinin varyasyonları gibi görünse de **doğaları, tehdit modelleri ve savunma stratejileri** temelden farklıdır. Siber güvenliğin yerleşik kuralları LLM tabanlı sistemlere tam olarak uygulanamaz; **yeni bir güvenlik zihniyeti** gerekir.
 
 ## İçindekiler (Bölüm 2)
-- [[#Deterministik ve Olasılıksal Sistemler]]
-- [[#Güvenlikle İlgili Determinizm Dışı Zorluklar]]
-- [[#Geleneksel Güvenlik ve Yapay Zeka Güvenliği Karşılaştırma]]
-- [[#Anlamsal Boşluk Sorunu]]
-- [[#Ortaya Çıkan Davranışlar ve Tahmin Edilemezlik]]
-- [[#Saldırı Yüzeyi Dilin Kendisidir]]
-- [[#Tedarik Zinciri Farklı]]
-- [[#Savunmacının İkilemi]]
-- [[#Temel Çıkarımlar]]
+- [Deterministik ve Olasılıksal Sistemler](#deterministik-ve-olasılıksal-sistemler)
+- [Güvenlikle İlgili Determinizm Dışı Zorluklar](#güvenlikle-i̇lgili-determinizm-dışı-zorluklar)
+- [Geleneksel Güvenlik ve Yapay Zeka Güvenliği Karşılaştırma](#geleneksel-güvenlik-ve-yapay-zeka-güvenliği-karşılaştırma)
+- [Anlamsal Boşluk Sorunu](#anlamsal-boşluk-sorunu)
+- [Ortaya Çıkan Davranışlar ve Tahmin Edilemezlik](#ortaya-çıkan-davranışlar-ve-tahmin-edilemezlik)
+- [Saldırı Yüzeyi Dilin Kendisidir](#saldırı-yüzeyi-dilin-kendisidir)
+- [Tedarik Zinciri Farklı](#tedarik-zinciri-farklı)
+- [Savunmacının İkilemi](#savunmacının-i̇kilemi)
+- [Temel Çıkarımlar](#temel-çıkarımlar)
 
 ---
 
@@ -56,7 +56,7 @@ def authenticate(username, password):
 
 > [!NOTE]
 > **Deterministik sistemde açık ya vardır ya yoktur**
-> Bir SQL injection verisi ya çalışır ya çalışmaz. Test senaryosu yazarsın, tutarlı şekilde başarılı veya başarısız olur. Bkz. [[SQL Injection]].
+> Bir SQL injection verisi ya çalışır ya çalışmaz. Test senaryosu yazarsın, tutarlı şekilde başarılı veya başarısız olur. Bkz. SQL Injection.
 
 ### Olasılıksal sistemler
 LLM'ler **olasılıksaldır**. Aynı girdi, aynı parametrelerle bile her seferinde farklı çıktı üretebilir. Sebep: model sözcük dağarcığı üzerindeki bir **olasılık dağılımından örnekleme** yapar ve [temperature](01%20-%20LLM%20G%C3%BCvenli%C4%9Fine%20Giri%C5%9F.md#temperature-sıcaklık) tam sıfır değilse çıktıda doğal rastgelelik vardır.
@@ -136,7 +136,7 @@ Geleneksel açıklar genelde **ikili**dir: savunmasızdır veya değildir. LLM a
 
 ## Anlamsal Boşluk Sorunu
 
-Geleneksel güvenlikte **kod ile veri arasında net bir ayrım** vardır. [[SQL Injection]] ikisinin karışmasından yararlanır, ama prensipte **parametreli sorgular** bu sınırı zorlayarak sorunu çözer.
+Geleneksel güvenlikte **kod ile veri arasında net bir ayrım** vardır. SQL Injection ikisinin karışmasından yararlanır, ama prensipte **parametreli sorgular** bu sınırı zorlayarak sorunu çözer.
 
 > [!CAUTION]
 > **LLM'de bu sınır yoktur**
@@ -158,7 +158,7 @@ Model, birine diğerine göre öncelik vermek için **öğrenilmiş kalıpları*
 
 > [!IMPORTANT]
 > **Anlamsal boşluk**
-> Model, geçerli talimatlar ile adversarial talimatlar arasında ayrım yapmak için **öğrenilmiş anlamsal anlayışı** kullanır (zorunlu sözdizimsel kuralları değil). Bu anlayış olasılıksal olduğu için **atlanabilir**. Bkz. [[Prompt Injection]], [Sistem Prompt ve Kullanıcı Prompt'u](01%20-%20LLM%20G%C3%BCvenli%C4%9Fine%20Giri%C5%9F.md#sistem-prompt-ve-kullanıcı-promptu).
+> Model, geçerli talimatlar ile adversarial talimatlar arasında ayrım yapmak için **öğrenilmiş anlamsal anlayışı** kullanır (zorunlu sözdizimsel kuralları değil). Bu anlayış olasılıksal olduğu için **atlanabilir**. Bkz. Prompt Injection, [Sistem Prompt ve Kullanıcı Prompt'u](01%20-%20LLM%20G%C3%BCvenli%C4%9Fine%20Giri%C5%9F.md#sistem-prompt-ve-kullanıcı-promptu).
 
 ---
 
@@ -198,7 +198,7 @@ LLM güvenliğinde saldırı dili **doğal dildir**. Saldırganın programlama b
 
 > [!TIP]
 > **Bağlantı**
-> Bu tür saldırılar [[Social Engineering]] (sosyal mühendislik) ile benzerlik taşır; hedef bir insan yerine bir model.
+> Bu tür saldırılar Social Engineering (sosyal mühendislik) ile benzerlik taşır; hedef bir insan yerine bir model.
 
 ---
 
@@ -213,7 +213,7 @@ Geleneksel yazılımın iyi anlaşılmış bir tedarik zinciri vardır: **kaynak
 | **Eğitim verileri** | İnternetten alınan, çoğunlukla düzenlenmemiş terabaytlarca metin. Zehirlenmiş veri, tespiti neredeyse imkansız **arka kapılara** yol açabilir |
 | **Model ağırlıkları** | HuggingFace gibi depolardan indirilen hazır modeller. Kötü amaçlı bir model yüklendiğinde **pickle deserialization** yoluyla rastgele kod çalıştırabilir |
 | **Fine-tuning veri kümeleri** | Zehirli fine-tuning verisi güvenlik eğitimini geçersiz kılabilir |
-| **Embedding modelleri** | [[RAG]] sistemlerinde metni vektöre çevirir. İhlal edilmiş embedding modeli **retrieval sonuçlarını** değiştirebilir |
+| **Embedding modelleri** | RAG sistemlerinde metni vektöre çevirir. İhlal edilmiş embedding modeli **retrieval sonuçlarını** değiştirebilir |
 | **Prompt şablonları** | System prompt'lar ve prompt zincirleri. Genelde düz metin olarak saklanır, **sürüm kontrolü yetersizdir** |
 
 ---
@@ -231,7 +231,7 @@ LLM güvenliğinde ise **her savunma olasılıksaldır**:
 
 > [!TIP]
 > **Ama savunma imkansız değil**
-> Savunma **katmanlı, istatistiksel ve sürekli izlenen** olmalıdır. Tek guardrail yetersizdir; her biri kendi başarısızlık moduna sahip **birden fazla örtüşen savunma** riski kabul edilebilir seviyelere indirir. Bu, [[Defense in Depth]] (derinlemesine savunma) yaklaşımıdır ve eğitimin son bölümünün konusudur.
+> Savunma **katmanlı, istatistiksel ve sürekli izlenen** olmalıdır. Tek guardrail yetersizdir; her biri kendi başarısızlık moduna sahip **birden fazla örtüşen savunma** riski kabul edilebilir seviyelere indirir. Bu, Defense in Depth (derinlemesine savunma) yaklaşımıdır ve eğitimin son bölümünün konusudur.
 
 ---
 
@@ -245,13 +245,6 @@ LLM güvenliğinde ise **her savunma olasılıksaldır**:
 > 4. Saldırı dili **doğal dildir**; bu giriş engelini düşürür ve tespiti zorlaştırır.
 > 5. **Her savunma olasılıksaldır.** Güvenlik katmanlı olmalı ve sürekli izlenmelidir.
 > 6. Yapay zeka güvenliği **yeni bir zihniyet, yeni araçlar ve yeni çerçeveler** gerektirir. Geleneksel siber güvenlik bilgisi **gereklidir ama yeterli değildir**.
-
-## İlgili Notlar (Bölüm 2)
-- [[SQL Injection]]
-- [[Social Engineering]]
-- [[Defense in Depth]]
-- [[Guardrails]]
-- [[AI Supply Chain]]
 
 ---
 > ◀ [LLM Güvenliğine Giriş](01%20-%20LLM%20G%C3%BCvenli%C4%9Fine%20Giri%C5%9F.md) · 📚 [Ana Sayfa (MOC)](00%20-%20Yapay%20zeka.md) · [LLM Uygulama Mimarileri](03%20-%20LLM%20Uygulama%20Mimarileri.md) ▶

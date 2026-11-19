@@ -27,24 +27,24 @@ tags:
 > Bu bölüm, önceki bölümlerde anlatılan **keşif** ([Bölüm 6](06%20-%20Model%20Parmak%20%C4%B0zi%20ve%20Ke%C5%9Fif.md)) ve **bilgi ifşa** ([Bölüm 8](08%20-%20Sistem%20Prompt%20%C3%87%C4%B1karma%20Teknikleri.md), [Bölüm 9](09%20-%20Hassas%20Bilgi%20%C4%B0f%C5%9Fas%C4%B1.md)) saldırılarına karşı **savunma tekniklerini ve mimari kalıpları** toplar. Her saldırıya karşılık gelen bir savunma vardır, ancak LLM davranışı **olasılıksal** olduğu için **hiçbir savunma tek başına yeterli değildir**. Savunma **katmanlı** olmalıdır.
 
 ## İçindekiler (Bölüm 10)
-- [[#Sistem Prompt Sağlamlaştırma]]
-- [[#Kişisel Bilgilerin Düzenlenmesi (PII Redaksiyonu)]]
-- [[#Hız Sınırlama ve Anormallik Tespiti]]
-- [[#Çıktı Filtreleme]]
-- [[#API Güvenliği ve Meta Veri Gizleme]]
-- [[#Derinlemesine Savunma Mimarisi]]
-- [[#Tam Güvenli Uygulama Örneği]]
-- [[#Savunmanın Sınırlamaları]]
-- [[#Temel Çıkarımlar (Bölüm 10)]]
+- [Sistem Prompt Sağlamlaştırma](#sistem-prompt-sağlamlaştırma)
+- [Kişisel Bilgilerin Düzenlenmesi (PII Redaksiyonu)](#kişisel-bilgilerin-düzenlenmesi-pii-redaksiyonu)
+- [Hız Sınırlama ve Anormallik Tespiti](#hız-sınırlama-ve-anormallik-tespiti)
+- [Çıktı Filtreleme](#çıktı-filtreleme)
+- [API Güvenliği ve Meta Veri Gizleme](#api-güvenliği-ve-meta-veri-gizleme)
+- [Derinlemesine Savunma Mimarisi](#derinlemesine-savunma-mimarisi)
+- [Tam Güvenli Uygulama Örneği](#tam-güvenli-uygulama-örneği)
+- [Savunmanın Sınırlamaları](#savunmanın-sınırlamaları)
+- [Temel Çıkarımlar (Bölüm 10)](#temel-çıkarımlar-bölüm-10)
 
 ## Hangi saldırıya hangi savunma?
 
 | Saldırı (bölüm) | Ana savunma | Bu bölümde |
 |---|---|---|
-| Sistem prompt çıkarma ([B8](08%20-%20Sistem%20Prompt%20%C3%87%C4%B1karma%20Teknikleri.md)) | Sır tutmama, çıkarma karşıtı talimat, canary token, sızıntı tespiti | [[#Sistem Prompt Sağlamlaştırma]], [[#Çıktı Filtreleme]] |
-| PII / eğitim verisi sızıntısı ([B9](09%20-%20Hassas%20Bilgi%20%C4%B0f%C5%9Fas%C4%B1.md)) | Giriş ve çıkış PII redaksiyonu | [[#Kişisel Bilgilerin Düzenlenmesi (PII Redaksiyonu)]] |
-| Model parmak izi, HTTP başlığı, hata mesajı ([B6](06%20-%20Model%20Parmak%20%C4%B0zi%20ve%20Ke%C5%9Fif.md)) | Metadata temizleme, header gizleme, zamanlama normalizasyonu | [[#API Güvenliği ve Meta Veri Gizleme]] |
-| Tekrarlı sondalama, otomatik keşif | Hız sınırı, anomali tespiti | [[#Hız Sınırlama ve Anormallik Tespiti]] |
+| Sistem prompt çıkarma ([B8](08%20-%20Sistem%20Prompt%20%C3%87%C4%B1karma%20Teknikleri.md)) | Sır tutmama, çıkarma karşıtı talimat, canary token, sızıntı tespiti | [Sistem Prompt Sağlamlaştırma](#sistem-prompt-sağlamlaştırma), [Çıktı Filtreleme](#çıktı-filtreleme) |
+| PII / eğitim verisi sızıntısı ([B9](09%20-%20Hassas%20Bilgi%20%C4%B0f%C5%9Fas%C4%B1.md)) | Giriş ve çıkış PII redaksiyonu | [Kişisel Bilgilerin Düzenlenmesi (PII Redaksiyonu)](#kişisel-bilgilerin-düzenlenmesi-pii-redaksiyonu) |
+| Model parmak izi, HTTP başlığı, hata mesajı ([B6](06%20-%20Model%20Parmak%20%C4%B0zi%20ve%20Ke%C5%9Fif.md)) | Metadata temizleme, header gizleme, zamanlama normalizasyonu | [API Güvenliği ve Meta Veri Gizleme](#api-güvenliği-ve-meta-veri-gizleme) |
+| Tekrarlı sondalama, otomatik keşif | Hız sınırı, anomali tespiti | [Hız Sınırlama ve Anormallik Tespiti](#hız-sınırlama-ve-anormallik-tespiti) |
 
 ```mermaid
 flowchart LR
@@ -163,13 +163,13 @@ Canary token normal bir model çıktısında **asla görünmemesi gereken** bir 
 
 > [!WARNING]
 > **Canary'nin sınırı**
-> Yalnızca **belirli tokenin aynen çıkmasını** yakalar. Prompt başka sözcüklerle anlatılırsa veya kısmen sızarsa canary tetiklenmez. Bunu [[#Sistem prompt sızıntı tespiti|benzerlik kontrolüyle]] tamamlayın.
+> Yalnızca **belirli tokenin aynen çıkmasını** yakalar. Prompt başka sözcüklerle anlatılırsa veya kısmen sızarsa canary tetiklenmez. Bunu [benzerlik kontrolüyle](#sistem-prompt-sızıntı-tespiti) tamamlayın.
 
 ---
 
 ## Kişisel Bilgilerin Düzenlenmesi (PII Redaksiyonu)
 
-**PII (Personally Identifiable Information; kişisel olarak tanımlanabilir bilgi) redaksiyonu**, hassas bilgileri kullanıcıya ulaşmadan **önce filtreler**. Hem [[RAG]] sistemleri (getirilen belgeler PII içerebilir) hem de ezberlenmiş eğitim verisi sızdırabilecek modeller için gereklidir. Bkz. [PII sızıntısı](09%20-%20Hassas%20Bilgi%20%C4%B0f%C5%9Fas%C4%B1.md#model-yanıtları-yoluyla-pii-sızıntısı).
+**PII (Personally Identifiable Information; kişisel olarak tanımlanabilir bilgi) redaksiyonu**, hassas bilgileri kullanıcıya ulaşmadan **önce filtreler**. Hem RAG sistemleri (getirilen belgeler PII içerebilir) hem de ezberlenmiş eğitim verisi sızdırabilecek modeller için gereklidir. Bkz. [PII sızıntısı](09%20-%20Hassas%20Bilgi%20%C4%B0f%C5%9Fas%C4%B1.md#model-yanıtları-yoluyla-pii-sızıntısı).
 
 ### Çıktı seviyesinde PII algılama ve redaksiyon
 
@@ -512,7 +512,7 @@ server {
 
 > [!IMPORTANT]
 > **Hiçbir savunma tek başına yeterli değildir**
-> Mimari, birden fazla koruma katmanını birleştirir: bir katman aşılırsa sonraki yakalar. Bkz. [[Defense in Depth]].
+> Mimari, birden fazla koruma katmanını birleştirir: bir katman aşılırsa sonraki yakalar. Bkz. Defense in Depth.
 
 | # | Katman | İçerik |
 |---|---|---|
@@ -619,14 +619,6 @@ def chat():
 > 5. Extraction örüntüsüne uyan isteklere **daha sıkı hız sınırı** uygulayın.
 > 6. **En az altı katmanlı** derinlemesine savunma kurun: girdi doğrulama, prompt güçlendirme, model yapılandırması, çıktı filtreleme, API güvenliği, izleme.
 > 7. Hiçbir savunmanın tek başına yeterli olmadığını kabul edin: LLM'lerin **olasılıksal doğası** her savunmanın bir bypass potansiyeli olduğu anlamına gelir.
-
-## İlgili Notlar (Bölüm 10)
-- [[Defense in Depth]]
-- [[Canary Token]]
-- [[PII Redaction]]
-- [[Rate Limiting]]
-- [[Microsoft Presidio]]
-- [[Principle of Least Privilege]]
 
 ---
 > ◀ [Hassas Bilgi İfşası](09%20-%20Hassas%20Bilgi%20%C4%B0f%C5%9Fas%C4%B1.md) · 📚 [Ana Sayfa (MOC)](00%20-%20Yapay%20zeka.md)

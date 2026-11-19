@@ -24,13 +24,13 @@ tags:
 > **Model parmak izi alma (model fingerprinting)**, kara kutu bir AI arayüzünün arkasındaki **temel LLM'i, sürümünü ve yapılandırmasını** tanımlama sürecidir. Sızma testi uzmanının hedefin işletim sistemini, web sunucusunu ve yazılım sürümlerini keşifle belirlemesi gibi, AI Red Team uzmanı da önce hedef uygulamaya güç veren modeli tanımlar. Çünkü farklı modellerin **farklı bilinen zafiyetleri, davranış kalıpları ve atlatma teknikleri** vardır.
 
 ## İçindekiler (Bölüm 6)
-- [[#Model Parmak İzi Neden Önemlidir?]]
-- [[#Doğrudan Tanımlama Teknikleri]]
-- [[#Davranışsal Parmak İzi]]
-- [[#API Düzeyinde Keşif]]
-- [[#Model Parmak İzi Veritabanı Oluşturma]]
-- [[#Otomatik Parmak İzi]]
-- [[#Parmak İzine Karşı Önlemler]]
+- [Model Parmak İzi Neden Önemlidir?](#model-parmak-i̇zi-neden-önemlidir)
+- [Doğrudan Tanımlama Teknikleri](#doğrudan-tanımlama-teknikleri)
+- [Davranışsal Parmak İzi](#davranışsal-parmak-i̇zi)
+- [API Düzeyinde Keşif](#api-düzeyinde-keşif)
+- [Model Parmak İzi Veritabanı Oluşturma](#model-parmak-i̇zi-veritabanı-oluşturma)
+- [Otomatik Parmak İzi](#otomatik-parmak-i̇zi)
+- [Parmak İzine Karşı Önlemler](#parmak-i̇zine-karşı-önlemler)
 
 ```mermaid
 flowchart LR
@@ -112,7 +112,7 @@ System prompt modele kimliğini açıklamamasını söylediğinde birkaç bypass
 
 > [!TIP]
 > **Bağlantı**
-> Bu teknikler [[Prompt Injection]] ve [[Jailbreak]] ile aynı temel zayıflığa dayanır: kurallar **davranışsaldır**, mimari olarak zorlanmaz.
+> Bu teknikler Prompt Injection ve Jailbreak ile aynı temel zayıflığa dayanır: kurallar **davranışsaldır**, mimari olarak zorlanmaz.
 
 ---
 
@@ -404,14 +404,7 @@ Parmak izini anlamak **savunmacılar** için de kritiktir. Parmak izi almayı zo
 
 > [!WARNING]
 > **Dürüst sınır**
-> System prompt tabanlı önlemler **davranışsaldır**; atlatılabilir (bkz. bypass teknikleri). Metadata ve zamanlama gibi **mimari düzeydeki** önlemler daha güvenilirdir. Bkz. [[Defense in Depth]].
-
-## İlgili Notlar (Bölüm 6)
-- [[Model Fingerprinting]]
-- [[Prompt Injection]]
-- [[Jailbreak]]
-- [[AI Red Teaming]]
-- [[LiteLLM]]
+> System prompt tabanlı önlemler **davranışsaldır**; atlatılabilir (bkz. bypass teknikleri). Metadata ve zamanlama gibi **mimari düzeydeki** önlemler daha güvenilirdir. Bkz. Defense in Depth.
 
 ---
 > ◀ [AI Red Teaming Etiği](05%20-%20AI%20Red%20Teaming%20Eti%C4%9Fi.md) · 📚 [Ana Sayfa (MOC)](00%20-%20Yapay%20zeka.md) · [Halüsinasyonları ve Aşırı Güvenmeyi Anlamak](07%20-%20Hal%C3%BCsinasyonlar%20ve%20A%C5%9F%C4%B1r%C4%B1%20G%C3%BCven.md) ▶

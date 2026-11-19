@@ -26,15 +26,15 @@ tags:
 > **AI Red Teaming**, yapay zeka sistemlerini güvenlik açıkları, önyargılar ve güvenlik hataları açısından sistematik olarak sınama uygulamasıdır. Geleneksel sızma testlerinden farklı bir **etik çerçeve** gerektirir; çünkü "zafiyetler" çoğu zaman insan benzeri çıktı üreten bir sistemin manipüle edilmesini içerir ve zarar potansiyeli veri ihlallerinin ötesine geçerek **yanlış bilgilendirme, ayrımcılık ve psikolojik manipülasyonu** da kapsayabilir.
 
 ## İçindekiler (Bölüm 5)
-- [[#AI Red Teaming Nedir?]]
-- [[#AI Red Teaming Metodolojisi]]
-- [[#Etik İlkeler ve Sınırlar]]
-- [[#Yasal Çerçeve]]
-- [[#Yapay Zeka Sistemleri için Bug Bounty Programları]]
-- [[#Sorumlu Açıklama Süreci]]
-- [[#Yapay Zeka Güvenlik Açığı Raporu Yazma]]
-- [[#AI Red Team Çerçeveleri ve Standartları]]
-- [[#Temel Çıkarımlar (Bölüm 5)]]
+- [AI Red Teaming Nedir?](#ai-red-teaming-nedir)
+- [AI Red Teaming Metodolojisi](#ai-red-teaming-metodolojisi)
+- [Etik İlkeler ve Sınırlar](#etik-i̇lkeler-ve-sınırlar)
+- [Yasal Çerçeve](#yasal-çerçeve)
+- [Yapay Zeka Sistemleri için Bug Bounty Programları](#yapay-zeka-sistemleri-için-bug-bounty-programları)
+- [Sorumlu Açıklama Süreci](#sorumlu-açıklama-süreci)
+- [Yapay Zeka Güvenlik Açığı Raporu Yazma](#yapay-zeka-güvenlik-açığı-raporu-yazma)
+- [AI Red Team Çerçeveleri ve Standartları](#ai-red-team-çerçeveleri-ve-standartları)
+- [Temel Çıkarımlar (Bölüm 5)](#temel-çıkarımlar-bölüm-5)
 
 ---
 
@@ -83,10 +83,10 @@ flowchart LR
 - Riskleri **etki ve olasılığa** göre önceliklendir.
 
 ### Aşama 3: Saldırı Uygulaması
-- [[Prompt Injection]] saldırıları (doğrudan ve dolaylı)
+- Prompt Injection saldırıları (doğrudan ve dolaylı)
 - System prompt çıkarma denemeleri
 - Bilgi ifşası testleri
-- **Jailbreak** teknikleriyle guardrail'leri sınama ([[Jailbreak]])
+- **Jailbreak** teknikleriyle guardrail'leri sınama (Jailbreak)
 - Araç ve entegrasyon güvenliği testleri
 - Çıktı işleme zafiyetlerinin değerlendirilmesi
 
@@ -227,7 +227,7 @@ Birçok büyük AI sağlayıcısının özellikle **LLM zafiyetlerini** kapsayan
 > - **Hassas veri ifşası** (PII, API anahtarları, dahili veriler)
 > - AI aracılığıyla **kimlik doğrulama ve yetkilendirme atlatma**
 > - **Kullanıcılar arası** veri sızıntısı
-> - AI aracı kullanımı yoluyla **SSRF** ([[SSRF]])
+> - AI aracı kullanımı yoluyla **SSRF** (SSRF)
 > - AI kod yorumlayıcıları aracılığıyla **kod yürütme**
 > - Önemli **güvenlik filtre geçişleri** (gerçek dünyada etkili)
 
@@ -358,16 +358,6 @@ Ortam:
 > 4. AI bug bounty programlarının belirli kapsamları vardır: **genel jailbreak'ler genellikle kapsam dışı, veri ifşası kapsam dahilidir.**
 > 5. Sorumlu açıklama zaman çizelgeleri genellikle **90 günlük** süreyi izler.
 > 6. Bu eğitimde öğretilen her teknik **etik ve yasal sınırlar** dahilinde kullanılmalıdır. **Yetkilendirme, kapsam uyumu ve sorumlu açıklama tartışılamaz.**
-
-## İlgili Notlar (Bölüm 5)
-- [[AI Red Teaming]]
-- [[OWASP LLM Top 10]]
-- [[MITRE ATLAS]]
-- [[EU AI Act]]
-- [[GDPR]]
-- [[Sorumlu Açıklama]]
-- [[Bug Bounty]]
-- [[Jailbreak]]
 
 ---
 > ◀ [LLM Uygulamaları için OWASP Top 10](04%20-%20OWASP%20LLM%20Top%2010.md) · 📚 [Ana Sayfa (MOC)](00%20-%20Yapay%20zeka.md) · [Model Parmak İzi ve Keşif](06%20-%20Model%20Parmak%20%C4%B0zi%20ve%20Ke%C5%9Fif.md) ▶

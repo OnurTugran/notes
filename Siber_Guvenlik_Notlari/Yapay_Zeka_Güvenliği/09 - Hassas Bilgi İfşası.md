@@ -25,14 +25,14 @@ tags:
 > **Hassas bilgi ifşası**, bir LLM'in **ifşa etmemesi gereken gizli verileri** açığa çıkarmasıdır. Kapsam: eğitim verisinden ezberlenen **PII**, çok kiracılı sistemlerde **kullanıcılar arası veri sızıntısı**, dahili sistem ayrıntılarının açığa çıkması ve özel iş bilgilerinin istenmeden ifşası. OWASP LLM Top 10'da **LLM02** olarak sınıflandırılır. Bkz. [LLM02](04%20-%20OWASP%20LLM%20Top%2010.md#llm02-sensitive-information-disclosure-hassas-bilgi-i̇fşası).
 
 ## İçindekiler (Bölüm 9)
-- [[#Eğitim Verilerinin Ezberlenmesi]]
-- [[#Kullanıcı Arası Veri Sızıntısı]]
-- [[#Model Yanıtları Yoluyla PII Sızıntısı]]
-- [[#API Anahtarı ve Kimlik Bilgilerinin Açığa Çıkması]]
-- [[#Hata Mesajları Yoluyla Bilgi İfşası]]
-- [[#Model Meta Verilerinde Hassas Bilgiler]]
-- [[#Gerçek Dünyadan Örnekler]]
-- [[#Temel Çıkarımlar (Bölüm 9)]]
+- [Eğitim Verilerinin Ezberlenmesi](#eğitim-verilerinin-ezberlenmesi)
+- [Kullanıcı Arası Veri Sızıntısı](#kullanıcı-arası-veri-sızıntısı)
+- [Model Yanıtları Yoluyla PII Sızıntısı](#model-yanıtları-yoluyla-pii-sızıntısı)
+- [API Anahtarı ve Kimlik Bilgilerinin Açığa Çıkması](#api-anahtarı-ve-kimlik-bilgilerinin-açığa-çıkması)
+- [Hata Mesajları Yoluyla Bilgi İfşası](#hata-mesajları-yoluyla-bilgi-i̇fşası)
+- [Model Meta Verilerinde Hassas Bilgiler](#model-meta-verilerinde-hassas-bilgiler)
+- [Gerçek Dünyadan Örnekler](#gerçek-dünyadan-örnekler)
+- [Temel Çıkarımlar (Bölüm 9)](#temel-çıkarımlar-bölüm-9)
 
 ```mermaid
 flowchart TD
@@ -279,14 +279,6 @@ Samsung çalışanları, hata ayıklama ve optimizasyon için **özel kaynak kod
 > 3. Kişisel bilgiler **doğrudan ezberleme, erişim denetimsiz RAG, çıkarım saldırıları ve ayrıntılı hata mesajları** yoluyla sızdırılabilir.
 > 4. **API anahtarları ve kimlik bilgileri**, system prompt'larda, eğitim verilerinde veya RAG bilgi tabanlarında saklandığında risk altındadır.
 > 5. Kuruluşlar LLM etkileşimleri için **DLP, PII redaction ve erişim kontrolleri** dahil kapsamlı veri koruma politikaları uygulamalıdır.
-
-## İlgili Notlar (Bölüm 9)
-- [[Sensitive Information Disclosure]]
-- [[PII]]
-- [[Training Data Extraction]]
-- [[DLP]]
-- [[GDPR]]
-- [[RAG]]
 
 ---
 > ◀ [Sistem Prompt Çıkarma Teknikleri](08%20-%20Sistem%20Prompt%20%C3%87%C4%B1karma%20Teknikleri.md) · 📚 [Ana Sayfa (MOC)](00%20-%20Yapay%20zeka.md) · [Savunma: Keşif ve Bilgi İfşasının Azaltılması](10%20-%20Ke%C5%9Fif%20ve%20Bilgi%20%C4%B0f%C5%9Fas%C4%B1%20Savunmas%C4%B1.md) ▶

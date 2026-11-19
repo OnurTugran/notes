@@ -70,7 +70,7 @@ flowchart LR
 
 > [!NOTE]
 > **Her bölümden akılda kalacak çıkarım**
-> 1. **Context window'da ayrıcalıklı bölge yok.** System prompt ve kullanıcı girdisi aynı alandadır; [[Prompt Injection]]'ın temel nedeni bu.
+> 1. **Context window'da ayrıcalıklı bölge yok.** System prompt ve kullanıcı girdisi aynı alandadır; Prompt Injection'ın temel nedeni bu.
 > 2. **LLM olasılıksaldır.** Bir saldırı bazen çalışır bazen çalışmaz; test istatistiksel olmalı.
 > 3. **Her entegrasyon noktası bir saldırı yüzeyidir.** Savunmanın temeli **En Az Ayrıcalık İlkesi**.
 > 4. **LLM çıktısı güvenilmez girdidir.** Alt sistemlere geçmeden sanitize et.
@@ -82,6 +82,6 @@ flowchart LR
 > 10. **Savunma katmanlıdır; mükemmel savunma yoktur.** Prompt'ta sır tutma, girişte ve çıkışta PII redakte et, canary ile sızıntıyı tespit et, metadata'yı temizle. Hedef, saldırı maliyetini yükseltip hızlı tespit etmektir.
 
 ## Bağlantılı konular
-- [[Prompt Injection]] · [[Jailbreak]] · [[RAG]] · [[SSRF]] · [[Excessive Agency]]
-- [[MITRE ATLAS]] · [[Defense in Depth]] · [[Principle of Least Privilege]]
-- Genel siber güvenlik notlarım: [[Siber Güvenlik]]
+- Prompt Injection · Jailbreak · RAG · SSRF · Excessive Agency
+- MITRE ATLAS · Defense in Depth · Principle of Least Privilege
+- Genel siber güvenlik notlarım: Siber Güvenlik

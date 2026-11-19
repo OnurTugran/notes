@@ -23,12 +23,12 @@ tags:
 > LLM'ler nadiren bağımsız model olarak dağıtılır; veritabanlarına, API'lere, araçlara ve diğer sistemlere bağlayan karmaşık uygulama mimarilerine gömülürler. **Her mimari kendine özgü saldırı yüzeyini sunar.** Bir LLM'nin nasıl entegre edildiği, saldırganın neyi başarabileceğini belirler.
 
 ## İçindekiler (Bölüm 3)
-- [[#Bağımsız LLM (Doğrudan Sohbet Arayüzü)]]
-- [[#Retrieval-Augmented Generation (RAG)]]
-- [[#Ajan Mimarisi]]
-- [[#Çok Ajanlı Mimari]]
-- [[#Model Context Protocol (MCP)]]
-- [[#Doğru Mimariyi Seçmek Güvenlik Konuları]]
+- [Bağımsız LLM (Doğrudan Sohbet Arayüzü)](#bağımsız-llm-doğrudan-sohbet-arayüzü)
+- [Retrieval-Augmented Generation (RAG)](#retrieval-augmented-generation-rag)
+- [Ajan Mimarisi](#ajan-mimarisi)
+- [Çok Ajanlı Mimari](#çok-ajanlı-mimari)
+- [Model Context Protocol (MCP)](#model-context-protocol-mcp)
+- [Doğru Mimariyi Seçmek Güvenlik Konuları](#doğru-mimariyi-seçmek-güvenlik-konuları)
 
 ---
 
@@ -57,7 +57,7 @@ Bu basit mimaride bile önemli vektörler var:
 | Vektör | Açıklama |
 |---|---|
 | **System prompt çıkarma** | System prompt her istekle gönderilir; saldırgan onu çıkarmaya çalışabilir |
-| **[[Prompt Injection]]** | Kullanıcı girişi system prompt ile aynı bağlamı paylaşır, override saldırılarına olanak tanır |
+| **Prompt Injection** | Kullanıcı girişi system prompt ile aynı bağlamı paylaşır, override saldırılarına olanak tanır |
 | **Eğitim verisi çıkarma** | Model ezberlenmiş eğitim verisini (hassas bilgi dahil) yeniden üretebilir |
 | **Model parmak izi alma** | Davranışsal analizle temel model türü ve sürümü belirlenebilir |
 | **Parametre manipülasyonu** | API `temperature` veya `max_tokens` gibi parametreleri açığa çıkarırsa saldırgan bunları manipüle edebilir |
@@ -91,7 +91,7 @@ response = client.chat.completions.create(
 
 ## Retrieval-Augmented Generation (RAG)
 
-En yaygın kurumsal LLM mimarilerinden biri. İlgili belgeleri harici bir bilgi tabanından alıp prompt bağlamına ekleyerek, LLM'lerin **güncel olmayan veya yetersiz bilgi** sorununu azaltır. Bkz. [[RAG]].
+En yaygın kurumsal LLM mimarilerinden biri. İlgili belgeleri harici bir bilgi tabanından alıp prompt bağlamına ekleyerek, LLM'lerin **güncel olmayan veya yetersiz bilgi** sorununu azaltır. Bkz. RAG.
 
 ```mermaid
 flowchart TD
@@ -330,16 +330,6 @@ MCP **protokol düzeyinde** saldırı vektörleri getirir:
 > [!TIP]
 > **Temel prensip**
 > **Her entegrasyon noktası bir saldırı yüzeyidir.** LLM'ye ne kadar çok yetenek verirsen, ondan o kadar çok şekilde yararlanılabilir. Güvenlik mimarisi, temelinde **Principle of Least Privilege (En Az Ayrıcalık İlkesi)** olacak şekilde tasarlanmalıdır.
-
-## İlgili Notlar (Bölüm 3)
-- [[RAG]]
-- [[Prompt Injection]]
-- [[Excessive Agency]]
-- [[Confused Deputy]]
-- [[SSRF]]
-- [[MCP (Model Context Protocol)]]
-- [[Tool Poisoning]]
-- [[Principle of Least Privilege]]
 
 ---
 > ◀ [Yapay Zeka Güvenliği Neden Farklı?](02%20-%20Yapay%20Zeka%20G%C3%BCvenli%C4%9Fi%20Neden%20Farkl%C4%B1.md) · 📚 [Ana Sayfa (MOC)](00%20-%20Yapay%20zeka.md) · [LLM Uygulamaları için OWASP Top 10](04%20-%20OWASP%20LLM%20Top%2010.md) ▶

@@ -25,14 +25,14 @@ tags:
 > Büyük Dil Modellerine (LLM) nasıl saldıracağımızı veya onları nasıl savunacağımızı anlamak için önce içeriden nasıl çalıştıklarını bilmek gerekir. Bu not; mimariyi, mekanizmaları ve temel kavramları **güvenlik odaklı** ele alır.
 
 ## İçindekiler
-- [[#LLM (Large Language Model) Nedir?]]
-- [[#Transformer Mimarisi]]
-- [[#Tokenizasyon (Tokenization)]]
-- [[#Attention Mekanizması]]
-- [[#LLM Eğitiminin Aşamaları]]
-- [[#LLM Davranışını Etkileyen Temel Parametreler]]
-- [[#Sistem Prompt ve Kullanıcı Prompt'u]]
-- [[#LLM Güvenliği Neden Önemlidir?]]
+- [LLM (Large Language Model) Nedir?](#llm-large-language-model-nedir)
+- [Transformer Mimarisi](#transformer-mimarisi)
+- [Tokenizasyon (Tokenization)](#tokenizasyon-tokenization)
+- [Attention Mekanizması](#attention-mekanizması)
+- [LLM Eğitiminin Aşamaları](#llm-eğitiminin-aşamaları)
+- [LLM Davranışını Etkileyen Temel Parametreler](#llm-davranışını-etkileyen-temel-parametreler)
+- [Sistem Prompt ve Kullanıcı Prompt'u](#sistem-prompt-ve-kullanıcı-promptu)
+- [LLM Güvenliği Neden Önemlidir?](#llm-güvenliği-neden-önemlidir)
 
 ---
 
@@ -53,7 +53,7 @@ tags:
 
 > [!WARNING]
 > **Sonuç**
-> Reddetme davranışı öğrenilmiş bir kalıp olduğu için, prensipte **hizalama atlanabilir**. Bkz. [[Jailbreak]], [[Prompt Injection]].
+> Reddetme davranışı öğrenilmiş bir kalıp olduğu için, prensipte **hizalama atlanabilir**. Bkz. Jailbreak, Prompt Injection.
 
 ### Model ailelerinin manzarası
 Parametre sayısı, context window, multimodal yetenekler ve araç entegrasyonları sağlayıcıya ve sürüme göre değişir. Bu yüzden güvenlik değerlendirmesi belirli bir model adına değil, **modelin gerçek yeteneklerine, entegrasyonlarına ve yetki sınırlarına** dayanmalıdır.
@@ -73,7 +73,7 @@ Parametre sayısı, context window, multimodal yetenekler ve araç entegrasyonla
 
 ## Transformer Mimarisi
 
-Her modern LLM, Vaswani ve arkadaşlarının 2017 tarihli **"Attention Is All You Need"** makalesindeki Transformer mimarisi üzerine kuruludur. [[Prompt Injection]]'dan eğitim verisi çıkarımına kadar birçok açık, bu mimarinin bilgiyi işleme biçimiyle yakından ilişkilidir.
+Her modern LLM, Vaswani ve arkadaşlarının 2017 tarihli **"Attention Is All You Need"** makalesindeki Transformer mimarisi üzerine kuruludur. Prompt Injection'dan eğitim verisi çıkarımına kadar birçok açık, bu mimarinin bilgiyi işleme biçimiyle yakından ilişkilidir.
 
 ### Transformer öncesindeki sorun
 Önceden baskın mimariler **RNN** ve **LSTM**'di. Metni soldan sağa, her defasında bir kelime olarak sırayla işliyorlardı. İki büyük sorun vardı:
@@ -100,7 +100,7 @@ flowchart TD
 ```
 
 #### 1. Tokenization
-Ham metin tokenlere bölünür. Detayı: [[#Tokenizasyon (Tokenization)]].
+Ham metin tokenlere bölünür. Detayı: [Tokenizasyon (Tokenization)](#tokenizasyon-tokenization).
 
 #### 2. Embedding (Vektör Temsili)
 Her token yüksek boyutlu sayısal bir vektöre dönüştürülür (tipik **768 ila 12.288 boyut**). Benzer kelimeler benzer vektörlere sahip olur.
@@ -154,7 +154,7 @@ Son katmanın çıktısı tüm sözcük dağarcığı üzerinde bir **olasılık
 > [!CAUTION]
 > **Güvenlik sonuçları**
 > 1. **Attention bağlama bağlıdır.** Model her tokenı context window'daki diğer tüm tokenlara göre yorumlar. Saldırgan, attention weight'lerini değiştiren girdiler hazırlayarak modelin system prompt'u yorumlama biçimini etkileyebilir.
-> 2. **Ayrıcalıklı bellek bölgesi yoktur.** CPU'daki çekirdek/kullanıcı alanı ayrımının aksine Transformer, context window'daki tüm tokenları eşit ele alır. System prompt, kullanıcı mesajları ve getirilen belgeler **aynı dikkat alanındadır**. [[Prompt Injection]]'ın işe yaramasının temel nedeni budur.
+> 2. **Ayrıcalıklı bellek bölgesi yoktur.** CPU'daki çekirdek/kullanıcı alanı ayrımının aksine Transformer, context window'daki tüm tokenları eşit ele alır. System prompt, kullanıcı mesajları ve getirilen belgeler **aynı dikkat alanındadır**. Prompt Injection'ın işe yaramasının temel nedeni budur.
 > 3. **Katman katman işleme fırsatlar yaratır.** Her katman temsili dönüştürür; adversarial girdiler belirli katmanları hedefleyebilir, farklı saldırılar pipeline'ın farklı düzeylerini vurur.
 
 ---
@@ -238,7 +238,7 @@ Modelin aynı anda işleyebileceği **toplam token sayısı**. Şunların hepsin
 | Küçük veya yerel instruction modelleri | Binlerce ila on binlerce token |
 | Yaygın hosted chat modelleri | On binlerce ila yüz binlerce token |
 | Uzun bağlamlı hosted modeller | Yüz binlerce ila bir milyondan fazla token |
-| Özel retrieval mimarileri | Uzun bağlamı harici bellek veya [[RAG]] ile birleştirebilir |
+| Özel retrieval mimarileri | Uzun bağlamı harici bellek veya RAG ile birleştirebilir |
 
 > [!NOTE]
 > **Doğrulama**
@@ -246,7 +246,7 @@ Modelin aynı anda işleyebileceği **toplam token sayısı**. Şunların hepsin
 
 > [!CAUTION]
 > **Güvenlik açısından**
-> Context window, **erişim kontrolü olmayan paylaşılan bir alandır**. Model, güvenilir system prompt tokenları ile güvenilmeyen kullanıcı girdisi tokenları arasında mimari olarak ayrım yapamaz; hepsi aynı attention hesaplamalarına katılır. Bu, [[Prompt Injection]]'ın temel nedenidir.
+> Context window, **erişim kontrolü olmayan paylaşılan bir alandır**. Model, güvenilir system prompt tokenları ile güvenilmeyen kullanıcı girdisi tokenları arasında mimari olarak ayrım yapamaz; hepsi aynı attention hesaplamalarına katılır. Bu, Prompt Injection'ın temel nedenidir.
 
 ### Causal (Autoregressive) Attention
 Metin üreten LLM'ler causal attention kullanır: **N. token üretilirken model yalnızca 1'den N-1'e kadar olan tokenlara bakabilir**. Geleceğe bakamaz. Bu, gelecekteki pozisyonları engelleyen bir **attention mask** ile uygulanır.
@@ -259,7 +259,7 @@ LLM'lerin soldan sağa, her seferinde bir token üretmesinin nedeni budur.
 
 > [!WARNING]
 > **Güvenlik etkisi**
-> Modelin davranışı **aşamalı olarak etkilenebilir**. Saldırgan, asıl kötü amaçlı isteği yapmadan önce birden fazla aşamada kademeli bağlam oluşturarak modelin "dikkat ortamını" yönlendirebilir (bkz. [[Multi-turn Jailbreak]]).
+> Modelin davranışı **aşamalı olarak etkilenebilir**. Saldırgan, asıl kötü amaçlı isteği yapmadan önce birden fazla aşamada kademeli bağlam oluşturarak modelin "dikkat ortamını" yönlendirebilir (bkz. Multi-turn Jailbreak).
 
 ---
 
@@ -400,7 +400,7 @@ LLM'lerin kritik uygulamalara hızla konuşlandırılması yeni ve benzeri gör�
 | Devlet ve savunma | İstihbarat analizi, belge işleme, karar desteği |
 
 ### Örnek riskler
-- Müşteri hizmetleri botuna yönelik [[Prompt Injection]] → **müşteri verisi sızıntısı**
+- Müşteri hizmetleri botuna yönelik Prompt Injection → **müşteri verisi sızıntısı**
 - Sağlık yapay zekasına saldırı → **tehlikeli tıbbi tavsiye**
 - Kod asistanına saldırı → **üretim yazılımında güvenlik açıkları**
 
@@ -418,14 +418,6 @@ LLM'lerin kritik uygulamalara hızla konuşlandırılması yeni ve benzeri gör�
 
 ---
 
-## İlgili Notlar
-- [[Prompt Injection]]
-- [[Jailbreak]]
-- [[Multi-turn Jailbreak]]
-- [[RAG]]
-- [[Siber Güvenlik]]
-
 #siber-guvenlik #llm #yapay-zeka
-
 ---
 > 📚 [Ana Sayfa (MOC)](00%20-%20Yapay%20zeka.md) · [Yapay Zeka Güvenliği Neden Farklı?](02%20-%20Yapay%20Zeka%20G%C3%BCvenli%C4%9Fi%20Neden%20Farkl%C4%B1.md) ▶

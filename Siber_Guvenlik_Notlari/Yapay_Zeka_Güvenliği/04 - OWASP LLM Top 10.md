@@ -23,9 +23,9 @@ tags:
 > LLM uygulamalarının saldırı yüzeyini ve endüstri standardı zafiyet sınıflandırmasını anlamak, hem saldırı hem savunma çalışmaları için kritiktir. Bu bölüm tüm yapay zeka saldırı yüzeyinin haritasını çıkarır ve **OWASP LLM Top 10**'un her maddesini ayrıntılı işler.
 
 ## İçindekiler (Bölüm 4)
-- [[#Yapay Zeka Saldırı Yüzeyi]]
-- [[#LLM Uygulamaları için OWASP Top 10 (2025)]]
-- [[#OWASP LLM Top 10 Hızlı Referans]]
+- [Yapay Zeka Saldırı Yüzeyi](#yapay-zeka-saldırı-yüzeyi)
+- [LLM Uygulamaları için OWASP Top 10 (2025)](#llm-uygulamaları-için-owasp-top-10-2025)
+- [OWASP LLM Top 10 Hızlı Referans](#owasp-llm-top-10-hızlı-referans)
 
 ---
 
@@ -91,7 +91,7 @@ flowchart TD
 
 ### LLM01: Prompt Injection (Prompt Enjeksiyonu)
 
-Saldırgan, LLM'yi system prompt'u geçersiz kılan veya yeni talimatlar enjekte eden hazırlanmış girdilerle manipüle eder. LLM uygulamalarındaki **en temel ve yaygın** zafiyettir. Bkz. [[Prompt Injection]].
+Saldırgan, LLM'yi system prompt'u geçersiz kılan veya yeni talimatlar enjekte eden hazırlanmış girdilerle manipüle eder. LLM uygulamalarındaki **en temel ve yaygın** zafiyettir. Bkz. Prompt Injection.
 
 **Türler:**
 - **Doğrudan (Direct):** Saldırgan LLM'ye girişinde doğrudan kötü amaçlı talimat verir.
@@ -142,7 +142,7 @@ Bu zafiyet LLM güvenlik temellerinin öncelikli odak noktalarından biridir.
 
 ### LLM03: Supply Chain (Tedarik Zinciri)
 
-Riskler, LLM yaşam döngüsündeki **üçüncü taraf bileşenlere** bağımlılıktan gelir: önceden eğitilmiş modeller, eğitim veri kümeleri, fine-tuning verileri, eklentiler, embedding modelleri. Bkz. [[AI Supply Chain]].
+Riskler, LLM yaşam döngüsündeki **üçüncü taraf bileşenlere** bağımlılıktan gelir: önceden eğitilmiş modeller, eğitim veri kümeleri, fine-tuning verileri, eklentiler, embedding modelleri. Bkz. AI Supply Chain.
 
 HuggingFace'te normal görünen bir model, **pickle tabanlı yükleme** sırasında kod çalıştırabilir:
 
@@ -205,7 +205,7 @@ LLM çıktısı uygun **doğrulama veya temizleme (sanitization)** yapılmadan a
 
 > [!CAUTION]
 > **Etki**
-> XSS, SQL Injection, Command Injection, [[SSRF]] ve LLM çıktısı yoluyla tetiklenen diğer geleneksel web zafiyetleri.
+> XSS, SQL Injection, Command Injection, SSRF ve LLM çıktısı yoluyla tetiklenen diğer geleneksel web zafiyetleri.
 
 > [!TIP]
 > **Kural**
@@ -215,7 +215,7 @@ LLM çıktısı uygun **doğrulama veya temizleme (sanitization)** yapılmadan a
 
 ### LLM06: Excessive Agency (Aşırı Yetki)
 
-LLM'ye **gereğinden fazla izin veya yetenek** verilmesi ya da beklenmeyen/belirsiz çıktılara dayalı eylemler gerçekleştirmesi. **En Az Ayrıcalık İlkesi'ni (Principle of Least Privilege)** ihlal eder. Bkz. [[Excessive Agency]].
+LLM'ye **gereğinden fazla izin veya yetenek** verilmesi ya da beklenmeyen/belirsiz çıktılara dayalı eylemler gerçekleştirmesi. **En Az Ayrıcalık İlkesi'ni (Principle of Least Privilege)** ihlal eder. Bkz. Excessive Agency.
 
 > [!NOTE]
 > **Excessive Agency örneği**
@@ -269,7 +269,7 @@ Gizli system prompt'un (LLM'nin davranışını, kurallarını ve kişiliğini t
 
 ### LLM08: Vector and Embedding Weaknesses (Vektör ve Embedding Zayıflıkları)
 
-[[RAG]] sistemlerinde kullanılan **vektör veritabanlarını ve embedding modellerini** hedefler. Saldırgan, belgelerin nasıl yerleştirildiğini, alındığını veya sıralandığını değiştirerek LLM'nin bağlamını etkileyebilir.
+RAG sistemlerinde kullanılan **vektör veritabanlarını ve embedding modellerini** hedefler. Saldırgan, belgelerin nasıl yerleştirildiğini, alındığını veya sıralandığını değiştirerek LLM'nin bağlamını etkileyebilir.
 
 > [!NOTE]
 > **Vector Space Manipulation örneği**
@@ -345,16 +345,6 @@ LLM uygulamasının kontrolsüz kaynak kullanımına izin vermesi; **hizmet redd
 | **LLM08** | Vector and Embedding Weaknesses | Vektör ve Embedding Zayıflıkları | RAG ve vektör veritabanı saldırıları |
 | **LLM09** | Misinformation | Yanlış Bilgi | LLM güvenlik temelleri |
 | **LLM10** | Unbounded Consumption | Kontrolsüz Kaynak Tüketimi | Model ve gizlilik saldırıları |
-
-## İlgili Notlar (Bölüm 4)
-- [[OWASP LLM Top 10]]
-- [[Prompt Injection]]
-- [[System Prompt Leakage]]
-- [[Excessive Agency]]
-- [[RAG]]
-- [[SSRF]]
-- [[AI Supply Chain]]
-- [[MITRE ATLAS]]
 
 ---
 > ◀ [LLM Uygulama Mimarileri](03%20-%20LLM%20Uygulama%20Mimarileri.md) · 📚 [Ana Sayfa (MOC)](00%20-%20Yapay%20zeka.md) · [AI Red Teaming Etiği](05%20-%20AI%20Red%20Teaming%20Eti%C4%9Fi.md) ▶
