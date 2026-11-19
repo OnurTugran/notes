@@ -18,7 +18,7 @@ tags:
 
 # Sistem Prompt Çıkarma Teknikleri
 
-> ◀ [[07 - Halüsinasyonlar ve Aşırı Güven|Halüsinasyonları ve Aşırı Güvenmeyi Anlamak]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]]
+> ◀ [[07 - Halüsinasyonlar ve Aşırı Güven|Halüsinasyonları ve Aşırı Güvenmeyi Anlamak]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[09 - Hassas Bilgi İfşası|Hassas Bilgi İfşası]] ▶
 
 > [!abstract] Özet
 > **Sistem prompt çıkarma (system prompt extraction)**, bir LLM'in davranışını, kişiliğini, kurallarını ve yeteneklerini tanımlayan **gizli talimatları ortaya çıkarması için kandırılması** işlemidir. System prompt, geliştiricinin modelin context window'una yüklediği **ilk talimat kümesidir** ve genellikle iş mantığı, güvenlik kuralları, dahili API uç noktaları, araç açıklamaları ve guardrail yapılandırmaları gibi **hassas bilgiler** içerir. OWASP LLM Top 10'da **LLM07** olarak sınıflandırılır. Bkz. [[04 - OWASP LLM Top 10#LLM07 System Prompt Leakage (Sistem Prompt Sızıntısı)|LLM07]].
@@ -310,4 +310,4 @@ Extraction girişimlerinde sık görülen **göstergeler:**
 - [[Markdown Image Exfiltration]]
 
 ---
-> ◀ [[07 - Halüsinasyonlar ve Aşırı Güven|Halüsinasyonları ve Aşırı Güvenmeyi Anlamak]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]]
+> ◀ [[07 - Halüsinasyonlar ve Aşırı Güven|Halüsinasyonları ve Aşırı Güvenmeyi Anlamak]] · 📚 [[00 - Yapay zeka|Ana Sayfa (MOC)]] · [[09 - Hassas Bilgi İfşası|Hassas Bilgi İfşası]] ▶

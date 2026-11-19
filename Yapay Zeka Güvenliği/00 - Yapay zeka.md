@@ -29,6 +29,7 @@ aliases:
 | 6 | [[06 - Model Parmak İzi ve Keşif\|Model Parmak İzi ve Keşif]] | Model fingerprinting, davranışsal ve API düzeyinde keşif, önlemler |
 | 7 | [[07 - Halüsinasyonlar ve Aşırı Güven\|Halüsinasyonları ve Aşırı Güvenmeyi Anlamak]] | Halüsinasyon türleri, slopsquatting (paket halüsinasyonu), aşırı güven, LLM09, savunma stratejileri |
 | 8 | [[08 - Sistem Prompt Çıkarma Teknikleri\|Sistem Prompt Çıkarma Teknikleri]] | LLM07, doğrudan/dolaylı/gelişmiş extraction teknikleri (25 teknik), tespit göstergeleri, savunma |
+| 9 | [[09 - Hassas Bilgi İfşası\|Hassas Bilgi İfşası]] | LLM02, eğitim verisi ezberleme, kullanıcılar arası sızıntı (ChatGPT 2023), RAG'de PII, API key sızıntısı, hata mesajları, Samsung vakası |
 
 ```mermaid
 flowchart LR
@@ -39,6 +40,7 @@ flowchart LR
     E --> F["6. Keşif ve fingerprinting"]
     F --> G["7. Halüsinasyon ve aşırı güven"]
     G --> H["8. Sistem prompt çıkarma"]
+    H --> I["9. Hassas bilgi ifşası"]
 ```
 
 ## Hızlı erişim
@@ -53,6 +55,9 @@ flowchart LR
 - **Halüsinasyona karşı savunma tablosu:** [[07 - Halüsinasyonlar ve Aşırı Güven#Halüsinasyonlara Karşı Savunma|Savunma stratejileri]]
 - **System prompt çıkarma teknikleri (25 teknik):** [[08 - Sistem Prompt Çıkarma Teknikleri#Doğrudan Ekstraksiyon Teknikleri|Doğrudan]] · [[08 - Sistem Prompt Çıkarma Teknikleri#Dolaylı Ekstraksiyon Teknikleri|Dolaylı]] · [[08 - Sistem Prompt Çıkarma Teknikleri#Gelişmiş Ekstraksiyon Teknikleri|Gelişmiş]]
 - **Extraction tespit göstergeleri:** [[08 - Sistem Prompt Çıkarma Teknikleri#Sistem Prompt Çıkarma Girişimlerini Algılama|Göstergeler ve detection]]
+- **Eğitim verisi ezberleme ve ekstraksiyon:** [[09 - Hassas Bilgi İfşası#Eğitim Verilerinin Ezberlenmesi|Prefix/completion attack]]
+- **ChatGPT veri sızıntısı vakası (2023):** [[09 - Hassas Bilgi İfşası#ChatGPT veri sızıntısı olayı (Mart 2023)|Redis bug'ı]]
+- **API key ve credential sızıntı yolları:** [[09 - Hassas Bilgi İfşası#API Anahtarı ve Kimlik Bilgilerinin Açığa Çıkması|4 yol]]
 - **Model parmak izi veritabanı yapısı:** [[06 - Model Parmak İzi ve Keşif#Model Parmak İzi Veritabanı Oluşturma|JSON yapısı]]
 
 ## Temel fikirler (tek cümlede)
@@ -66,6 +71,7 @@ flowchart LR
 > 6. **Model parmak izi keşfin ilk adımıdır**; modelin kendini tanıtmasına değil, çoklu kanıta güven.
 > 7. **LLM doğruluk için değil inandırıcılık için optimize edilir.** Paket adı, URL, içtihat ve yapılandırmayı bağımsız kaynakla doğrula.
 > 8. **System prompt gizli kalmaz.** Sırları (API key, şifre) prompt'a koyma, kuralları uygulama kodunda zorla.
+> 9. **Veri üç yoldan sızar:** modelin ezberinden, paylaşılan oturum/bellek hatalarından ve kullanıcının kendi yapıştırdığı veriden. Erişim kontrolü, PII redaction ve DLP şart.
 
 ## Bağlantılı konular
 - [[Prompt Injection]] · [[Jailbreak]] · [[RAG]] · [[SSRF]] · [[Excessive Agency]]
