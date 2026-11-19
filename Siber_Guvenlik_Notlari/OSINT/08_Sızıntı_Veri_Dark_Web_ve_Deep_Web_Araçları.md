@@ -15,7 +15,7 @@ tags:
 
 # Sızıntı Veri, Dark Web ve Deep Web Araçları
 
-> ◀ [İnternet Arama Motorları: Shodan ve Censys](07_%C4%B0nternet_Arama_Motorlar%C4%B1_Shodan_ve_Censys.md) · 📚 [İndeks](00_OSINT_%C4%B0ndeks.md)
+> ◀ [İnternet Arama Motorları: Shodan ve Censys](07_%C4%B0nternet_Arama_Motorlar%C4%B1_Shodan_ve_Censys.md) · 📚 [İndeks](00_OSINT_%C4%B0ndeks.md) · [OSINT Framework](09_OSINT_Framework.md) ▶
 
 Siber güvenlik uzmanları, sızma testi (penetration testing) uzmanları ve araştırmacılar için sızıntı verileri, dark web ve deep web araçları kritik öneme sahiptir. Bu araçlar, çeşitli güvenlik zafiyetlerini tespit etmek, hassas bilgilerin sızdırılıp sızdırılmadığını kontrol etmek ve derin internetin (deep web) karanlık köşelerine (dark web) erişmek için kullanılır.
 
@@ -61,4 +61,4 @@ Bu araçlar, sızdırılmış veri tabanlarını, kullanıcı bilgilerini ve has
 Bu araçlar, siber güvenlik uzmanlarının daha kapsamlı ve derinlemesine analizler yapmasına olanak tanır. Sızdırılmış veri tabanları, dark web ve deep web üzerindeki bilgiler, tehdit istihbaratı toplama ve güvenlik zafiyetlerini tespit etme konusunda önemli rol oynar.
 
 ---
-> ◀ [İnternet Arama Motorları: Shodan ve Censys](07_%C4%B0nternet_Arama_Motorlar%C4%B1_Shodan_ve_Censys.md) · 📚 [İndeks](00_OSINT_%C4%B0ndeks.md)
+> ◀ [İnternet Arama Motorları: Shodan ve Censys](07_%C4%B0nternet_Arama_Motorlar%C4%B1_Shodan_ve_Censys.md) · 📚 [İndeks](00_OSINT_%C4%B0ndeks.md) · [OSINT Framework](09_OSINT_Framework.md) ▶

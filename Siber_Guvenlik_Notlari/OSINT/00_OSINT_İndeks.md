@@ -29,3 +29,4 @@ tags:
 | [Web Uygulamaları ve DNS ile Bilgi Toplama](06_Web_Uygulamalar%C4%B1_ve_DNS_ile_Bilgi_Toplama.md) | Whois, Wayback, teknoloji tespiti, robots.txt, DNSdumpster, host, dig |
 | [İnternet Arama Motorları: Shodan ve Censys](07_%C4%B0nternet_Arama_Motorlar%C4%B1_Shodan_ve_Censys.md) | Shodan ve Censys filtreleri ve kullanım örnekleri |
 | [Sızıntı Veri, Dark Web ve Deep Web Araçları](08_S%C4%B1z%C4%B1nt%C4%B1_Veri_Dark_Web_ve_Deep_Web_Ara%C3%A7lar%C4%B1.md) | Have I Been Pwned, Hunter, Tor, Ahmia, DuckDuckGo, kullanım senaryoları |
+| [OSINT Framework](09_OSINT_Framework.md) | Temel özellikler, kullanım alanları, örnek kaynaklar |
