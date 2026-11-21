@@ -108,4 +108,8 @@ Obsidian notlarım: otomatik eşitlenen kişisel bilgi tabanı. Aşağıdaki lis
 - [Sistem Logları ve Güvenlik Analizi](Siber_Guvenlik_Notlari/Linux_Komutlar%C4%B1/13_Sistem_Loglar%C4%B1.md)
 - [Solaris ve Linux Farkları](Siber_Guvenlik_Notlari/Linux_Komutlar%C4%B1/14_Solaris_ile_Farklar.md)
 
+### [SIEM ve SOC](Siber_Guvenlik_Notlari/SIEM_ve_SOC/00_SIEM_%C4%B0ndeks.md)
+
+- [SIEM Tanımı ve Temelleri](Siber_Guvenlik_Notlari/SIEM_ve_SOC/01_SIEM_Tan%C4%B1m%C4%B1_ve_Temelleri.md)
+
 Ana sayfa: [Siber Güvenlik](Siber_Guvenlik_Notlari/Siber_G%C3%BCvenlik_Ana_Sayfa.md)
