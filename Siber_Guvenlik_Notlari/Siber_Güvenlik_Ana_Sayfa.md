@@ -23,6 +23,7 @@ tags:
 | Web zafiyetleri | [Web Hacking / SQL Injection](Web_Hack%C4%B1ng/00_Web_Hacking_Index.md) |
 | CMS | [WordPress Pentest](WordPress/00_WordPress_%C4%B0ndeks.md) |
 | Yetki yükseltme | [Yetki Yükseltme](Yetki%20Y%C3%BCkseltme/00_Yetki_Y%C3%BCkseltme.md) |
+| Kriptoloji | [Kriptoloji](Kriptoloji/00_Kriptoloji_%C4%B0ndeks.md) |
 | Linux | [Linux Komutları](Linux_Komutlar%C4%B1/00_Linux_Komutlar%C4%B1.md) |
 
 ```mermaid
