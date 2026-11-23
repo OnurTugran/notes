@@ -212,4 +212,4 @@ spotify 1.1.84 from Spotify installed
 | Snap ile kur | `sudo snap install <ad>` |
 
 ---
-> ◀ [Bölüm 8 - Filtreler ve Yönlendirme](08_Filtreler_ve_Y%C3%B6nlendirme.md) · 📚 [İndeks](00_Linux_Temelleri_%C4%B0ndeks.md)
+> ◀ [Bölüm 8 - Filtreler ve Yönlendirme](08_Filtreler_ve_Y%C3%B6nlendirme.md) · 📚 [İndeks](00_Linux_Temelleri_%C4%B0ndeks.md) · [Bölüm 10 - Kullanıcı Yönetimi](10_Kullan%C4%B1c%C4%B1_Y%C3%B6netimi.md) ▶
