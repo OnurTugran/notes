@@ -189,4 +189,4 @@ user@hackerbox:~$ grep -r -i "error" /var/log/
 - **`grep`:** Dosya içeriğinde metin/regex arar.
 
 ---
-> ◀ [Bölüm 5 - Dosya ve Dizin İşlemleri](05_Dosya_ve_Dizin_%C4%B0%C5%9Flemleri.md) · 📚 [İndeks](00_Linux_Temelleri_%C4%B0ndeks.md)
+> ◀ [Bölüm 5 - Dosya ve Dizin İşlemleri](05_Dosya_ve_Dizin_%C4%B0%C5%9Flemleri.md) · 📚 [İndeks](00_Linux_Temelleri_%C4%B0ndeks.md) · [Bölüm 7 - Metin Düzenleme](07_Metin_D%C3%BCzenleme.md) ▶
