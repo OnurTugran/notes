@@ -18,6 +18,7 @@ tags:
 > [!NOTE]
 > **Bu klasör**
 > Sızma testi ve sistem yönetimi için Linux notları. Eskiden tek dosyadaydı, konuya göre bölündü.
+> Teorik temeller (FHS, mimari, açılış süreci): [Linux Temelleri](../Linux_Temelleri/00_Linux_Temelleri_%C4%B0ndeks.md)
 
 | Not | İçerik |
 |---|---|
