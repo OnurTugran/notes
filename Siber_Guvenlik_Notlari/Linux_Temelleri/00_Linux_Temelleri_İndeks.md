@@ -27,3 +27,4 @@ tags:
 | 5 | [Dosya ve Dizin İşlemleri](05_Dosya_ve_Dizin_%C4%B0%C5%9Flemleri.md) | touch, mkdir -p, cp, mv, rm, file, stat, hard/soft link, dd |
 | 6 | [Dosya ve Dizinleri Bulma](06_Dosya_ve_Dizinleri_Bulma.md) | find (kriter, operatör, -exec, xargs), locate/updatedb, which, grep ile içerik arama |
 | 7 | [Metin Düzenleme](07_Metin_D%C3%BCzenleme.md) | nano kısayolları, vim modları ve temel komutları, view, grafiksel editörler |
+| 8 | [Filtreler ve Yönlendirme](08_Filtreler_ve_Y%C3%B6nlendirme.md) | Pipe, STDIN/STDOUT/STDERR, `>` `>>` `2>` `<`, cat, head, tail -f, sort, uniq, grep, wc, cut, awk, sed, tee, diff, tr |

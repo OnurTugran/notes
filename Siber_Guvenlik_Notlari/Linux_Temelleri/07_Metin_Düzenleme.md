@@ -132,4 +132,4 @@ flowchart LR
 - **Grafiksel editörler:** Masaüstü ortamın (GNOME, KDE vb.) varsa `gedit`, `kate`, VS Code (`code .`) gibi editörler de kullanılabilir.
 
 ---
-> ◀ [Bölüm 6 - Dosya ve Dizinleri Bulma](06_Dosya_ve_Dizinleri_Bulma.md) · 📚 [İndeks](00_Linux_Temelleri_%C4%B0ndeks.md)
+> ◀ [Bölüm 6 - Dosya ve Dizinleri Bulma](06_Dosya_ve_Dizinleri_Bulma.md) · 📚 [İndeks](00_Linux_Temelleri_%C4%B0ndeks.md) · [Bölüm 8 - Filtreler ve Yönlendirme](08_Filtreler_ve_Y%C3%B6nlendirme.md) ▶
