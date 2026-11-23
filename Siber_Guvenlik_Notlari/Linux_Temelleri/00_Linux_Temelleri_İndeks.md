@@ -31,3 +31,4 @@ tags:
 | 9 | [Paket Yönetimi](09_Paket_Y%C3%B6netimi.md) | Paket/depo kavramı, APT (update, upgrade, install, remove, purge, autoremove), dpkg, snap |
 | 10 | [Kullanıcı Yönetimi](10_Kullan%C4%B1c%C4%B1_Y%C3%B6netimi.md) | Kullanıcı türleri, adduser/useradd, id/who/w/last, /etc/passwd, /etc/shadow, /etc/skel, usermod, chage, userdel |
 | 11 | [Grup Yönetimi](11_Grup_Y%C3%B6netimi.md) | Grup kavramı, groupadd/groupdel, /etc/group, usermod -aG, gpasswd -d, ortak proje dizini (chown/chmod 770) |
+| 12 | [İzinler](12_%C4%B0zinler.md) | ls -l izin okuma, r/w/x, u/g/o, oktal, chmod, SUID/SGID/Sticky, umask, chattr/lsattr |

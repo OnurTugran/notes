@@ -177,4 +177,4 @@ Sızma testinde ve savunmada `id`, `groups` ve `/etc/group` çıktısına bakmak
 | Grup/sahip tam yetki, diğerleri yok | `sudo chmod 770 <dizin>` |
 
 ---
-> ◀ [Bölüm 10 - Kullanıcı Yönetimi](10_Kullan%C4%B1c%C4%B1_Y%C3%B6netimi.md) · 📚 [İndeks](00_Linux_Temelleri_%C4%B0ndeks.md)
+> ◀ [Bölüm 10 - Kullanıcı Yönetimi](10_Kullan%C4%B1c%C4%B1_Y%C3%B6netimi.md) · 📚 [İndeks](00_Linux_Temelleri_%C4%B0ndeks.md) · [Bölüm 12 - İzinler](12_%C4%B0zinler.md) ▶
