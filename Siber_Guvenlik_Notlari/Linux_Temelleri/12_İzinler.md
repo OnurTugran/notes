@@ -254,4 +254,4 @@ sudo chattr -i kritik_dosya.conf
 | Öznitelikleri gör | `lsattr dosya` |
 
 ---
-> ◀ [Bölüm 11 - Grup Yönetimi](11_Grup_Y%C3%B6netimi.md) · 📚 [İndeks](00_Linux_Temelleri_%C4%B0ndeks.md)
+> ◀ [Bölüm 11 - Grup Yönetimi](11_Grup_Y%C3%B6netimi.md) · 📚 [İndeks](00_Linux_Temelleri_%C4%B0ndeks.md) · [Bölüm 13 - Process Yönetimi](13_Process_Y%C3%B6netimi.md) ▶
