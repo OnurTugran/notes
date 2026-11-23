@@ -102,4 +102,4 @@ flowchart TB
 | **Yuvarlanan Sürüm (Rolling Release)** | Sürüm numarası yok; uygulamalar ve çekirdek sürekli güncellenir. | Her zaman en yeni teknoloji, ama güncelleme sonrası hata riski daha yüksek. | Arch Linux |
 
 ---
-> ◀ [Bölüm 1 - Linux'a Giriş](01_Linux_Giri%C5%9F.md) · 📚 [İndeks](00_Linux_Temelleri_%C4%B0ndeks.md)
+> ◀ [Bölüm 1 - Linux'a Giriş](01_Linux_Giri%C5%9F.md) · 📚 [İndeks](00_Linux_Temelleri_%C4%B0ndeks.md) · [Bölüm 3 - Linux Kabuğu](03_Linux_Kabu%C4%9Fu_Shell.md) ▶
