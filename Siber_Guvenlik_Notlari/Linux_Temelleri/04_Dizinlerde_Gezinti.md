@@ -202,4 +202,4 @@ Dizinlerin iç içe yapısını tek bakışta gösterir. `-L 2` yalnızca 2 sevi
 > `tree` her dağıtımda yüklü gelmeyebilir. Yoksa `sudo apt install tree` ile kurulur ([Paket Yönetimi](../Linux_Komutlar%C4%B1/03_Paket_Y%C3%B6netimi.md)).
 
 ---
-> ◀ [Bölüm 3 - Linux Kabuğu](03_Linux_Kabu%C4%9Fu_Shell.md) · 📚 [İndeks](00_Linux_Temelleri_%C4%B0ndeks.md)
+> ◀ [Bölüm 3 - Linux Kabuğu](03_Linux_Kabu%C4%9Fu_Shell.md) · 📚 [İndeks](00_Linux_Temelleri_%C4%B0ndeks.md) · [Bölüm 5 - Dosya ve Dizin İşlemleri](05_Dosya_ve_Dizin_%C4%B0%C5%9Flemleri.md) ▶

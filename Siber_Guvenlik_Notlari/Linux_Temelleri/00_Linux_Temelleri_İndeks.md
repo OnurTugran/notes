@@ -24,3 +24,4 @@ tags:
 | 2 | [Linux Dağıtımları](02_Linux_Da%C4%9F%C4%B1t%C4%B1mlar%C4%B1.md) | Distro nedir, bileşenler, seçim rehberi, paket aileleri (Debian/Red Hat/Arch), popüler distrolar, fixed vs rolling |
 | 3 | [Linux Kabuğu (Shell)](03_Linux_Kabu%C4%9Fu_Shell.md) | CLI/GUI, Bash/Zsh/Fish, terminal, history/type, .bashrc ve alias, çevre değişkenleri, `;` `&&` `\|\|`, shebang |
 | 4 | [Dizinlerde Gezinti](04_Dizinlerde_Gezinti.md) | Mutlak/göreceli yol, pwd, realpath, cd, ls parametreleri ve çıktı okuma, pushd/popd, tree |
+| 5 | [Dosya ve Dizin İşlemleri](05_Dosya_ve_Dizin_%C4%B0%C5%9Flemleri.md) | touch, mkdir -p, cp, mv, rm, file, stat, hard/soft link, dd |
