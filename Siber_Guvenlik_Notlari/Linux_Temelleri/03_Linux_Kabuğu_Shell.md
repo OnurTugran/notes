@@ -169,4 +169,4 @@ echo "Merhaba Dünya"
 Bu satır sisteme "bu dosyayı `/bin/bash` programıyla çalıştır" der. Çalıştırmak için betiğe `chmod +x` ile execute izni verilir; gerçek kullanım örneği: [Yedekleme ve Rsync](../Linux_Komutlar%C4%B1/10_Yedekleme_ve_Rsync.md) (cron ile otomatik yedek betiği).
 
 ---
-> ◀ [Bölüm 2 - Linux Dağıtımları](02_Linux_Da%C4%9F%C4%B1t%C4%B1mlar%C4%B1.md) · 📚 [İndeks](00_Linux_Temelleri_%C4%B0ndeks.md)
+> ◀ [Bölüm 2 - Linux Dağıtımları](02_Linux_Da%C4%9F%C4%B1t%C4%B1mlar%C4%B1.md) · 📚 [İndeks](00_Linux_Temelleri_%C4%B0ndeks.md) · [Bölüm 4 - Dizinlerde Gezinti](04_Dizinlerde_Gezinti.md) ▶

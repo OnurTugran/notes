@@ -23,3 +23,4 @@ tags:
 | 1 | [Linux'a Giriş](01_Linux_Giri%C5%9F.md) | Linux nedir, Windows karşılaştırması, felsefe, çekirdek, FHS, mimari, açılış süreci |
 | 2 | [Linux Dağıtımları](02_Linux_Da%C4%9F%C4%B1t%C4%B1mlar%C4%B1.md) | Distro nedir, bileşenler, seçim rehberi, paket aileleri (Debian/Red Hat/Arch), popüler distrolar, fixed vs rolling |
 | 3 | [Linux Kabuğu (Shell)](03_Linux_Kabu%C4%9Fu_Shell.md) | CLI/GUI, Bash/Zsh/Fish, terminal, history/type, .bashrc ve alias, çevre değişkenleri, `;` `&&` `\|\|`, shebang |
+| 4 | [Dizinlerde Gezinti](04_Dizinlerde_Gezinti.md) | Mutlak/göreceli yol, pwd, realpath, cd, ls parametreleri ve çıktı okuma, pushd/popd, tree |
