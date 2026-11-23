@@ -107,4 +107,4 @@ flowchart LR
 5. **Init System (systemd / SysVinit):** İlk süreç olarak (**PID 1**) çalışır; arka plan servislerini, ağı ve giriş ekranını başlatır. → Ayrıntı: [Süreçler ve Görev Zamanlama](../Linux_Komutlar%C4%B1/04_S%C3%BCre%C3%A7ler_ve_G%C3%B6rev_Zamanlama.md)
 
 ---
-> 📚 [İndeks](00_Linux_Temelleri_%C4%B0ndeks.md)
+> 📚 [İndeks](00_Linux_Temelleri_%C4%B0ndeks.md) · [Bölüm 2 - Linux Dağıtımları](02_Linux_Da%C4%9F%C4%B1t%C4%B1mlar%C4%B1.md) ▶

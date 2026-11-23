@@ -21,3 +21,4 @@ tags:
 | Bölüm | Not | İçerik |
 |---|---|---|
 | 1 | [Linux'a Giriş](01_Linux_Giri%C5%9F.md) | Linux nedir, Windows karşılaştırması, felsefe, çekirdek, FHS, mimari, açılış süreci |
+| 2 | [Linux Dağıtımları](02_Linux_Da%C4%9F%C4%B1t%C4%B1mlar%C4%B1.md) | Distro nedir, bileşenler, seçim rehberi, paket aileleri (Debian/Red Hat/Arch), popüler distrolar, fixed vs rolling |
