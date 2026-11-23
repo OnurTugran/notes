@@ -28,3 +28,4 @@ tags:
 | 6 | [Dosya ve Dizinleri Bulma](06_Dosya_ve_Dizinleri_Bulma.md) | find (kriter, operatör, -exec, xargs), locate/updatedb, which, grep ile içerik arama |
 | 7 | [Metin Düzenleme](07_Metin_D%C3%BCzenleme.md) | nano kısayolları, vim modları ve temel komutları, view, grafiksel editörler |
 | 8 | [Filtreler ve Yönlendirme](08_Filtreler_ve_Y%C3%B6nlendirme.md) | Pipe, STDIN/STDOUT/STDERR, `>` `>>` `2>` `<`, cat, head, tail -f, sort, uniq, grep, wc, cut, awk, sed, tee, diff, tr |
+| 9 | [Paket Yönetimi](09_Paket_Y%C3%B6netimi.md) | Paket/depo kavramı, APT (update, upgrade, install, remove, purge, autoremove), dpkg, snap |

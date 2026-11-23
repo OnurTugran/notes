@@ -291,4 +291,4 @@ Küçük harfler büyüğe çevrildi.
 | `tr` | Karakter dönüştür |
 
 ---
-> ◀ [Bölüm 7 - Metin Düzenleme](07_Metin_D%C3%BCzenleme.md) · 📚 [İndeks](00_Linux_Temelleri_%C4%B0ndeks.md)
+> ◀ [Bölüm 7 - Metin Düzenleme](07_Metin_D%C3%BCzenleme.md) · 📚 [İndeks](00_Linux_Temelleri_%C4%B0ndeks.md) · [Bölüm 9 - Paket Yönetimi](09_Paket_Y%C3%B6netimi.md) ▶
