@@ -205,4 +205,4 @@ sudo dd if=linux.iso of=/dev/sdb bs=4M status=progress
 > `of=` yanlış cihaz olursa (örn. ana disk) **tüm veri geri dönüşsüz silinir.** Çalıştırmadan önce `lsblk` veya `fdisk -l` ile hedef cihazı mutlaka doğrula ([Dosya Sistemi ve Disk](../Linux_Komutlar%C4%B1/05_Dosya_Sistemi_ve_Disk.md)).
 
 ---
-> ◀ [Bölüm 4 - Dizinlerde Gezinti](04_Dizinlerde_Gezinti.md) · 📚 [İndeks](00_Linux_Temelleri_%C4%B0ndeks.md)
+> ◀ [Bölüm 4 - Dizinlerde Gezinti](04_Dizinlerde_Gezinti.md) · 📚 [İndeks](00_Linux_Temelleri_%C4%B0ndeks.md) · [Bölüm 6 - Dosya ve Dizinleri Bulma](06_Dosya_ve_Dizinleri_Bulma.md) ▶
