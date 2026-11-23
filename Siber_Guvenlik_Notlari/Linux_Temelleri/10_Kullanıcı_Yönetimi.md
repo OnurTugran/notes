@@ -205,4 +205,4 @@ sudo userdel -r mehmet
 | Sil (ev dizini dahil) | `sudo userdel -r <ad>` |
 
 ---
-> ◀ [Bölüm 9 - Paket Yönetimi](09_Paket_Y%C3%B6netimi.md) · 📚 [İndeks](00_Linux_Temelleri_%C4%B0ndeks.md)
+> ◀ [Bölüm 9 - Paket Yönetimi](09_Paket_Y%C3%B6netimi.md) · 📚 [İndeks](00_Linux_Temelleri_%C4%B0ndeks.md) · [Bölüm 11 - Grup Yönetimi](11_Grup_Y%C3%B6netimi.md) ▶
