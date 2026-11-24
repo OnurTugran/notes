@@ -111,4 +111,4 @@ Ağ trafiği analizi karmaşık olabilir. Daha deneyimli kişilerle işbirliği 
 > Buradaki örnekler, [Bölüm 1'deki](01_Giri%C5%9F.md) kullanım alanlarının (anormallik tespiti, monitörleme, botnet tespiti) uygulamadaki karşılığıdır.
 
 ---
-> ◀ [Bölüm 3 - Temel Araçlar](03_Temel_Ara%C3%A7lar.md) · 📚 [İndeks](00_A%C4%9F_Trafi%C4%9Fi_Analizi_%C4%B0ndeks.md)
+> ◀ [Bölüm 3 - Temel Araçlar](03_Temel_Ara%C3%A7lar.md) · 📚 [İndeks](00_A%C4%9F_Trafi%C4%9Fi_Analizi_%C4%B0ndeks.md) · [Bölüm 5 - tcpdump Temelleri](05_tcpdump_Temelleri.md) ▶
