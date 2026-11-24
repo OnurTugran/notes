@@ -90,4 +90,4 @@ Ağ trafiği dahil çeşitli **günlük (log) ve olay verilerini** toplayan öze
 | Maliyet/kurulum | Hafif, hazır | Kolay | Açık kaynak, kurulumu zor | Genelde pahalı |
 
 ---
-> ◀ [Bölüm 2 - Hatırlatmalar](02_Hat%C4%B1rlatmalar.md) · 📚 [İndeks](00_A%C4%9F_Trafi%C4%9Fi_Analizi_%C4%B0ndeks.md)
+> ◀ [Bölüm 2 - Hatırlatmalar](02_Hat%C4%B1rlatmalar.md) · 📚 [İndeks](00_A%C4%9F_Trafi%C4%9Fi_Analizi_%C4%B0ndeks.md) · [Bölüm 4 - Ağ Analizi Süreci](04_A%C4%9F_Analizi_S%C3%BCreci.md) ▶

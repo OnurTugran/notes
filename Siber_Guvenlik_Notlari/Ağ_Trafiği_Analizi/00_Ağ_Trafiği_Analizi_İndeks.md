@@ -25,3 +25,4 @@ tags:
 | 1 | [Giriş](01_Giri%C5%9F.md) | Ağ trafiği analizi nedir, kullanım alanları: anormallik tespiti, uyumluluk, monitörleme, botnet tespiti |
 | 2 | [Hatırlatmalar](02_Hat%C4%B1rlatmalar.md) | Ağ türleri ve cihazları, IP/MAC, DNS/DHCP/NAT, TCP/IP katmanları, yaygın portlar ve servisler |
 | 3 | [Temel Araçlar](03_Temel_Ara%C3%A7lar.md) | tcpdump, Wireshark, Elastic (ELK) Stack, SIEM |
+| 4 | [Ağ Analizi Süreci](04_A%C4%9F_Analizi_S%C3%BCreci.md) | Basit ve karmaşık analiz, Ingest-Filter-Analyze iş akışı, analiz yaklaşımı ilkeleri |
