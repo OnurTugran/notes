@@ -147,4 +147,4 @@ tcpdump -r output.pcap
 | Dosyadan oku | `tcpdump -r output.pcap` |
 
 ---
-> ◀ [Bölüm 4 - Ağ Analizi Süreci](04_A%C4%9F_Analizi_S%C3%BCreci.md) · 📚 [İndeks](00_A%C4%9F_Trafi%C4%9Fi_Analizi_%C4%B0ndeks.md)
+> ◀ [Bölüm 4 - Ağ Analizi Süreci](04_A%C4%9F_Analizi_S%C3%BCreci.md) · 📚 [İndeks](00_A%C4%9F_Trafi%C4%9Fi_Analizi_%C4%B0ndeks.md) · [Bölüm 6 - Wireshark](06_Wireshark_ile_A%C4%9F_Analizi.md) ▶
