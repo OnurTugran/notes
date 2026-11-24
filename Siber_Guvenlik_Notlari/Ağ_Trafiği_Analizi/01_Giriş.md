@@ -55,7 +55,7 @@ Bu teknoloji sıklıkla şunlar için kullanılır:
 > - *Botnet:* Bir cihazın düzenli aralıklarla aynı dış adrese bağlanması (beacon) komuta-kontrol (C2) iletişimi belirtisi olabilir.
 
 ## 4. Diğer Notlarla İlişkisi
-- Ağ trafiğinin kaydını tutan log ve izleme tarafı: [SIEM ve SOC](../SIEM_ve_SOC/00_SIEM_%C4%B0ndeks.md)
+- Ağ trafiğini yakalayan ve merkezi olarak analiz eden araçlar (tcpdump, Wireshark, ELK, SIEM): [Bölüm 3 - Temel Araçlar](03_Temel_Ara%C3%A7lar.md)
 - Port ve bağlantı komutları (`ss`, `netstat`, `ping`): [Ağ Yapılandırması ve Güvenliği](../Linux_Komutlar%C4%B1/06_A%C4%9F_Yap%C4%B1land%C4%B1rmas%C4%B1_ve_G%C3%BCvenli%C4%9Fi.md)
 - Trafiği filtreleyen güvenlik duvarı: [Iptables](../Linux_Komutlar%C4%B1/07_Iptables_G%C3%BCvenlik_Duvar%C4%B1.md)
 - Kablosuz ağda paket yakalama ve çözme: [Wi-Fi Hackleme](../Wi-Fi%20Hackleme/00_Wi-Fi_Hackleme_%C4%B0ndex.md)

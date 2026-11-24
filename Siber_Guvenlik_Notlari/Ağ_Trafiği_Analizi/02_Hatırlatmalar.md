@@ -113,4 +113,4 @@ flowchart TB
 > DNS (`53`) genelde **UDP**, web (`80`/`443`), SSH ve SMTP gibi güvenilir aktarım isteyen servisler **TCP** kullanır. Hangisinin kullanıldığı taşıma katmanı başlığında görünür.
 
 ---
-> ◀ [Bölüm 1 - Giriş](01_Giri%C5%9F.md) · 📚 [İndeks](00_A%C4%9F_Trafi%C4%9Fi_Analizi_%C4%B0ndeks.md)
+> ◀ [Bölüm 1 - Giriş](01_Giri%C5%9F.md) · 📚 [İndeks](00_A%C4%9F_Trafi%C4%9Fi_Analizi_%C4%B0ndeks.md) · [Bölüm 3 - Temel Araçlar](03_Temel_Ara%C3%A7lar.md) ▶

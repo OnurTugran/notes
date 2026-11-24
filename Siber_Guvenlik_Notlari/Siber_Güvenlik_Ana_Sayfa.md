@@ -26,7 +26,6 @@ tags:
 | Kriptoloji | [Kriptoloji](Kriptoloji/00_Kriptoloji_%C4%B0ndeks.md) |
 | Linux | [Linux Komutları](Linux_Komutlar%C4%B1/00_Linux_Komutlar%C4%B1.md) |
 | Linux (teori) | [Linux Temelleri](Linux_Temelleri/00_Linux_Temelleri_%C4%B0ndeks.md) |
-| Güvenlik izleme / Blue team | [SIEM ve SOC](SIEM_ve_SOC/00_SIEM_%C4%B0ndeks.md) |
 | Ağ trafiği analizi | [Ağ Trafiği Analizi](A%C4%9F_Trafi%C4%9Fi_Analizi/00_A%C4%9F_Trafi%C4%9Fi_Analizi_%C4%B0ndeks.md) |
 
 ```mermaid
