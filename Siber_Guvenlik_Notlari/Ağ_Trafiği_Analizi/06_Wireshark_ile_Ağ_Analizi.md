@@ -228,4 +228,4 @@ Dersin ötesinde, başlangıçta işe yarayan birkaç filtre:
 | Yakalama filtresi vs görüntüleme filtresi | Biri kaydı sınırlar (BPF), diğeri ekranı |
 
 ---
-> ◀ [Bölüm 5 - tcpdump Temelleri](05_tcpdump_Temelleri.md) · 📚 [İndeks](00_A%C4%9F_Trafi%C4%9Fi_Analizi_%C4%B0ndeks.md)
+> ◀ [Bölüm 5 - tcpdump Temelleri](05_tcpdump_Temelleri.md) · 📚 [İndeks](00_A%C4%9F_Trafi%C4%9Fi_Analizi_%C4%B0ndeks.md) · [Bölüm 7 - Filtreleme](07_Wireshark_Filtreleme.md) ▶
