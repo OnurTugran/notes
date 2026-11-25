@@ -101,12 +101,12 @@ Veri yakalanıp belleğe yüklendikten **sonra** uygulanır. Daha karmaşık ara
 
 ### Örnek görüntüleme filtreleri
 
-| Amaç | Filtre |
-|---|---|
-| Sadece HTTP POST istekleri | `http.request.method == "POST"` |
-| 192.168.1.0/24 alt ağı | `ip.addr >= 192.168.1.0 and ip.addr <= 192.168.1.255` |
-| HTTP hataları (4xx ve 5xx) | `http.response.code >= 400 and http.response.code <= 599` |
-| 1000 bayttan büyük paketler | `frame.len > 1000` |
+| Amaç                        | Filtre                                                    |
+| --------------------------- | --------------------------------------------------------- |
+| Sadece HTTP POST istekleri  | `http.request.method == "POST"`                           |
+| 192.168.1.0/24 alt ağı      | `ip.addr >= 192.168.1.0 and ip.addr <= 192.168.1.255`     |
+| HTTP hataları (4xx ve 5xx)  | `http.response.code >= 400 and http.response.code <= 599` |
+| 1000 bayttan büyük paketler | `frame.len > 1000`                                        |
 
 > [!TIP]
 > Alt ağ için daha kısa yol: `ip.addr == 192.168.1.0/24`. CIDR gösterimini Wireshark doğrudan anlar.
