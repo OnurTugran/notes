@@ -180,4 +180,4 @@ SEE THE MAN PAGE (https://nmap.org/book/man.html) FOR MORE OPTIONS AND EXAMPLES
 > Yukarıdaki örnek hedefler (`scanme.nmap.org`, `192.168.0.0/16` vb.) yalnızca sözdizimini göstermek içindir. Taramayı yalnızca izinli hedeflerde yap.
 
 ---
-> 📚 [İndeks](00_Nmap_ile_A%C4%9F_Tarama_%C4%B0ndeks.md) · [Bölüm 1 - Giriş](01_Giri%C5%9F_ve_Temel_A%C4%9F_Bilgisi.md)
+> 📚 [İndeks](00_Nmap_ile_A%C4%9F_Tarama_%C4%B0ndeks.md) · ◀ [Bölüm 1 - Giriş](01_Giri%C5%9F_ve_Temel_A%C4%9F_Bilgisi.md) · [Bölüm 3 - Host Keşfi](03_Host_Ke%C5%9Ffi.md) ▶
