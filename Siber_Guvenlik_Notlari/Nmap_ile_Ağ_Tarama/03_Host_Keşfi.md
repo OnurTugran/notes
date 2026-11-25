@@ -129,4 +129,4 @@ Bu komut `192.168.1.0` ile `192.168.1.255` arasındaki tüm adresleri tarar. `/2
 > Örnek çıktılardaki hedefler (`stanford.edu`, `scanme.nmap.org`) yalnızca gösterim içindir. Taramayı yalnızca izinli hedeflerde ve kendi lab ortamında yap.
 
 ---
-> 📚 [İndeks](00_Nmap_ile_A%C4%9F_Tarama_%C4%B0ndeks.md) · ◀ [Bölüm 2 - Genel Bakış](02_Genel_Bak%C4%B1%C5%9F.md)
+> 📚 [İndeks](00_Nmap_ile_A%C4%9F_Tarama_%C4%B0ndeks.md) · ◀ [Bölüm 2 - Genel Bakış](02_Genel_Bak%C4%B1%C5%9F.md) · [Bölüm 4 - Port Tarama](04_Port_Tarama.md) ▶
