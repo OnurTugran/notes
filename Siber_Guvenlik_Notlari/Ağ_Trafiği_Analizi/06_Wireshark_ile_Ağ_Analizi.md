@@ -194,15 +194,15 @@ Her pakete yakalanma sırasına göre bir numara verilir (listede en soldaki sü
 
 Dersin ötesinde, başlangıçta işe yarayan birkaç filtre:
 
-| Amaç | Filtre |
-|---|---|
-| Belirli bir IP | `ip.addr == 192.168.1.106` |
-| Sadece kaynak IP | `ip.src == 192.168.1.106` |
-| Belirli port | `tcp.port == 80` |
-| Protokole göre | `dns`, `http`, `arp`, `ssdp` |
-| Birleştirme | `ip.addr == 192.168.1.106 && tcp` |
-| Belirli MAC | `eth.addr == 54:88:0e:75:b3:2e` |
-| Metin arama | `frame contains "password"` |
+| Amaç             | Filtre                            |
+| ---------------- | --------------------------------- |
+| Belirli bir IP   | `ip.addr == 192.168.1.106`        |
+| Sadece kaynak IP | `ip.src == 192.168.1.106`         |
+| Belirli port     | `tcp.port == 80`                  |
+| Protokole göre   | `dns`, `http`, `arp`, `ssdp`      |
+| Birleştirme      | `ip.addr == 192.168.1.106 && tcp` |
+| Belirli MAC      | `eth.addr == 54:88:0e:75:b3:2e`   |
+| Metin arama      | `frame contains "password"`       |
 
 > [!TIP]
 > Filtre çubuğu yazarken **yeşil** olursa ifade geçerlidir, **kırmızı** olursa hatalıdır. Bir alana sağ tıklayıp **Apply as Filter → Selected** diyerek filtreyi otomatik de oluşturabilirsin.
