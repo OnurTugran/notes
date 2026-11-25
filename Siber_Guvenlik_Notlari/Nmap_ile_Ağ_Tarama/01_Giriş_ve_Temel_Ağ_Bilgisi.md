@@ -118,4 +118,4 @@ flowchart TB
 - Taramayı engelleyen/filtreleyen güvenlik duvarı: [Iptables](../Linux_Komutlar%C4%B1/07_Iptables_G%C3%BCvenlik_Duvar%C4%B1.md)
 
 ---
-> 📚 [İndeks](00_Nmap_ile_A%C4%9F_Tarama_%C4%B0ndeks.md)
+> 📚 [İndeks](00_Nmap_ile_A%C4%9F_Tarama_%C4%B0ndeks.md) · [Bölüm 2 - Genel Bakış](02_Genel_Bak%C4%B1%C5%9F.md) ▶

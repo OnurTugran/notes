@@ -28,3 +28,4 @@ tags:
 | Bölüm | Not | İçerik |
 |---|---|---|
 | 1 | [Giriş ve Temel Ağ Bilgisi](01_Giri%C5%9F_ve_Temel_A%C4%9F_Bilgisi.md) | Ağ tarama nedir, amaçları ve çeşitleri; TCP ve bayrakları, IP, port, TCP/IP katmanları |
+| 2 | [Genel Bakış](02_Genel_Bak%C4%B1%C5%9F.md) | Nmap'in tarihçesi, tarama aşamaları, temel kullanım ve yardım menüsü |
