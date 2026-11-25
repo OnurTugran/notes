@@ -318,4 +318,4 @@ Nmap done: 1 IP address (1 host up) scanned in 129.94 seconds
 > `-A` hedefte çok sayıda istek üretir ve kolayca fark edilir. Örnek hedefler (`scanme.nmap.org`, `192.168.1.1`) yalnızca gösterim içindir; taramayı yalnızca izinli hedeflerde ve kendi lab ortamında yap.
 
 ---
-> 📚 [İndeks](00_Nmap_ile_A%C4%9F_Tarama_%C4%B0ndeks.md) · ◀ [Bölüm 3 - Host Keşfi](03_Host_Ke%C5%9Ffi.md)
+> 📚 [İndeks](00_Nmap_ile_A%C4%9F_Tarama_%C4%B0ndeks.md) · ◀ [Bölüm 3 - Host Keşfi](03_Host_Ke%C5%9Ffi.md) · [Bölüm 5 - TCP SYN Tarama](05_TCP_SYN_Stealth_Tarama.md) ▶
