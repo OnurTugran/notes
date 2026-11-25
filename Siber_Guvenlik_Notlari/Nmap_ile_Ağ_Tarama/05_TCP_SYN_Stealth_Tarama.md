@@ -84,4 +84,4 @@ SYN Scan, özellikle yüksek güvenlikli ağlarda **IDS (Intrusion Detection Sys
 TCP SYN (Stealth) Scan, ağ güvenliği uzmanlarının sıkça kullandığı güçlü bir yöntemdir. Hızlı, etkili ve göze çarpmayan bir tarama için `-sS` parametresi bu ihtiyacı karşılar.
 
 ---
-> 📚 [İndeks](00_Nmap_ile_A%C4%9F_Tarama_%C4%B0ndeks.md) · ◀ [Bölüm 4 - Port Tarama](04_Port_Tarama.md)
+> 📚 [İndeks](00_Nmap_ile_A%C4%9F_Tarama_%C4%B0ndeks.md) · ◀ [Bölüm 4 - Port Tarama](04_Port_Tarama.md) · [Bölüm 6 - TCP Connect Tarama](06_TCP_Connect_Tarama.md) ▶

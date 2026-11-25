@@ -32,3 +32,4 @@ tags:
 | 3 | [Host Keşfi](03_Host_Ke%C5%9Ffi.md) | Host keşfi kontrolleri, List Scan (-sL), Ping Scan (-sn), -Pn, subnet taraması |
 | 4 | [Port Tarama](04_Port_Tarama.md) | Sık kullanılan portlar, 6 port durumu, -F, --top-ports, -p, -p-, agresif tarama (-A) |
 | 5 | [TCP SYN (Stealth) Tarama](05_TCP_SYN_Stealth_Tarama.md) | -sS, half-open tarama, çalışma mantığı, avantajlar ve dikkat edilecekler |
+| 6 | [TCP Connect Tarama](06_TCP_Connect_Tarama.md) | -sT, tam bağlantı kurma, ne zaman kullanılır, SYN taramasıyla karşılaştırma |
