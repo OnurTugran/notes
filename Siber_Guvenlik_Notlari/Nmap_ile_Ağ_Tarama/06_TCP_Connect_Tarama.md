@@ -88,4 +88,4 @@ Tarama sırasında kurulan **tam bağlantılar hedef sistemlerin loglarına dü�
 TCP Connect Scan, SYN Scan'in mümkün olmadığı durumlarda, özellikle **düşük ayrıcalıklı hesaplardan** veya **IPv6 ağlarında** tarama yapmak için etkili bir alternatiftir. Daha fazla paket gönderimi ve tam bağlantı kurulması nedeniyle hedef sistemde iz bırakma olasılığı daha yüksektir.
 
 ---
-> 📚 [İndeks](00_Nmap_ile_A%C4%9F_Tarama_%C4%B0ndeks.md) · ◀ [Bölüm 5 - TCP SYN Tarama](05_TCP_SYN_Stealth_Tarama.md)
+> 📚 [İndeks](00_Nmap_ile_A%C4%9F_Tarama_%C4%B0ndeks.md) · ◀ [Bölüm 5 - TCP SYN Tarama](05_TCP_SYN_Stealth_Tarama.md) · [Bölüm 7 - UDP Tarama](07_UDP_Tarama.md) ▶

@@ -33,3 +33,4 @@ tags:
 | 4 | [Port Tarama](04_Port_Tarama.md) | Sık kullanılan portlar, 6 port durumu, -F, --top-ports, -p, -p-, agresif tarama (-A) |
 | 5 | [TCP SYN (Stealth) Tarama](05_TCP_SYN_Stealth_Tarama.md) | -sS, half-open tarama, çalışma mantığı, avantajlar ve dikkat edilecekler |
 | 6 | [TCP Connect Tarama](06_TCP_Connect_Tarama.md) | -sT, tam bağlantı kurma, ne zaman kullanılır, SYN taramasıyla karşılaştırma |
+| 7 | [UDP Tarama](07_UDP_Tarama.md) | -sU, UDP tarama durumları, açık\|filtrelenmiş sorunu, tarama hızı |
