@@ -34,3 +34,9 @@ tags:
 | 5 | [TCP SYN (Stealth) Tarama](05_TCP_SYN_Stealth_Tarama.md) | -sS, half-open tarama, çalışma mantığı, avantajlar ve dikkat edilecekler |
 | 6 | [TCP Connect Tarama](06_TCP_Connect_Tarama.md) | -sT, tam bağlantı kurma, ne zaman kullanılır, SYN taramasıyla karşılaştırma |
 | 7 | [UDP Tarama](07_UDP_Tarama.md) | -sU, UDP tarama durumları, açık\|filtrelenmiş sorunu, tarama hızı |
+| 8 | [TCP FIN, NULL ve Xmas Tarama](08_TCP_FIN_NULL_Xmas_Tarama.md) | -sF, -sN, -sX, RFC 793 davranışı, yanıtların değerlendirilmesi, avantaj ve dezavantajlar |
+| 9 | [TCP ACK Tarama](09_TCP_ACK_Tarama.md) | -sA, güvenlik duvarı kurallarını haritalama, filtrelenmemiş ve filtrelenmiş portlar |
+| 11 | [Zamanlama Şablonları](11_Zamanlama_%C5%9Eablonlar%C4%B1.md) | -T0 ile -T5 arası şablonlar, hız ve doğruluk karşılaştırması, tavsiyeler |
+| 12 | [Servis Versiyon Tespiti](12_Servis_Versiyon_Tespiti.md) | -sV, servis ve versiyon bilgisi, gizli servisler, çıktıyı okuma |
+| 13 | [İşletim Sistemi Tespiti](13_%C4%B0%C5%9Fletim_Sistemi_Tespiti.md) | -O, TCP/IP sınamaları, çıktıyı okuma, doğruluk ipuçları |
+| 14 | [Nmap Scripting Engine](14_Nmap_Scripting_Engine.md) | NSE, script kategorileri, -sC, --script, script argümanları |
