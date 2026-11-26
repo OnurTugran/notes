@@ -18,35 +18,44 @@ tags:
 
 > 📚 [İndeks](00_Nmap_ile_A%C4%9F_Tarama_%C4%B0ndeks.md) · ◀ [Bölüm 9 - TCP ACK Tarama](09_TCP_ACK_Tarama.md)
 
-## 1. Idle Tarama Nedir?
-TCP Idle Taraması, port tarama teknikleri arasında benzersiz bir yöntemdir. **"Zombi"** adı verilen bir aracı makine üzerinden, taramanın sonuçları o makineye yönlendirilerek hedefteki portlar taranır. Böylece hedef, taramanın **gerçek kaynağını** göremez; saldırı tespit sistemleri zombi makineyi saldırgan olarak görür.
+# TCP Idle Tarama
 
-> [!NOTE]
-> Hedefe giden paketler zombi adına (sahte kaynak adresiyle) gönderilir. Tarayan makine yine de zombiyle konuşur, yani zombiye yoklama paketleri gönderir. Gizlenen şey, **hedefin gördüğü kaynak adresidir**.
+TCP Idle Taraması, port tarama teknikleri arasında benzersiz ve farklı bir yöntemdir. Kendi IP adresinizden tek bir paket bile göndermeden hedefteki portları taramanıza olanak tanır. Bu, "zombi" olarak adlandırılan ve taramanın sonuçlarının onun üzerinden yönlendirildiği bir aracı makine kullanarak yapılır. Bu yöntemle, saldırı tespit sistemleri zombi makineyi saldırgan olarak görecektir.
 
-## 2. Temelleri
-Idle Tarama, **Antirez** tarafından **1998**'de geliştirilen ve tamamen **kör** bir port taraması yapılmasını sağlayan zekice bir tekniktir. Özellikle **hedef ile zombi arasındaki IP tabanlı güven ilişkilerini** keşfetmek için kullanılır.
+## TCP Idle Taramasının Temelleri
 
-### 2.1 Temel Adımlar
-Tarama üç adımdan oluşur ve her port için tekrarlanır:
+Idle Tarama, Antirez tarafından 1998 yılında geliştirilen ve tamamen kör bir port taraması yapılmasını sağlayan zekice bir tekniktir. Bu tarama türü, özellikle hedef ve zombi arasındaki IP tabanlı güven ilişkilerini keşfetmek için kullanılır.
 
-1. **Zombi'nin IP ID'sini sorgulama:** Önce zombi bilgisayarın IP ID numarası sorgulanır.
-2. **SYN paketi gönderme:** Zombi adına, hedefteki belirli bir porta `SYN` paketi gönderilir. Hedefin bu porttaki durumuna göre zombinin IP ID değerinin artıp artmayacağı izlenir.
-3. **IP ID'de değişiklik kontrolü:** Zombi'nin IP ID'si tekrar kontrol edilir.
+## Temel Adımlar
 
-| IP ID değişimi (ilk değere göre) | Sonuç |
-|---|---|
-| **+2** | Port **açık** |
-| **+1** | Port **kapalı** veya **filtrelenmiş** |
+Idle Tarama, temelde üç adımdan oluşur ve her port için bu adımlar tekrarlanır:
 
-```mermaid
-sequenceDiagram
-    participant S as Saldırgan
-    participant Z as Zombi
-    participant H as Hedef
-    S->>Z: 1. Yoklama (IP ID okunur)
-    S->>H: 2. SYN (kaynak adresi = Zombi, sahte)
-    H->>Z: Port açıksa SYN/ACK
-    Z->>H: RST (IP ID artar)
-    S->>Z: 3. Yoklama (IP ID tekrar okunur)
-    Note over
+1. **Zombi'nin IP ID'sini Sorgulama:** Öncelikle, zombi bilgisayarın IP ID numarasını sorgulayarak başlanır.
+2. **SYN Paketi Gönderme:** Zombi adına hedefteki belirli bir porta bir SYN paketi gönderilir. Bu paketin hedefteki port durumuna göre zombinin IP ID değerinde bir artışa neden olup olmayacağı kontrol edilir.
+3. **IP ID'de Değişiklik Kontrolü:** Zombi'nin IP ID'si tekrar kontrol edilir. Eğer IP ID, ilk adımda kaydedilenden iki artmışsa, bu portun açık olduğu anlamına gelir. Eğer bir artış varsa, port ya kapalıdır ya da filtrelidir.
+
+![Temel Adımlar](https://storage.hackviser.com/file/hackviser-prod/trainings/sections/images/ea047221-bad0-4fe5-81ae-c3de38656e45/image-6-63432dbbc.webp)
+
+![Temel Adımlar](https://storage.hackviser.com/file/hackviser-prod/trainings/sections/images/ea047221-bad0-4fe5-81ae-c3de38656e45/image-7-d05e92378.webp)
+
+## Idle Taraması Nasıl Yapılır?
+
+Idle Tarama yapabilmek için, uygun bir zombi bilgisayar seçmek kritik öneme sahiptir. İdeal bir zombi, IP ID değerlerini global olarak art arda şekilde atayan ve mümkün olduğunca az trafik üreten (yani "idle" veya boşta olan) bir sistemdir.
+
+## Tarama Yapma
+
+- Uygun bir zombi bulduktan sonra, `-sI` parametresi ile Nmap komutunu kullanarak idle taraması başlatılır. Örneğin: `nmap -sI zombie-ip target-ip`
+- Bu tarama, IDS sistemlerini yanıltabilir ve zombi makineyi saldırgan olarak gösterebilir, bu nedenle kullanımında dikkatli olunmalıdır.
+- Idle Tarama, güvenlik duvarlarını ve IP adresine dayalı filtrelemeleri aşmak için de kullanılabilir.
+
+```bash
+nmap -sI 10.10.10.10 10.10.10.192
+```
+
+## Avantajlar ve Dezavantajlar
+
+**Avantajlar:** Idle Tarama, son derece gizliliğin ön planda olduğu bir tarama yöntemidir ve saldırganın IP adresini gizler. Ayrıca, hedef ve zombi arasındaki IP tabanlı güven ilişkilerini ortaya çıkarmak için de kullanılabilir.
+
+**Dezavantajlar:** Uygun bir zombi bulmak zor olabilir ve tarama süreci, diğer yöntemlere göre daha uzun sürebilir.
+
+TCP Idle Tarama, gelişmiş port tarama tekniklerinden biridir ve özellikle ağ güvenliği uzmanları tarafından tercih edilir. Bu yöntem, saldırganın anonim kalmasını sağlar ve zombi makineyi kullanarak hedef sistem hakkında değerli bilgiler toplamayı mümkün kılar. Ancak, etik kullanımı önemlidir ve zombi olarak kullanılan sistemlerin sahiplerinden izin alınması tavsiye edilir.

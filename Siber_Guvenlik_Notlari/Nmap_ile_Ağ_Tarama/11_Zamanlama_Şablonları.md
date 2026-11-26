@@ -16,7 +16,7 @@ tags:
 
 # Bölüm 11 - Zamanlama Şablonları
 
-> 📚 [İndeks](00_Nmap_ile_A%C4%9F_Tarama_%C4%B0ndeks.md) · ◀ [Bölüm 9 - TCP ACK Tarama](09_TCP_ACK_Tarama.md)
+> 📚 [İndeks](00_Nmap_ile_A%C4%9F_Tarama_%C4%B0ndeks.md) · ◀ [Bölüm 10 - TCP Idle Tarama](10_TCP_Idle_Tarama.md)
 
 ## 1. Zamanlama Şablonları Nedir?
 Nmap, taramaları optimize etmek ve farklı ağ koşullarına uyum sağlamak için **altı zamanlama şablonu** sunar. Şablonlar **`-T`** parametresiyle belirtilir ve her biri tarama hızını ve davranışını büyük ölçüde etkiler. 0'dan 5'e kadar numaralandırılır ya da isimleriyle kullanılabilir.
@@ -114,4 +114,4 @@ Zamanlama şablonları, Nmap taramalarını farklı ağ koşullarına ve ihtiya�
 > Örnek hedef (`scanme.nmap.org`) yalnızca gösterim içindir. Taramayı yalnızca izinli hedeflerde ve kendi lab ortamında yap.
 
 ---
-> 📚 [İndeks](00_Nmap_ile_A%C4%9F_Tarama_%C4%B0ndeks.md) · ◀ [Bölüm 9 - TCP ACK Tarama](09_TCP_ACK_Tarama.md) · [Bölüm 12 - Servis Versiyon Tespiti](12_Servis_Versiyon_Tespiti.md) ▶
+> 📚 [İndeks](00_Nmap_ile_A%C4%9F_Tarama_%C4%B0ndeks.md) · ◀ [Bölüm 10 - TCP Idle Tarama](10_TCP_Idle_Tarama.md) · [Bölüm 12 - Servis Versiyon Tespiti](12_Servis_Versiyon_Tespiti.md) ▶

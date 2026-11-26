@@ -36,6 +36,7 @@ tags:
 | 7 | [UDP Tarama](07_UDP_Tarama.md) | -sU, UDP tarama durumları, açık\|filtrelenmiş sorunu, tarama hızı |
 | 8 | [TCP FIN, NULL ve Xmas Tarama](08_TCP_FIN_NULL_Xmas_Tarama.md) | -sF, -sN, -sX, RFC 793 davranışı, yanıtların değerlendirilmesi, avantaj ve dezavantajlar |
 | 9 | [TCP ACK Tarama](09_TCP_ACK_Tarama.md) | -sA, güvenlik duvarı kurallarını haritalama, filtrelenmemiş ve filtrelenmiş portlar |
+| 10 | [TCP Idle Tarama](10_TCP_Idle_Tarama.md) | -sI |
 | 11 | [Zamanlama Şablonları](11_Zamanlama_%C5%9Eablonlar%C4%B1.md) | -T0 ile -T5 arası şablonlar, hız ve doğruluk karşılaştırması, tavsiyeler |
 | 12 | [Servis Versiyon Tespiti](12_Servis_Versiyon_Tespiti.md) | -sV, servis ve versiyon bilgisi, gizli servisler, çıktıyı okuma |
 | 13 | [İşletim Sistemi Tespiti](13_%C4%B0%C5%9Fletim_Sistemi_Tespiti.md) | -O, TCP/IP sınamaları, çıktıyı okuma, doğruluk ipuçları |

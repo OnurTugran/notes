@@ -64,4 +64,4 @@ Bu komut `scanme.nmap.org` adresine bir ACK taraması yapar. Çıktıda 1000 por
 > Örnek hedef (`scanme.nmap.org`) yalnızca gösterim içindir. Taramayı yalnızca izinli hedeflerde ve kendi lab ortamında yap.
 
 ---
-> 📚 [İndeks](00_Nmap_ile_A%C4%9F_Tarama_%C4%B0ndeks.md) · ◀ [Bölüm 8 - FIN, NULL ve Xmas](08_TCP_FIN_NULL_Xmas_Tarama.md) · [Bölüm 11 - Zamanlama Şablonları](11_Zamanlama_%C5%9Eablonlar%C4%B1.md) ▶
+> 📚 [İndeks](00_Nmap_ile_A%C4%9F_Tarama_%C4%B0ndeks.md) · ◀ [Bölüm 8 - FIN, NULL ve Xmas](08_TCP_FIN_NULL_Xmas_Tarama.md) · [Bölüm 10 - TCP Idle Tarama](10_TCP_Idle_Tarama.md) ▶
