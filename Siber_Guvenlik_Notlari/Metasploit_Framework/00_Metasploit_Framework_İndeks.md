@@ -32,3 +32,4 @@ tags:
 | 4 | [Exploits](04_Exploits.md) | Exploit modülleri, Supervisor 3.3.2 uygulaması, exploit ve payload ayarları, check, exploit, Meterpreter oturumu |
 | 5 | [Payloadlar](05_Payloadlar.md) | Payload isimlendirme, singles, stagers, stages, show payloads, generate ile shellcode üretme |
 | 6 | [Exploit Sonrası](06_Exploit_Sonras%C4%B1.md) | Post exploitation modülleri, bilgi toplama, oturumu arka plana atma, enum_system, SESSION ayarı |
+| 7 | [Kodlayıcılar](07_Kodlay%C4%B1c%C4%B1lar.md) | Encoder nedir, kötü karakterler, kullanım amaçları, show encoders, set encoder ve generate |
