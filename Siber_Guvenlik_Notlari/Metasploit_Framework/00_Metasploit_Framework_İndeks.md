@@ -35,3 +35,5 @@ tags:
 | 7 | [Kodlayıcılar](07_Kodlay%C4%B1c%C4%B1lar.md) | Encoder nedir, kötü karakterler, kullanım amaçları, show encoders, set encoder ve generate |
 | 8 | [Nops](08_Nops.md) | No Operation, NOP sled / NOP slide, show nops, set NOP ve generate |
 | 9 | [Evasion](09_Evasion.md) | Evasion modülleri, show evasion, AppLocker MSBuild evasion uygulaması |
+| 10 | [Meterpreter](10_Meterpreter.md) | Meterpreter nedir, nasıl çalışır (akış şeması ve tablo), tasarım hedefleri, komut listeleri, savunma tarafı |
+| 11 | [MSFVenom](11_MSFVenom.md) | msfvenom kullanımı, parametreler, staged ve stageless payload, multi/handler, savunma tarafı |
