@@ -141,4 +141,4 @@ flowchart LR
 > Metasploit'i yalnızca izinli hedeflerde ve kendi lab ortamında kullan.
 
 ---
-> 📚 [İndeks](00_Metasploit_Framework_%C4%B0ndeks.md) · ⬅️ [Bölüm 1](01_Giri%C5%9F_ve_Temel_Terminoloji.md)
+> 📚 [İndeks](00_Metasploit_Framework_%C4%B0ndeks.md) · ⬅️ [Bölüm 1](01_Giri%C5%9F_ve_Temel_Terminoloji.md) · ➡️ [Bölüm 3](03_Auxiliary.md)
