@@ -191,16 +191,16 @@ tcp.port in {80, 443, 53}
 
 ## Hızlı Özet
 
-| Konu | Not |
-|---|---|
-| Yakalama filtresi | Yakalamadan önce, BPF, kaçan paket geri gelmez |
-| Görüntüleme filtresi | Yakalamadan sonra, Wireshark dili, geri alınabilir |
-| Yakalama örneği | `tcp port 80`, `host 192.168.1.10`, `port 53 or port 80` |
-| Görüntüleme örneği | `http.request.method == "POST"`, `frame.len > 1000` |
-| Metin ara | `contains` (harf duyarlı) |
-| Regex ara | `matches` |
-| Liste | `in {80, 443, 53}` |
-| Diğer sık filtreler | [Bölüm 6 - Sık Kullanılan Filtreler](06_Wireshark_ile_A%C4%9F_Analizi.md#10-s%C4%B1k-kullan%C4%B1lan-g%C3%B6r%C3%BCnt%C3%BCleme-filtreleri) |
+| Konu                 | Not                                                                                                                                         |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| Yakalama filtresi    | Yakalamadan önce, BPF, kaçan paket geri gelmez                                                                                              |
+| Görüntüleme filtresi | Yakalamadan sonra, Wireshark dili, geri alınabilir                                                                                          |
+| Yakalama örneği      | `tcp port 80`, `host 192.168.1.10`, `port 53 or port 80`                                                                                    |
+| Görüntüleme örneği   | `http.request.method == "POST"`, `frame.len > 1000`                                                                                         |
+| Metin ara            | `contains` (harf duyarlı)                                                                                                                   |
+| Regex ara            | `matches`                                                                                                                                   |
+| Liste                | `in {80, 443, 53}`                                                                                                                          |
+| Diğer sık filtreler  | [Bölüm 6 - Sık Kullanılan Filtreler](06_Wireshark_ile_A%C4%9F_Analizi.md#10-s%C4%B1k-kullan%C4%B1lan-g%C3%B6r%C3%BCnt%C3%BCleme-filtreleri) |
 
 ---
 > ◀ [Bölüm 6 - Wireshark ile Ağ Analizi](06_Wireshark_ile_A%C4%9F_Analizi.md) · 📚 [İndeks](00_A%C4%9F_Trafi%C4%9Fi_Analizi_%C4%B0ndeks.md) · [Bölüm 8 - İstatistikler](08_Wireshark_%C4%B0statistikler.md) ▶
