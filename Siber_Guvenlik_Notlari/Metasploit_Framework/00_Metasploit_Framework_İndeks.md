@@ -29,3 +29,4 @@ tags:
 | 1 | [Giriş ve Temel Terminoloji](01_Giri%C5%9F_ve_Temel_Terminoloji.md) | Metasploit tarihçesi, Pro ve Framework, modül, exploit, payload, Meterpreter, bind ve reverse shell |
 | 2 | [MSFConsole](02_MSFConsole.md) | Başlatma, yardım komutları, search, use, info, options, show, set/get, unset, advanced, history, sessions, back |
 | 3 | [Auxiliary](03_Auxiliary.md) | Yardımcı modül kategorileri, scraper modülü ile HTTP ve HTTPS web scraping |
+| 4 | [Exploits](04_Exploits.md) | Exploit modülleri, Supervisor 3.3.2 uygulaması, exploit ve payload ayarları, check, exploit, Meterpreter oturumu |
