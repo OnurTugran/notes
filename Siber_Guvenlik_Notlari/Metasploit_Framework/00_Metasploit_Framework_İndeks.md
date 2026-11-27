@@ -30,3 +30,4 @@ tags:
 | 2 | [MSFConsole](02_MSFConsole.md) | Başlatma, yardım komutları, search, use, info, options, show, set/get, unset, advanced, history, sessions, back |
 | 3 | [Auxiliary](03_Auxiliary.md) | Yardımcı modül kategorileri, scraper modülü ile HTTP ve HTTPS web scraping |
 | 4 | [Exploits](04_Exploits.md) | Exploit modülleri, Supervisor 3.3.2 uygulaması, exploit ve payload ayarları, check, exploit, Meterpreter oturumu |
+| 5 | [Payloadlar](05_Payloadlar.md) | Payload isimlendirme, singles, stagers, stages, show payloads, generate ile shellcode üretme |
